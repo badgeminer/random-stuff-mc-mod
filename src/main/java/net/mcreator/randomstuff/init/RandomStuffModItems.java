@@ -11,16 +11,20 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraft.world.item.Item;
 
 import net.mcreator.randomstuff.item.UnobtanibleIconItemItem;
+import net.mcreator.randomstuff.item.TopazItem;
 import net.mcreator.randomstuff.item.SmithsAnvilCoreItem;
 import net.mcreator.randomstuff.item.SaphireNetheriteItem;
 import net.mcreator.randomstuff.item.SaphireItem;
 import net.mcreator.randomstuff.item.SandPaperItem;
 import net.mcreator.randomstuff.item.RubieNetheriteItem;
 import net.mcreator.randomstuff.item.RubieItem;
+import net.mcreator.randomstuff.item.PolishedTopazItem;
+import net.mcreator.randomstuff.item.PolishedJasperItem;
 import net.mcreator.randomstuff.item.PolishedAmberItem;
 import net.mcreator.randomstuff.item.PolisedSaphireItem;
 import net.mcreator.randomstuff.item.PolihsedRubieItem;
 import net.mcreator.randomstuff.item.LootTokenItem;
+import net.mcreator.randomstuff.item.JasperItem;
 import net.mcreator.randomstuff.item.AmberItem;
 
 import java.util.List;
@@ -47,6 +51,10 @@ public class RandomStuffModItems {
 	public static final Item POLIHSED_RUBIE = register(new PolihsedRubieItem());
 	public static final Item SAPHIRE = register(new SaphireItem());
 	public static final Item POLISED_SAPHIRE = register(new PolisedSaphireItem());
+	public static final Item JASPER = register(new JasperItem());
+	public static final Item POLISHED_JASPER = register(new PolishedJasperItem());
+	public static final Item TOPAZ = register(new TopazItem());
+	public static final Item POLISHED_TOPAZ = register(new PolishedTopazItem());
 
 	private static Item register(Item item) {
 		REGISTRY.add(item);

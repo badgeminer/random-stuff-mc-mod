@@ -99,6 +99,20 @@ public class LootTokenRightClickedInAirProcedure {
 				((Slot) _slots.get(0)).set(_setstack);
 				_player.containerMenu.broadcastChanges();
 			}
+		} else if (rand >= 0.4) {
+			if (entity instanceof ServerPlayer _player && _player.containerMenu instanceof Supplier _current && _current.get()instanceof Map _slots) {
+				ItemStack _setstack = new ItemStack(RandomStuffModItems.POLISHED_JASPER);
+				_setstack.setCount(1);
+				((Slot) _slots.get(0)).set(_setstack);
+				_player.containerMenu.broadcastChanges();
+			}
+		} else if (rand >= 0.3) {
+			if (entity instanceof ServerPlayer _player && _player.containerMenu instanceof Supplier _current && _current.get()instanceof Map _slots) {
+				ItemStack _setstack = new ItemStack(RandomStuffModItems.POLISHED_TOPAZ);
+				_setstack.setCount(1);
+				((Slot) _slots.get(0)).set(_setstack);
+				_player.containerMenu.broadcastChanges();
+			}
 		}
 	}
 }
