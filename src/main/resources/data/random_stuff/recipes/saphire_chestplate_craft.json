@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "minecraft:netherite_chestplate"
+  },
+  "addition": {
+    "item": "random_stuff:polised_saphire"
+  },
+  "result": {
+    "item": "random_stuff:saphire_netherite_chestplate"
+  }
+}

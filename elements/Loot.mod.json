@@ -1,0 +1,57 @@
+{
+  "_fv": 24,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 176,
+    "height": 230,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 33,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "melee_looting.png",
+          "use1Xscale": true,
+          "name": "melee_looting.png",
+          "x": -49,
+          "y": -55
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "color": {
+            "value": -256,
+            "falpha": 0.0
+          },
+          "id": 0,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #0",
+          "x": 204,
+          "y": 98
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "daily_map_wings_level3.png",
+          "use1Xscale": false,
+          "name": "daily_map_wings_level3.png",
+          "x": 211,
+          "y": 57
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

@@ -129,21 +129,142 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "random_stuff_misc"
+    },
+    {
+      "name": "Loot",
+      "type": "gui",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "loot"
+    },
+    {
+      "name": "LootTokenRightClickedInAir",
+      "type": "procedure",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "loot_token_right_clicked_in_air",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/gems"
+    },
+    {
+      "name": "LootToken",
+      "type": "item",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "loot_token"
+    },
+    {
+      "name": "Amber",
+      "type": "item",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "amber"
+    },
+    {
+      "name": "PolishedAmber",
+      "type": "item",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "polished_amber"
+    },
+    {
+      "name": "Rubie",
+      "type": "item",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rubie",
+      "path": "~/gems"
+    },
+    {
+      "name": "PolihsedRubie",
+      "type": "item",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "polihsed_rubie",
+      "path": "~/gems"
+    },
+    {
+      "name": "Saphire",
+      "type": "item",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "saphire",
+      "path": "~/gems"
+    },
+    {
+      "name": "PolisedSaphire",
+      "type": "item",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "polised_saphire",
+      "path": "~/gems"
+    },
+    {
+      "name": "SaphireChestplateCraft",
+      "type": "recipe",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "saphire_chestplate_craft",
+      "path": "~/gear"
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "en_us": {
+      "item.random_stuff.rubie": "Rubie",
+      "item.random_stuff.loot_token": "Loot Token",
+      "item.random_stuff.polised_saphire": "Polised Saphire",
       "item.random_stuff.smiths_anvil_core": "Smiths Anvil Core",
       "itemGroup.tabrandom_stuff_misc": "Random Stuff Misc",
+      "item.random_stuff.amber": "Amber",
+      "item.random_stuff.polihsed_rubie": "Polihsed Rubie",
       "item.random_stuff.saphire_netherite_leggings": "Saphire Netherite Leggings",
+      "item.random_stuff.saphire": "Saphire",
       "item.random_stuff.rubie_netherite_chestplate": "Rubie Netherite Body",
       "item.random_stuff.saphire_netherite_helmet": "Saphire Netherite Helmet",
       "item.random_stuff.sand_paper": "Sand Paper",
       "item.random_stuff.saphire_netherite_boots": "Saphire Netherite Boots",
       "item.random_stuff.rubie_netherite_leggings": "Rubie Netherite Leggings",
       "item.random_stuff.rubie_netherite_helmet": "Rubie Netherite Helmet",
+      "item.random_stuff.polished_amber": "Polished Amber",
       "itemGroup.tabrandom_stuff_smith": "Random Stuff Smithing",
       "item.random_stuff.saphire_netherite_chestplate": "Saphire Netherite Body",
       "item.random_stuff.rubie_netherite_boots": "Rubie Netherite Boots"
@@ -154,6 +275,10 @@
     "children": [
       {
         "name": "gear",
+        "children": []
+      },
+      {
+        "name": "gems",
         "children": []
       }
     ]
