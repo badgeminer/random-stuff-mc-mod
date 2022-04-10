@@ -1,0 +1,26 @@
+{
+  "_fv": 24,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:SaphireNetherite.helmet"
+      },
+      {
+        "value": "CUSTOM:SaphireNetherite.body"
+      },
+      {
+        "value": "CUSTOM:SaphireNetherite.legs"
+      },
+      {
+        "value": "CUSTOM:SaphireNetherite.boots"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "name": "saphire_netherite_tag",
+    "namespace": "forge"
+  }
+}

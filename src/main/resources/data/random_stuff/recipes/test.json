@@ -1,0 +1,16 @@
+{
+  "group": "sandpaper",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "minecraft:sand"
+    },
+    {
+      "item": "minecraft:paper"
+    }
+  ],
+  "result": {
+    "item": "random_stuff:sand_paper",
+    "count": 1
+  }
+}

@@ -1,4 +1,14 @@
 {
   "item.random_stuff.smiths_anvil_core": "Smiths Anvil Core",
-  "itemGroup.tabrandom_stuff_smith": "Random Stuff Smithing"
+  "itemGroup.tabrandom_stuff_misc": "Random Stuff Misc",
+  "item.random_stuff.saphire_netherite_leggings": "Saphire Netherite Leggings",
+  "item.random_stuff.rubie_netherite_chestplate": "Rubie Netherite Body",
+  "item.random_stuff.saphire_netherite_helmet": "Saphire Netherite Helmet",
+  "item.random_stuff.sand_paper": "Sand Paper",
+  "item.random_stuff.saphire_netherite_boots": "Saphire Netherite Boots",
+  "item.random_stuff.rubie_netherite_leggings": "Rubie Netherite Leggings",
+  "item.random_stuff.rubie_netherite_helmet": "Rubie Netherite Helmet",
+  "itemGroup.tabrandom_stuff_smith": "Random Stuff Smithing",
+  "item.random_stuff.saphire_netherite_chestplate": "Saphire Netherite Body",
+  "item.random_stuff.rubie_netherite_boots": "Rubie Netherite Boots"
 }
