@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0",
+    "1",
+    "2"
+  ],
+  "key": {
+    "0": {
+      "item": "random_stuff:polihsed_rubie"
+    },
+    "1": {
+      "item": "minecraft:netherite_boots"
+    },
+    "2": {
+      "item": "random_stuff:smiths_anvil_core"
+    }
+  },
+  "result": {
+    "item": "random_stuff:rubie_netherite_boots",
+    "count": 1
+  }
+}

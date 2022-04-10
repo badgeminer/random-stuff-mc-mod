@@ -236,12 +236,75 @@
       "path": "~/gems"
     },
     {
-      "name": "SaphireChestplateCraft",
+      "name": "Saphch",
       "type": "recipe",
       "sortid": 20,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "saphire_chestplate_craft",
+      "registry_name": "saphch",
+      "path": "~/gear"
+    },
+    {
+      "name": "Saphhelm",
+      "type": "recipe",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "saphhelm",
+      "path": "~/gear"
+    },
+    {
+      "name": "Saphleg",
+      "type": "recipe",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "saphleg",
+      "path": "~/gear"
+    },
+    {
+      "name": "Saphboot",
+      "type": "recipe",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "saphboot",
+      "path": "~/gear"
+    },
+    {
+      "name": "Rubieboot",
+      "type": "recipe",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rubieboot",
+      "path": "~/gear"
+    },
+    {
+      "name": "Rubieleg",
+      "type": "recipe",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rubieleg",
+      "path": "~/gear"
+    },
+    {
+      "name": "Rubiehelm",
+      "type": "recipe",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rubiehelm",
+      "path": "~/gear"
+    },
+    {
+      "name": "Rubiech",
+      "type": "recipe",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rubiech",
       "path": "~/gear"
     }
   ],

@@ -14,6 +14,16 @@ public class SmithsAnvilCoreItem extends Item {
 	}
 
 	@Override
+	public boolean hasCraftingRemainingItem() {
+		return true;
+	}
+
+	@Override
+	public ItemStack getContainerItem(ItemStack itemstack) {
+		return new ItemStack(this);
+	}
+
+	@Override
 	public int getUseDuration(ItemStack itemstack) {
 		return 0;
 	}
