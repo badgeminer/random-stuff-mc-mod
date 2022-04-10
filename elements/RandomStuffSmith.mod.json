@@ -1,0 +1,11 @@
+{
+  "_fv": 24,
+  "_type": "tab",
+  "definition": {
+    "name": "Random Stuff Smithing",
+    "icon": {
+      "value": "CUSTOM:SmithsAnvilCore"
+    },
+    "showSearch": false
+  }
+}
