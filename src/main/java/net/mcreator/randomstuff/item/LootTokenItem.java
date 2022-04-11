@@ -36,7 +36,7 @@ public class LootTokenItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		LootTokenRightClickedInAirProcedure.execute(world, x, y, z, entity, itemstack);
+		LootTokenRightClickedInAirProcedure.execute(world, x, y, z, entity);
 		return ar;
 	}
 }
