@@ -12,6 +12,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.client.gui.screens.MenuScreens;
 
 import net.mcreator.randomstuff.client.gui.LootScreen;
+import net.mcreator.randomstuff.client.gui.DrillGuiScreen;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class RandomStuffModScreens {
@@ -19,6 +20,7 @@ public class RandomStuffModScreens {
 	public static void clientLoad(FMLClientSetupEvent event) {
 		event.enqueueWork(() -> {
 			MenuScreens.register(RandomStuffModMenus.LOOT, LootScreen::new);
+			MenuScreens.register(RandomStuffModMenus.DRILL_GUI, DrillGuiScreen::new);
 		});
 	}
 }

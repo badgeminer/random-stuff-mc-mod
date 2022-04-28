@@ -1,0 +1,36 @@
+{
+  "display": {
+    "icon": {
+      "item": "random_stuff:amber"
+    },
+    "title": {
+      "translate": "advancements.gemed.title"
+    },
+    "description": {
+      "translate": "advancements.gemed.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "gemed": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "random_stuff:amber"
+            ],
+            "count": {
+              "min": 1,
+              "max": 64
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "random_stuff:random_stuff"
+}

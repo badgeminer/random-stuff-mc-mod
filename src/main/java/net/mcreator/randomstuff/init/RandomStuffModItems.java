@@ -8,7 +8,10 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.RegistryEvent;
 
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.BlockItem;
 
 import net.mcreator.randomstuff.item.UnobtanibleIconItemItem;
 import net.mcreator.randomstuff.item.TopazItem;
@@ -23,6 +26,7 @@ import net.mcreator.randomstuff.item.PolishedJasperItem;
 import net.mcreator.randomstuff.item.PolishedAmberItem;
 import net.mcreator.randomstuff.item.PolisedSaphireItem;
 import net.mcreator.randomstuff.item.PolihsedRubieItem;
+import net.mcreator.randomstuff.item.MasterSwordItem;
 import net.mcreator.randomstuff.item.LootTokenItem;
 import net.mcreator.randomstuff.item.JasperItem;
 import net.mcreator.randomstuff.item.AmberItem;
@@ -55,10 +59,17 @@ public class RandomStuffModItems {
 	public static final Item POLISHED_JASPER = register(new PolishedJasperItem());
 	public static final Item TOPAZ = register(new TopazItem());
 	public static final Item POLISHED_TOPAZ = register(new PolishedTopazItem());
+	public static final Item MASTER_SWORD = register(new MasterSwordItem());
+	public static final Item GEMSTONE_ORE = register(RandomStuffModBlocks.GEMSTONE_ORE, RandomStuffModTabs.TAB_RANDOM_STUFF_SMITH);
+	public static final Item DRILL = register(RandomStuffModBlocks.DRILL, RandomStuffModTabs.TAB_RANDOM_STUFF_MISC);
 
 	private static Item register(Item item) {
 		REGISTRY.add(item);
 		return item;
+	}
+
+	private static Item register(Block block, CreativeModeTab tab) {
+		return register(new BlockItem(block, new Item.Properties().tab(tab)).setRegistryName(block.getRegistryName()));
 	}
 
 	@SubscribeEvent

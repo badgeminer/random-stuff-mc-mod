@@ -1,0 +1,8 @@
+{
+  "parent": "random_stuff:custom/diamond_sword",
+  "textures": {
+    "1": "random_stuff:blocks/meister",
+    "2": "random_stuff:blocks/meister2",
+    "particle": "random_stuff:items/t_immuneshield"
+  }
+}

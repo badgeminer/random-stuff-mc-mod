@@ -1,0 +1,36 @@
+{
+  "display": {
+    "icon": {
+      "item": "random_stuff:smiths_anvil_core"
+    },
+    "title": {
+      "translate": "advancements.apprentice_smith.title"
+    },
+    "description": {
+      "translate": "advancements.apprentice_smith.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "apprentice_smith": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "random_stuff:smiths_anvil_core"
+            ],
+            "count": {
+              "min": 1,
+              "max": 64
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "random_stuff:random_stuff"
+}

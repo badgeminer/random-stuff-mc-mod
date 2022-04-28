@@ -1,0 +1,23 @@
+{
+  "display": {
+    "background": "random_stuff:textures/blueprint.png",
+    "icon": {
+      "item": "random_stuff:unobtanible_icon_item"
+    },
+    "title": {
+      "translate": "advancements.random_stuff.title"
+    },
+    "description": {
+      "translate": "advancements.random_stuff.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "random_stuff": {
+      "trigger": "minecraft:tick"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "random_stuff:blocks/stoneore",
+    "up": "random_stuff:blocks/drilltop",
+    "north": "random_stuff:blocks/drillside",
+    "east": "random_stuff:blocks/drillside",
+    "south": "random_stuff:blocks/drillside",
+    "west": "random_stuff:blocks/drillside",
+    "particle": "random_stuff:blocks/stoneore"
+  }
+}

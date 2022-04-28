@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "random_stuff:blocks/stoneore",
+    "up": "random_stuff:blocks/stoneore",
+    "north": "random_stuff:blocks/stoneore",
+    "east": "random_stuff:blocks/stoneore",
+    "south": "random_stuff:blocks/stoneore",
+    "west": "random_stuff:blocks/stoneore",
+    "particle": "random_stuff:blocks/stoneore"
+  }
+}

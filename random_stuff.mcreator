@@ -338,6 +338,135 @@
       "locked_code": false,
       "registry_name": "polished_topaz",
       "path": "~/gems"
+    },
+    {
+      "name": "ApprenticeSmith",
+      "type": "achievement",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "apprentice_smith"
+    },
+    {
+      "name": "RandomStuff",
+      "type": "achievement",
+      "sortid": 33,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "random_stuff"
+    },
+    {
+      "name": "LootObtained",
+      "type": "achievement",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "loot_obtained"
+    },
+    {
+      "name": "Gemed",
+      "type": "achievement",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gemed"
+    },
+    {
+      "name": "MasterSword",
+      "type": "tool",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "master_sword"
+    },
+    {
+      "name": "GemOre",
+      "type": "loottable",
+      "sortid": 37,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gem_ore"
+    },
+    {
+      "name": "GemstoneOre",
+      "type": "block",
+      "sortid": 37,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gemstone_ore"
+    },
+    {
+      "name": "DrillGui",
+      "type": "gui",
+      "sortid": 38,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "drill_gui"
+    },
+    {
+      "name": "DrillBlockValidPlacementCondition",
+      "type": "procedure",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "drill_block_valid_placement_condition",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Drill",
+      "type": "block",
+      "sortid": 38,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "drill"
+    },
+    {
+      "name": "DrillUpdateTick",
+      "type": "procedure",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "drill_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -346,26 +475,37 @@
     "en_us": {
       "item.random_stuff.rubie": "Rubie",
       "item.random_stuff.loot_token": "Loot Token",
-      "item.random_stuff.polised_saphire": "Polised Saphire",
-      "item.random_stuff.smiths_anvil_core": "Smiths Anvil Core",
-      "itemGroup.tabrandom_stuff_misc": "Random Stuff Misc",
       "item.random_stuff.amber": "Amber",
+      "itemGroup.tabrandom_stuff_misc": "Random Stuff Misc",
+      "item.random_stuff.master_sword": "Master Sword",
       "item.random_stuff.polihsed_rubie": "Polihsed Rubie",
+      "advancements.gemed.title": "Amber Gemmed",
       "item.random_stuff.saphire_netherite_leggings": "Saphire Netherite Leggings",
       "item.random_stuff.saphire": "Saphire",
-      "item.random_stuff.topaz": "Topaz",
-      "item.random_stuff.rubie_netherite_chestplate": "Rubie Netherite Body",
+      "advancements.random_stuff.title": "Random Stuff",
+      "advancements.apprentice_smith.descr": "get a Smiths anvil core",
+      "advancements.loot_obtained.title": "Loot Obtained",
       "item.random_stuff.saphire_netherite_helmet": "Saphire Netherite Helmet",
-      "item.random_stuff.jasper": "Jasper",
+      "block.random_stuff.gemstone_ore": "Gemstone Ore",
       "item.random_stuff.sand_paper": "Sand Paper",
-      "item.random_stuff.saphire_netherite_boots": "Saphire Netherite Boots",
-      "item.random_stuff.rubie_netherite_leggings": "Rubie Netherite Leggings",
-      "item.random_stuff.rubie_netherite_helmet": "Rubie Netherite Helmet",
-      "item.random_stuff.polished_amber": "Polished Amber",
-      "itemGroup.tabrandom_stuff_smith": "Random Stuff Smithing",
+      "advancements.loot_obtained.descr": "get a Loot Token",
+      "block.random_stuff.drill": "Drill",
       "item.random_stuff.saphire_netherite_chestplate": "Saphire Netherite Body",
       "item.random_stuff.polished_jasper": "Polished Jasper",
       "item.random_stuff.rubie_netherite_boots": "Rubie Netherite Boots",
+      "item.random_stuff.polised_saphire": "Polised Saphire",
+      "item.random_stuff.smiths_anvil_core": "Smiths Anvil Core",
+      "item.random_stuff.topaz": "Topaz",
+      "advancements.apprentice_smith.title": "Apprentice Smith",
+      "item.random_stuff.rubie_netherite_chestplate": "Rubie Netherite Body",
+      "item.random_stuff.jasper": "Jasper",
+      "item.random_stuff.saphire_netherite_boots": "Saphire Netherite Boots",
+      "item.random_stuff.rubie_netherite_leggings": "Rubie Netherite Leggings",
+      "item.random_stuff.rubie_netherite_helmet": "Rubie Netherite Helmet",
+      "advancements.random_stuff.descr": "lots of Random Stuff",
+      "item.random_stuff.polished_amber": "Polished Amber",
+      "advancements.gemed.descr": "get some Amber gems",
+      "itemGroup.tabrandom_stuff_smith": "Random Stuff Smithing",
       "item.random_stuff.polished_topaz": "Polished Topaz"
     }
   },
