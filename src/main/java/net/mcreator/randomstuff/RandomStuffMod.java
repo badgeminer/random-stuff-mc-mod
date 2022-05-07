@@ -28,6 +28,7 @@ import net.minecraft.network.FriendlyByteBuf;
 
 import net.mcreator.randomstuff.init.RandomStuffModTabs;
 import net.mcreator.randomstuff.init.RandomStuffModItems;
+import net.mcreator.randomstuff.init.RandomStuffModEntities;
 import net.mcreator.randomstuff.init.RandomStuffModBlocks;
 import net.mcreator.randomstuff.init.RandomStuffModBlockEntities;
 
@@ -49,7 +50,7 @@ public class RandomStuffMod {
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 		RandomStuffModBlocks.REGISTRY.register(bus);
 		RandomStuffModItems.REGISTRY.register(bus);
-
+		RandomStuffModEntities.REGISTRY.register(bus);
 		RandomStuffModBlockEntities.REGISTRY.register(bus);
 
 	}

@@ -7,6 +7,7 @@ package net.mcreator.randomstuff.init;
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.Item;
@@ -68,6 +69,9 @@ public class RandomStuffModItems {
 	public static final RegistryObject<Item> GEMSTONE_ORE = block(RandomStuffModBlocks.GEMSTONE_ORE, RandomStuffModTabs.TAB_RANDOM_STUFF_SMITH);
 	public static final RegistryObject<Item> DRILL = block(RandomStuffModBlocks.DRILL, RandomStuffModTabs.TAB_RANDOM_STUFF_MISC);
 	public static final RegistryObject<Item> WARP_STAFF = REGISTRY.register("warp_staff", () -> new WarpStaffItem());
+	public static final RegistryObject<Item> SHADOW_ARMOR = REGISTRY.register("shadow_armor_spawn_egg",
+			() -> new ForgeSpawnEggItem(RandomStuffModEntities.SHADOW_ARMOR, -16777216, -10092391,
+					new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
