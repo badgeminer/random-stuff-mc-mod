@@ -1,0 +1,9 @@
+{
+  "parent": "random_stuff:custom/relativity_wand",
+  "textures": {
+    "0": "random_stuff:blocks/obsidian",
+    "1": "random_stuff:blocks/spruce_log",
+    "2": "random_stuff:blocks/purple_stained_glass",
+    "particle": "random_stuff:items/upgrade_icon_map"
+  }
+}

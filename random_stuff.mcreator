@@ -467,6 +467,34 @@
           }
         ]
       }
+    },
+    {
+      "name": "WarpStaff",
+      "type": "item",
+      "sortid": 41,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "warp_staff"
+    },
+    {
+      "name": "WarpStaffRightclicked",
+      "type": "procedure",
+      "sortid": 42,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "warp_staff_rightclicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -494,6 +522,7 @@
       "item.random_stuff.saphire_netherite_chestplate": "Saphire Netherite Body",
       "item.random_stuff.polished_jasper": "Polished Jasper",
       "item.random_stuff.rubie_netherite_boots": "Rubie Netherite Boots",
+      "item.random_stuff.warp_staff": "Warp Staff",
       "item.random_stuff.polised_saphire": "Polised Saphire",
       "item.random_stuff.smiths_anvil_core": "Smiths Anvil Core",
       "item.random_stuff.topaz": "Topaz",
@@ -527,8 +556,7 @@
     "modid": "random_stuff",
     "modName": "random stuff",
     "version": "1.0.0",
-    "author": "Ben, MCreator",
-    "websiteURL": "https://mcreator.net",
+    "author": "Badgeminer2",
     "license": "Academic Free License v3.0",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,

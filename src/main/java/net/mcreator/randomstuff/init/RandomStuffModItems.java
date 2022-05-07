@@ -13,6 +13,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.BlockItem;
 
+import net.mcreator.randomstuff.item.WarpStaffItem;
 import net.mcreator.randomstuff.item.UnobtanibleIconItemItem;
 import net.mcreator.randomstuff.item.TopazItem;
 import net.mcreator.randomstuff.item.SmithsAnvilCoreItem;
@@ -66,6 +67,7 @@ public class RandomStuffModItems {
 	public static final RegistryObject<Item> MASTER_SWORD = REGISTRY.register("master_sword", () -> new MasterSwordItem());
 	public static final RegistryObject<Item> GEMSTONE_ORE = block(RandomStuffModBlocks.GEMSTONE_ORE, RandomStuffModTabs.TAB_RANDOM_STUFF_SMITH);
 	public static final RegistryObject<Item> DRILL = block(RandomStuffModBlocks.DRILL, RandomStuffModTabs.TAB_RANDOM_STUFF_MISC);
+	public static final RegistryObject<Item> WARP_STAFF = REGISTRY.register("warp_staff", () -> new WarpStaffItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
