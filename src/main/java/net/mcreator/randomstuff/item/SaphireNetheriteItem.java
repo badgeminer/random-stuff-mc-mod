@@ -66,7 +66,6 @@ public abstract class SaphireNetheriteItem extends ArmorItem {
 	public static class Helmet extends SaphireNetheriteItem {
 		public Helmet() {
 			super(EquipmentSlot.HEAD, new Item.Properties().tab(RandomStuffModTabs.TAB_RANDOM_STUFF_SMITH));
-			setRegistryName("saphire_netherite_helmet");
 		}
 
 		@Override
@@ -83,7 +82,6 @@ public abstract class SaphireNetheriteItem extends ArmorItem {
 	public static class Chestplate extends SaphireNetheriteItem {
 		public Chestplate() {
 			super(EquipmentSlot.CHEST, new Item.Properties().tab(RandomStuffModTabs.TAB_RANDOM_STUFF_SMITH));
-			setRegistryName("saphire_netherite_chestplate");
 		}
 
 		@Override
@@ -95,7 +93,6 @@ public abstract class SaphireNetheriteItem extends ArmorItem {
 	public static class Leggings extends SaphireNetheriteItem {
 		public Leggings() {
 			super(EquipmentSlot.LEGS, new Item.Properties().tab(RandomStuffModTabs.TAB_RANDOM_STUFF_SMITH));
-			setRegistryName("saphire_netherite_leggings");
 		}
 
 		@Override
@@ -107,7 +104,6 @@ public abstract class SaphireNetheriteItem extends ArmorItem {
 	public static class Boots extends SaphireNetheriteItem {
 		public Boots() {
 			super(EquipmentSlot.FEET, new Item.Properties().tab(RandomStuffModTabs.TAB_RANDOM_STUFF_SMITH));
-			setRegistryName("saphire_netherite_boots");
 		}
 
 		@Override

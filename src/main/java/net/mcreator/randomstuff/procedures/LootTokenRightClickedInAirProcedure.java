@@ -1,6 +1,6 @@
 package net.mcreator.randomstuff.procedures;
 
-import net.minecraftforge.fmllegacy.network.NetworkHooks;
+import net.minecraftforge.network.NetworkHooks;
 
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
@@ -33,17 +33,18 @@ public class LootTokenRightClickedInAirProcedure {
 		if (entity == null)
 			return;
 		double rand = 0;
-		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == RandomStuffModItems.LOOT_TOKEN) {
+		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == RandomStuffModItems.LOOT_TOKEN
+				.get()) {
 			if (entity instanceof LivingEntity _entity) {
 				ItemStack _setstack = new ItemStack(Blocks.AIR);
 				_setstack.setCount(1);
 				_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
-				if (_entity instanceof ServerPlayer _serverPlayer)
-					_serverPlayer.getInventory().setChanged();
+				if (_entity instanceof Player _player)
+					_player.getInventory().setChanged();
 			}
 			{
 				if (entity instanceof ServerPlayer _ent) {
-					BlockPos _bpos = new BlockPos((int) x, (int) y, (int) z);
+					BlockPos _bpos = new BlockPos(x, y, z);
 					NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
@@ -60,7 +61,7 @@ public class LootTokenRightClickedInAirProcedure {
 			rand = Math.random();
 			if (rand >= 0.9) {
 				if (entity instanceof ServerPlayer _player && _player.containerMenu instanceof Supplier _current
-						&& _current.get()instanceof Map _slots) {
+						&& _current.get() instanceof Map _slots) {
 					ItemStack _setstack = new ItemStack(Blocks.NETHERITE_BLOCK);
 					_setstack.setCount(1);
 					((Slot) _slots.get(0)).set(_setstack);
@@ -68,7 +69,7 @@ public class LootTokenRightClickedInAirProcedure {
 				}
 			} else if (rand >= 0.85) {
 				if (entity instanceof ServerPlayer _player && _player.containerMenu instanceof Supplier _current
-						&& _current.get()instanceof Map _slots) {
+						&& _current.get() instanceof Map _slots) {
 					ItemStack _setstack = new ItemStack(Items.TOTEM_OF_UNDYING);
 					_setstack.setCount(1);
 					((Slot) _slots.get(0)).set(_setstack);
@@ -76,7 +77,7 @@ public class LootTokenRightClickedInAirProcedure {
 				}
 			} else if (rand >= 0.8) {
 				if (entity instanceof ServerPlayer _player && _player.containerMenu instanceof Supplier _current
-						&& _current.get()instanceof Map _slots) {
+						&& _current.get() instanceof Map _slots) {
 					ItemStack _setstack = new ItemStack(Items.NETHER_STAR);
 					_setstack.setCount(1);
 					((Slot) _slots.get(0)).set(_setstack);
@@ -84,7 +85,7 @@ public class LootTokenRightClickedInAirProcedure {
 				}
 			} else if (rand >= 0.75) {
 				if (entity instanceof ServerPlayer _player && _player.containerMenu instanceof Supplier _current
-						&& _current.get()instanceof Map _slots) {
+						&& _current.get() instanceof Map _slots) {
 					ItemStack _setstack = new ItemStack(Items.ELYTRA);
 					_setstack.setCount(1);
 					((Slot) _slots.get(0)).set(_setstack);
@@ -92,40 +93,40 @@ public class LootTokenRightClickedInAirProcedure {
 				}
 			} else if (rand >= 0.7) {
 				if (entity instanceof ServerPlayer _player && _player.containerMenu instanceof Supplier _current
-						&& _current.get()instanceof Map _slots) {
-					ItemStack _setstack = new ItemStack(RandomStuffModItems.POLISHED_AMBER);
+						&& _current.get() instanceof Map _slots) {
+					ItemStack _setstack = new ItemStack(RandomStuffModItems.POLISHED_AMBER.get());
 					_setstack.setCount(1);
 					((Slot) _slots.get(0)).set(_setstack);
 					_player.containerMenu.broadcastChanges();
 				}
 			} else if (rand >= 0.6) {
 				if (entity instanceof ServerPlayer _player && _player.containerMenu instanceof Supplier _current
-						&& _current.get()instanceof Map _slots) {
-					ItemStack _setstack = new ItemStack(RandomStuffModItems.POLIHSED_RUBIE);
+						&& _current.get() instanceof Map _slots) {
+					ItemStack _setstack = new ItemStack(RandomStuffModItems.POLIHSED_RUBIE.get());
 					_setstack.setCount(1);
 					((Slot) _slots.get(0)).set(_setstack);
 					_player.containerMenu.broadcastChanges();
 				}
 			} else if (rand >= 0.5) {
 				if (entity instanceof ServerPlayer _player && _player.containerMenu instanceof Supplier _current
-						&& _current.get()instanceof Map _slots) {
-					ItemStack _setstack = new ItemStack(RandomStuffModItems.POLISED_SAPHIRE);
+						&& _current.get() instanceof Map _slots) {
+					ItemStack _setstack = new ItemStack(RandomStuffModItems.POLISED_SAPHIRE.get());
 					_setstack.setCount(1);
 					((Slot) _slots.get(0)).set(_setstack);
 					_player.containerMenu.broadcastChanges();
 				}
 			} else if (rand >= 0.4) {
 				if (entity instanceof ServerPlayer _player && _player.containerMenu instanceof Supplier _current
-						&& _current.get()instanceof Map _slots) {
-					ItemStack _setstack = new ItemStack(RandomStuffModItems.POLISHED_JASPER);
+						&& _current.get() instanceof Map _slots) {
+					ItemStack _setstack = new ItemStack(RandomStuffModItems.POLISHED_JASPER.get());
 					_setstack.setCount(1);
 					((Slot) _slots.get(0)).set(_setstack);
 					_player.containerMenu.broadcastChanges();
 				}
 			} else if (rand >= 0.3) {
 				if (entity instanceof ServerPlayer _player && _player.containerMenu instanceof Supplier _current
-						&& _current.get()instanceof Map _slots) {
-					ItemStack _setstack = new ItemStack(RandomStuffModItems.POLISHED_TOPAZ);
+						&& _current.get() instanceof Map _slots) {
+					ItemStack _setstack = new ItemStack(RandomStuffModItems.POLISHED_TOPAZ.get());
 					_setstack.setCount(1);
 					((Slot) _slots.get(0)).set(_setstack);
 					_player.containerMenu.broadcastChanges();

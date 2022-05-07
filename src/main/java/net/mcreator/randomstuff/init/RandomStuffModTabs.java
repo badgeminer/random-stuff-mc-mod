@@ -18,7 +18,7 @@ public class RandomStuffModTabs {
 		TAB_RANDOM_STUFF_SMITH = new CreativeModeTab("tabrandom_stuff_smith") {
 			@Override
 			public ItemStack makeIcon() {
-				return new ItemStack(RandomStuffModItems.SMITHS_ANVIL_CORE);
+				return new ItemStack(RandomStuffModItems.SMITHS_ANVIL_CORE.get());
 			}
 
 			@OnlyIn(Dist.CLIENT)
@@ -29,7 +29,7 @@ public class RandomStuffModTabs {
 		TAB_RANDOM_STUFF_MISC = new CreativeModeTab("tabrandom_stuff_misc") {
 			@Override
 			public ItemStack makeIcon() {
-				return new ItemStack(RandomStuffModItems.UNOBTANIBLE_ICON_ITEM);
+				return new ItemStack(RandomStuffModItems.UNOBTANIBLE_ICON_ITEM.get());
 			}
 
 			@OnlyIn(Dist.CLIENT)

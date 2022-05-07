@@ -11,10 +11,13 @@ import net.minecraft.client.Minecraft;
 
 import net.mcreator.randomstuff.world.inventory.DrillGuiMenu;
 
+import java.util.HashMap;
+
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.systems.RenderSystem;
 
 public class DrillGuiScreen extends AbstractContainerScreen<DrillGuiMenu> {
+	private final static HashMap<String, Object> guistate = DrillGuiMenu.guistate;
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;

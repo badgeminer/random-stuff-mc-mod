@@ -11,10 +11,13 @@ import net.minecraft.client.Minecraft;
 
 import net.mcreator.randomstuff.world.inventory.LootMenu;
 
+import java.util.HashMap;
+
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.systems.RenderSystem;
 
 public class LootScreen extends AbstractContainerScreen<LootMenu> {
+	private final static HashMap<String, Object> guistate = LootMenu.guistate;
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;

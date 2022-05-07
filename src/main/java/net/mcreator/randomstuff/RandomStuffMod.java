@@ -16,15 +16,20 @@ package net.mcreator.randomstuff;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
-import net.minecraftforge.fmllegacy.network.simple.SimpleChannel;
-import net.minecraftforge.fmllegacy.network.NetworkRegistry;
-import net.minecraftforge.fmllegacy.network.NetworkEvent;
+import net.minecraftforge.network.simple.SimpleChannel;
+import net.minecraftforge.network.NetworkRegistry;
+import net.minecraftforge.network.NetworkEvent;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.IEventBus;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
 import net.mcreator.randomstuff.init.RandomStuffModTabs;
+import net.mcreator.randomstuff.init.RandomStuffModItems;
+import net.mcreator.randomstuff.init.RandomStuffModBlocks;
+import net.mcreator.randomstuff.init.RandomStuffModBlockEntities;
 
 import java.util.function.Supplier;
 import java.util.function.Function;
@@ -41,6 +46,12 @@ public class RandomStuffMod {
 
 	public RandomStuffMod() {
 		RandomStuffModTabs.load();
+		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+		RandomStuffModBlocks.REGISTRY.register(bus);
+		RandomStuffModItems.REGISTRY.register(bus);
+
+		RandomStuffModBlockEntities.REGISTRY.register(bus);
+
 	}
 
 	public static <T> void addNetworkMessage(Class<T> messageType, BiConsumer<T, FriendlyByteBuf> encoder, Function<FriendlyByteBuf, T> decoder,

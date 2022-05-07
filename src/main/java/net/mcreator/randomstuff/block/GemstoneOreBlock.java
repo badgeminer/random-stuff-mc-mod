@@ -12,7 +12,6 @@ import net.minecraft.core.BlockPos;
 public class GemstoneOreBlock extends Block {
 	public GemstoneOreBlock() {
 		super(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.GRAVEL).strength(1f, 10f));
-		setRegistryName("gemstone_ore");
 	}
 
 	@Override

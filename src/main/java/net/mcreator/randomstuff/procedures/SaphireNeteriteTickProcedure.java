@@ -14,17 +14,14 @@ public class SaphireNeteriteTickProcedure {
 		if (entity == null)
 			return;
 		if (Math.random() >= 0.8) {
-			if (ItemTags.getAllTags().getTagOrEmpty(new ResourceLocation("forge:saphire_netherite_tag")).contains(
-					(entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY).getItem())
-					&& ItemTags.getAllTags().getTagOrEmpty(new ResourceLocation("forge:saphire_netherite_tag"))
-							.contains((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.LEGS) : ItemStack.EMPTY)
-									.getItem())
-					&& ItemTags.getAllTags().getTagOrEmpty(new ResourceLocation("forge:saphire_netherite_tag")).contains(
-							(entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST) : ItemStack.EMPTY)
-									.getItem())
-					&& ItemTags.getAllTags().getTagOrEmpty(new ResourceLocation("forge:saphire_netherite_tag"))
-							.contains((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY)
-									.getItem())) {
+			if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY)
+					.is(ItemTags.create(new ResourceLocation("forge:saphire_netherite_tag")))
+					&& (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.LEGS) : ItemStack.EMPTY)
+							.is(ItemTags.create(new ResourceLocation("forge:saphire_netherite_tag")))
+					&& (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST) : ItemStack.EMPTY)
+							.is(ItemTags.create(new ResourceLocation("forge:saphire_netherite_tag")))
+					&& (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY)
+							.is(ItemTags.create(new ResourceLocation("forge:saphire_netherite_tag")))) {
 				if (entity instanceof LivingEntity _entity)
 					_entity.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 120, 4, (true), (false)));
 			}

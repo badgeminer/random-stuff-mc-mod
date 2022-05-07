@@ -1,7 +1,7 @@
 
 package net.mcreator.randomstuff.block;
 
-import net.minecraftforge.fmllegacy.network.NetworkHooks;
+import net.minecraftforge.network.NetworkHooks;
 
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.level.storage.loot.LootContext;
@@ -50,7 +50,6 @@ public class DrillBlock extends Block
 			EntityBlock {
 	public DrillBlock() {
 		super(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).strength(1f, 10f));
-		setRegistryName("drill");
 	}
 
 	@Override
@@ -88,7 +87,7 @@ public class DrillBlock extends Block
 	@Override
 	public void onPlace(BlockState blockstate, Level world, BlockPos pos, BlockState oldState, boolean moving) {
 		super.onPlace(blockstate, world, pos, oldState, moving);
-		world.getBlockTicks().scheduleTick(pos, this, 1);
+		world.scheduleTick(pos, this, 1);
 	}
 
 	@Override
@@ -99,7 +98,7 @@ public class DrillBlock extends Block
 		int z = pos.getZ();
 
 		DrillUpdateTickProcedure.execute(world, x, y, z);
-		world.getBlockTicks().scheduleTick(pos, this, 1);
+		world.scheduleTick(pos, this, 1);
 	}
 
 	@Override

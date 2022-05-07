@@ -4,31 +4,22 @@
  */
 package net.mcreator.randomstuff.init;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.registries.RegistryObject;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.DeferredRegister;
 
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.Block;
 
 import net.mcreator.randomstuff.block.entity.DrillBlockEntity;
+import net.mcreator.randomstuff.RandomStuffMod;
 
-import java.util.List;
-import java.util.ArrayList;
-
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class RandomStuffModBlockEntities {
-	private static final List<BlockEntityType<?>> REGISTRY = new ArrayList<>();
-	public static final BlockEntityType<?> DRILL = register("random_stuff:drill", RandomStuffModBlocks.DRILL, DrillBlockEntity::new);
+	public static final DeferredRegister<BlockEntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITIES, RandomStuffMod.MODID);
+	public static final RegistryObject<BlockEntityType<?>> DRILL = register("drill", RandomStuffModBlocks.DRILL, DrillBlockEntity::new);
 
-	private static BlockEntityType<?> register(String registryname, Block block, BlockEntityType.BlockEntitySupplier<?> supplier) {
-		BlockEntityType<?> blockEntityType = BlockEntityType.Builder.of(supplier, block).build(null).setRegistryName(registryname);
-		REGISTRY.add(blockEntityType);
-		return blockEntityType;
-	}
-
-	@SubscribeEvent
-	public static void registerTileEntity(RegistryEvent.Register<BlockEntityType<?>> event) {
-		event.getRegistry().registerAll(REGISTRY.toArray(new BlockEntityType[0]));
+	private static RegistryObject<BlockEntityType<?>> register(String registryname, RegistryObject<Block> block,
+			BlockEntityType.BlockEntitySupplier<?> supplier) {
+		return REGISTRY.register(registryname, () -> BlockEntityType.Builder.of(supplier, block.get()).build(null));
 	}
 }

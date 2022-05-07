@@ -35,6 +35,5 @@ public class MasterSwordItem extends SwordItem {
 				return Ingredient.EMPTY;
 			}
 		}, 3, -3f, new Item.Properties().tab(RandomStuffModTabs.TAB_RANDOM_STUFF_MISC));
-		setRegistryName("master_sword");
 	}
 }

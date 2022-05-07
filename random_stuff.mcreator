@@ -475,13 +475,14 @@
     "en_us": {
       "item.random_stuff.rubie": "Rubie",
       "item.random_stuff.loot_token": "Loot Token",
-      "item.random_stuff.amber": "Amber",
       "itemGroup.tabrandom_stuff_misc": "Random Stuff Misc",
+      "item.random_stuff.amber": "Amber",
+      "item.random_stuff.unobtanible_icon_item": "q",
       "item.random_stuff.master_sword": "Master Sword",
       "item.random_stuff.polihsed_rubie": "Polihsed Rubie",
       "advancements.gemed.title": "Amber Gemmed",
-      "item.random_stuff.saphire_netherite_leggings": "Saphire Netherite Leggings",
       "item.random_stuff.saphire": "Saphire",
+      "item.random_stuff.saphire_netherite_leggings": "Saphire Netherite Leggings",
       "advancements.random_stuff.title": "Random Stuff",
       "advancements.apprentice_smith.descr": "get a Smiths anvil core",
       "advancements.loot_obtained.title": "Loot Obtained",
@@ -535,9 +536,10 @@
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [],
-    "currentGenerator": "forge-1.17.1",
+    "currentGenerator": "forge-1.18.2",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "net.mcreator.randomstuff",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202100353117
+  "mcreatorVersion": 202200119518
 }
