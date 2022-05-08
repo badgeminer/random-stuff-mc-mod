@@ -32,7 +32,6 @@ import net.mcreator.randomstuff.init.RandomStuffModItems;
 import net.mcreator.randomstuff.init.RandomStuffModEntities;
 import net.mcreator.randomstuff.init.RandomStuffModBlocks;
 import net.mcreator.randomstuff.init.RandomStuffModBlockEntities;
-import net.mcreator.randomstuff.init.RandomStuffModBiomes;
 
 import java.util.function.Supplier;
 import java.util.function.Function;
@@ -56,7 +55,6 @@ public class RandomStuffMod {
 		RandomStuffModBlockEntities.REGISTRY.register(bus);
 
 		RandomStuffModPotions.REGISTRY.register(bus);
-		RandomStuffModBiomes.REGISTRY.register(bus);
 
 	}
 

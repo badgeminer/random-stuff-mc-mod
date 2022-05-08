@@ -1,19 +1,20 @@
 
 package net.mcreator.randomstuff.client.renderer;
 
-public class NoobRenderer extends HumanoidMobRenderer<NoobEntity, HumanoidModel<NoobEntity>> {
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.client.renderer.entity.MobRenderer;
+import net.minecraft.client.renderer.entity.EntityRendererProvider;
 
+import net.mcreator.randomstuff.entity.NoobEntity;
+import net.mcreator.randomstuff.client.model.Modelsteve;
+
+public class NoobRenderer extends MobRenderer<NoobEntity, Modelsteve<NoobEntity>> {
 	public NoobRenderer(EntityRendererProvider.Context context) {
-		super(context, new HumanoidModel(context.bakeLayer(ModelLayers.PLAYER)), 0.5f);
-
-		this.addLayer(new HumanoidArmorLayer(this, new HumanoidModel(context.bakeLayer(ModelLayers.PLAYER_INNER_ARMOR)),
-				new HumanoidModel(context.bakeLayer(ModelLayers.PLAYER_OUTER_ARMOR))));
-
+		super(context, new Modelsteve(context.bakeLayer(Modelsteve.LAYER_LOCATION)), 0.5f);
 	}
 
 	@Override
 	public ResourceLocation getTextureLocation(NoobEntity entity) {
-		return new ResourceLocation("random_stuff:textures/daily_left_wing.png");
+		return new ResourceLocation("random_stuff:textures/noob-1234-20274971.png");
 	}
-
 }
