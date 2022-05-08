@@ -1,8 +1,8 @@
 package net.mcreator.randomstuff.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
-
-import javax.annotation.Nullable;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.core.BlockPos;
 
 public class NoobEntityDiesProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
