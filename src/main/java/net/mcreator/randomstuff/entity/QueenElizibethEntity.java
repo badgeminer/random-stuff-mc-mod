@@ -1,65 +1,17 @@
 
 package net.mcreator.randomstuff.entity;
 
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.network.PlayMessages;
-import net.minecraftforge.network.NetworkHooks;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.world.BiomeLoadingEvent;
-import net.minecraftforge.common.ForgeMod;
-
-import net.minecraft.world.level.pathfinder.BlockPathTypes;
-import net.minecraft.world.level.levelgen.Heightmap;
-import net.minecraft.world.level.biome.MobSpawnSettings;
-import net.minecraft.world.level.LevelReader;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.projectile.ThrownPotion;
-import net.minecraft.world.entity.projectile.AbstractArrow;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.monster.Monster;
-import net.minecraft.world.entity.animal.Animal;
-import net.minecraft.world.entity.ai.navigation.WaterBoundPathNavigation;
-import net.minecraft.world.entity.ai.navigation.PathNavigation;
-import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
-import net.minecraft.world.entity.ai.goal.TemptGoal;
-import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
-import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
-import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
-import net.minecraft.world.entity.ai.goal.FloatGoal;
-import net.minecraft.world.entity.ai.control.MoveControl;
+import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
-import net.minecraft.world.entity.SpawnPlacements;
-import net.minecraft.world.entity.MobType;
-import net.minecraft.world.entity.MobSpawnType;
-import net.minecraft.world.entity.MobCategory;
-import net.minecraft.world.entity.Mob;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.AreaEffectCloud;
-import net.minecraft.world.entity.AgeableMob;
-import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.Difficulty;
-import net.minecraft.util.Mth;
+import net.minecraft.world.level.material.Material;
+import net.minecraft.nbt.Tag;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.protocol.Packet;
-import net.minecraft.network.chat.TextComponent;
-import net.minecraft.core.particles.ParticleTypes;
 
-import net.mcreator.randomstuff.procedures.QueenElizibethEntityDiesProcedure;
-import net.mcreator.randomstuff.init.RandomStuffModEntities;
-
-import java.util.List;
+import javax.annotation.Nullable;
 
 @Mod.EventBusSubscriber
 public class QueenElizibethEntity extends Animal {
+
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
 		event.getSpawns().getSpawner(MobCategory.MONSTER)
@@ -74,29 +26,37 @@ public class QueenElizibethEntity extends Animal {
 		super(type, world);
 		xpReward = 0;
 		setNoAi(false);
+
 		setCustomName(new TextComponent("The Queen"));
 		setCustomNameVisible(true);
+
 		this.setPathfindingMalus(BlockPathTypes.WATER, 0);
 		this.moveControl = new MoveControl(this) {
 			@Override
 			public void tick() {
 				if (QueenElizibethEntity.this.isInWater())
 					QueenElizibethEntity.this.setDeltaMovement(QueenElizibethEntity.this.getDeltaMovement().add(0, 0.005, 0));
+
 				if (this.operation == MoveControl.Operation.MOVE_TO && !QueenElizibethEntity.this.getNavigation().isDone()) {
 					double dx = this.wantedX - QueenElizibethEntity.this.getX();
 					double dy = this.wantedY - QueenElizibethEntity.this.getY();
 					double dz = this.wantedZ - QueenElizibethEntity.this.getZ();
+
 					float f = (float) (Mth.atan2(dz, dx) * (double) (180 / Math.PI)) - 90;
 					float f1 = (float) (this.speedModifier * QueenElizibethEntity.this.getAttribute(Attributes.MOVEMENT_SPEED).getValue());
+
 					QueenElizibethEntity.this.setYRot(this.rotlerp(QueenElizibethEntity.this.getYRot(), f, 10));
 					QueenElizibethEntity.this.yBodyRot = QueenElizibethEntity.this.getYRot();
 					QueenElizibethEntity.this.yHeadRot = QueenElizibethEntity.this.getYRot();
+
 					if (QueenElizibethEntity.this.isInWater()) {
 						QueenElizibethEntity.this.setSpeed((float) QueenElizibethEntity.this.getAttribute(Attributes.MOVEMENT_SPEED).getValue());
+
 						float f2 = -(float) (Mth.atan2(dy, (float) Math.sqrt(dx * dx + dz * dz)) * (180 / Math.PI));
 						f2 = Mth.clamp(Mth.wrapDegrees(f2), -85, 85);
 						QueenElizibethEntity.this.setXRot(this.rotlerp(QueenElizibethEntity.this.getXRot(), f2, 5));
 						float f3 = Mth.cos(QueenElizibethEntity.this.getXRot() * (float) (Math.PI / 180.0));
+
 						QueenElizibethEntity.this.setZza(f3 * f1);
 						QueenElizibethEntity.this.setYya((float) (f1 * dy));
 					} else {
@@ -124,17 +84,21 @@ public class QueenElizibethEntity extends Animal {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
+
 		this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 10, true) {
+
 			@Override
 			protected double getAttackReachSqr(LivingEntity entity) {
 				return (double) (4.0 + entity.getBbWidth() * entity.getBbWidth());
 			}
+
 		});
 		this.goalSelector.addGoal(2, new TemptGoal(this, 10000000, Ingredient.of(Items.TOTEM_OF_UNDYING), false));
 		this.goalSelector.addGoal(3, new RandomStrollGoal(this, 10));
 		this.targetSelector.addGoal(4, new HurtByTargetGoal(this).setAlertOthers());
 		this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
 		this.goalSelector.addGoal(6, new FloatGoal(this));
+
 	}
 
 	@Override
@@ -189,7 +153,9 @@ public class QueenElizibethEntity extends Animal {
 	@Override
 	public void die(DamageSource source) {
 		super.die(source);
-		QueenElizibethEntityDiesProcedure.execute(this.level, this.getX(), this.getY(), this.getZ());
+		QueenElizibethEntityDiesProcedure.execute(
+
+		);
 	}
 
 	@Override
@@ -221,6 +187,7 @@ public class QueenElizibethEntity extends Animal {
 
 	public void aiStep() {
 		super.aiStep();
+
 		double x = this.getX();
 		double y = this.getY();
 		double z = this.getZ();
@@ -241,6 +208,7 @@ public class QueenElizibethEntity extends Animal {
 		SpawnPlacements.register(RandomStuffModEntities.QUEEN_ELIZIBETH.get(), SpawnPlacements.Type.ON_GROUND,
 				Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL
 						&& Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)));
+
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {
@@ -249,8 +217,12 @@ public class QueenElizibethEntity extends Animal {
 		builder = builder.add(Attributes.MAX_HEALTH, 1024);
 		builder = builder.add(Attributes.ARMOR, 100);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 0);
+
 		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 1000);
+
 		builder = builder.add(ForgeMod.SWIM_SPEED.get(), 0.3);
+
 		return builder;
 	}
+
 }

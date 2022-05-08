@@ -508,7 +508,7 @@
       "name": "ShadowArmor",
       "type": "livingentity",
       "sortid": 44,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "shadow_armor"
     },
@@ -516,7 +516,7 @@
       "name": "Eye",
       "type": "item",
       "sortid": 45,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "eye",
       "path": "~/gear"
@@ -534,7 +534,7 @@
       "name": "Boobitem",
       "type": "item",
       "sortid": 45,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "boobitem",
       "path": "~/gear"
@@ -551,7 +551,7 @@
       "name": "EarthGem",
       "type": "item",
       "sortid": 45,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "earth_gem",
       "path": "~/gear"
@@ -568,7 +568,7 @@
       "name": "Ruby",
       "type": "item",
       "sortid": 45,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "ruby",
       "path": "~/gear"
@@ -589,7 +589,7 @@
       "name": "Ghost",
       "type": "livingentity",
       "sortid": 45,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "ghost"
     },
