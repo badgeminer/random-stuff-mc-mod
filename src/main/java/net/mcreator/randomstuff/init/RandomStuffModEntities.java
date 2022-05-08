@@ -18,6 +18,7 @@ import net.minecraft.world.entity.Entity;
 
 import net.mcreator.randomstuff.entity.ShadowArmorEntity;
 import net.mcreator.randomstuff.entity.NoobEntity;
+import net.mcreator.randomstuff.entity.GhostEntity;
 import net.mcreator.randomstuff.RandomStuffMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -26,6 +27,11 @@ public class RandomStuffModEntities {
 	public static final RegistryObject<EntityType<ShadowArmorEntity>> SHADOW_ARMOR = register("shadow_armor",
 			EntityType.Builder.<ShadowArmorEntity>of(ShadowArmorEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
 					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ShadowArmorEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<GhostEntity>> GHOST = register("ghost",
+			EntityType.Builder.<GhostEntity>of(GhostEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
+					.setUpdateInterval(3).setCustomClientFactory(GhostEntity::new)
 
 					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<NoobEntity>> NOOB = register("noob",
@@ -40,6 +46,7 @@ public class RandomStuffModEntities {
 	public static void init(FMLCommonSetupEvent event) {
 		event.enqueueWork(() -> {
 			ShadowArmorEntity.init();
+			GhostEntity.init();
 			NoobEntity.init();
 		});
 	}
@@ -47,6 +54,7 @@ public class RandomStuffModEntities {
 	@SubscribeEvent
 	public static void registerAttributes(EntityAttributeCreationEvent event) {
 		event.put(SHADOW_ARMOR.get(), ShadowArmorEntity.createAttributes().build());
+		event.put(GHOST.get(), GhostEntity.createAttributes().build());
 		event.put(NOOB.get(), NoobEntity.createAttributes().build());
 	}
 }

@@ -2,22 +2,25 @@
   "_fv": 28,
   "_type": "livingentity",
   "definition": {
-    "mobName": "Shadow Armor",
+    "mobName": "Ghost",
     "mobLabel": "",
-    "mobModelName": "ModelshadowArmor",
-    "mobModelTexture": "shadow_armor.png",
-    "mobModelGlowTexture": "",
+    "mobModelName": "Modelsteve",
+    "mobModelTexture": "811f8dae76dd7890612f9fee95dcd0b3b37f36a1984f28d7d5bc2656728cbf.png",
+    "mobModelGlowTexture": "glow.png",
+    "transparentModelCondition": {
+      "name": "GhostTransparentEntityModelCondition"
+    },
     "modelWidth": 0.6,
     "modelHeight": 1.8,
     "modelShadowSize": 0.5,
     "mountedYOffset": 0.0,
     "hasSpawnEgg": true,
     "spawnEggBaseColor": {
-      "value": -16777216,
+      "value": -1,
       "falpha": 0.0
     },
     "spawnEggDotColor": {
-      "value": -10092391,
+      "value": -65536,
       "falpha": 0.0
     },
     "creativeTab": {
@@ -46,14 +49,14 @@
     },
     "mobBehaviourType": "Mob",
     "mobCreatureType": "UNDEFINED",
-    "attackStrength": 5,
-    "attackKnockback": 0.1,
-    "knockbackResistance": 0.1,
-    "movementSpeed": 0.30000000000000004,
-    "armorBaseValue": 0.30000000000000004,
+    "attackStrength": 3,
+    "attackKnockback": 0.0,
+    "knockbackResistance": 0.0,
+    "movementSpeed": 0.3,
+    "armorBaseValue": 0.0,
     "trackingRange": 64,
-    "health": 50,
-    "xpAmount": 14,
+    "health": 10,
+    "xpAmount": 0,
     "waterMob": false,
     "flyingMob": false,
     "guiBoundTo": "<NONE>",
@@ -111,15 +114,11 @@
     "rangedItemType": "Default item",
     "spawnThisMob": true,
     "doesDespawnWhenIdle": true,
-    "spawningProbability": 13,
+    "spawningProbability": 20,
     "mobSpawningType": "monster",
     "minNumberOfMobsPerGroup": 4,
     "maxNumberOfMobsPerGroup": 4,
-    "restrictionBiomes": [
-      {
-        "value": "void"
-      }
-    ],
+    "restrictionBiomes": [],
     "spawnInDungeons": false
   }
 }

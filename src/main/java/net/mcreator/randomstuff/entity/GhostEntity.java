@@ -10,24 +10,20 @@ import net.minecraft.sounds.SoundEvent;
 import javax.annotation.Nullable;
 
 @Mod.EventBusSubscriber
-public class ShadowArmorEntity extends Monster {
-
-	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("the_void"));
+public class GhostEntity extends Monster {
 
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
-		if (SPAWN_BIOMES.contains(event.getName()))
-			event.getSpawns().getSpawner(MobCategory.MONSTER)
-					.add(new MobSpawnSettings.SpawnerData(RandomStuffModEntities.SHADOW_ARMOR.get(), 13, 4, 4));
+		event.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(RandomStuffModEntities.GHOST.get(), 20, 4, 4));
 	}
 
-	public ShadowArmorEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(RandomStuffModEntities.SHADOW_ARMOR.get(), world);
+	public GhostEntity(PlayMessages.SpawnEntity packet, Level world) {
+		this(RandomStuffModEntities.GHOST.get(), world);
 	}
 
-	public ShadowArmorEntity(EntityType<ShadowArmorEntity> type, Level world) {
+	public GhostEntity(EntityType<GhostEntity> type, Level world) {
 		super(type, world);
-		xpReward = 14;
+		xpReward = 0;
 		setNoAi(false);
 
 	}
@@ -72,7 +68,7 @@ public class ShadowArmorEntity extends Monster {
 	}
 
 	public static void init() {
-		SpawnPlacements.register(RandomStuffModEntities.SHADOW_ARMOR.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+		SpawnPlacements.register(RandomStuffModEntities.GHOST.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
 				(entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL
 						&& Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)));
 
@@ -81,13 +77,9 @@ public class ShadowArmorEntity extends Monster {
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
-		builder = builder.add(Attributes.MAX_HEALTH, 50);
-		builder = builder.add(Attributes.ARMOR, 0.3);
-		builder = builder.add(Attributes.ATTACK_DAMAGE, 5);
-
-		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 0.1);
-
-		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 0.1);
+		builder = builder.add(Attributes.MAX_HEALTH, 10);
+		builder = builder.add(Attributes.ARMOR, 0);
+		builder = builder.add(Attributes.ATTACK_DAMAGE, 3);
 
 		return builder;
 	}

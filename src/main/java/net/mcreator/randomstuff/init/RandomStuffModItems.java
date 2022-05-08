@@ -78,8 +78,10 @@ public class RandomStuffModItems {
 					new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> EYE = REGISTRY.register("eye", () -> new EyeItem());
 	public static final RegistryObject<Item> BOOBITEM = REGISTRY.register("boobitem", () -> new BoobitemItem());
-	public static final RegistryObject<Item> RUBY = REGISTRY.register("ruby", () -> new RubyItem());
 	public static final RegistryObject<Item> EARTH_GEM = REGISTRY.register("earth_gem", () -> new EarthGemItem());
+	public static final RegistryObject<Item> RUBY = REGISTRY.register("ruby", () -> new RubyItem());
+	public static final RegistryObject<Item> GHOST = REGISTRY.register("ghost_spawn_egg",
+			() -> new ForgeSpawnEggItem(RandomStuffModEntities.GHOST, -1, -65536, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> NOOB = REGISTRY.register("noob_spawn_egg",
 			() -> new ForgeSpawnEggItem(RandomStuffModEntities.NOOB, -11776241, -16465639, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 

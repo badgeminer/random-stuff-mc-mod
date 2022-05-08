@@ -513,28 +513,13 @@
       "registry_name": "shadow_armor"
     },
     {
-      "name": "NoobHaven",
-      "type": "biome",
+      "name": "Eye",
+      "type": "item",
       "sortid": 45,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "noob_haven"
-    },
-    {
-      "name": "Battle",
-      "type": "potion",
-      "sortid": 46,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "battle"
-    },
-    {
-      "name": "LandOfNoobs",
-      "type": "achievement",
-      "sortid": 47,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "land_of_noobs"
+      "registry_name": "eye",
+      "path": "~/gear"
     },
     {
       "name": "Noob",
@@ -543,15 +528,6 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "noob",
-      "path": "~/gear"
-    },
-    {
-      "name": "Eye",
-      "type": "item",
-      "sortid": 45,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "eye",
       "path": "~/gear"
     },
     {
@@ -564,13 +540,12 @@
       "path": "~/gear"
     },
     {
-      "name": "Ruby",
-      "type": "item",
-      "sortid": 45,
+      "name": "Battle",
+      "type": "potion",
+      "sortid": 46,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "ruby",
-      "path": "~/gear"
+      "registry_name": "battle"
     },
     {
       "name": "EarthGem",
@@ -580,6 +555,51 @@
       "locked_code": false,
       "registry_name": "earth_gem",
       "path": "~/gear"
+    },
+    {
+      "name": "NoobHaven",
+      "type": "biome",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "noob_haven"
+    },
+    {
+      "name": "LandOfNoobs",
+      "type": "achievement",
+      "sortid": 47,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "land_of_noobs"
+    },
+    {
+      "name": "Ruby",
+      "type": "item",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ruby",
+      "path": "~/gear"
+    },
+    {
+      "name": "GhostTransparentEntityModelCondition",
+      "type": "procedure",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ghost_transparent_entity_model_condition",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": []
+      }
+    },
+    {
+      "name": "Ghost",
+      "type": "livingentity",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ghost"
     }
   ],
   "variable_elements": [],
@@ -592,24 +612,20 @@
       "item.random_stuff.master_sword": "Master Sword",
       "item.random_stuff.polihsed_rubie": "Polihsed Rubie",
       "item.random_stuff.saphire": "Saphire",
-      "item.random_stuff.boobitem": "Boobitem",
       "advancements.loot_obtained.title": "Loot Obtained",
       "advancements.loot_obtained.descr": "get a Loot Token",
       "block.random_stuff.drill": "Drill",
       "entity.random_stuff.shadow_armor": "Shadow Armor",
       "item.random_stuff.polished_jasper": "Polished Jasper",
       "item.random_stuff.rubie_netherite_boots": "Rubie Netherite Boots",
-      "item.minecraft.potion.effect.battle": "Battle Potion",
       "item.random_stuff.warp_staff": "Warp Staff",
       "item.random_stuff.polised_saphire": "Polised Saphire",
       "item.random_stuff.topaz": "Topaz",
-      "item.random_stuff.ruby": "Ruby Element",
       "item.random_stuff.saphire_netherite_boots": "Saphire Netherite Boots",
       "advancements.random_stuff.descr": "lots of Random Stuff",
       "item.random_stuff.rubie_netherite_helmet": "Rubie Netherite Helmet",
       "item.random_stuff.polished_amber": "Polished Amber",
       "itemGroup.tabrandom_stuff_smith": "Random Stuff Smithing",
-      "biome.random_stuff.noob_haven": "Noob Haven",
       "item.random_stuff.polished_topaz": "Polished Topaz",
       "itemGroup.tabrandom_stuff_misc": "Random Stuff Misc",
       "item.random_stuff.unobtanible_icon_item": "q",
@@ -617,26 +633,17 @@
       "item.random_stuff.saphire_netherite_leggings": "Saphire Netherite Leggings",
       "advancements.random_stuff.title": "Random Stuff",
       "advancements.apprentice_smith.descr": "get a Smiths anvil core",
-      "advancements.land_of_noobs.descr": "gather fish",
       "item.random_stuff.saphire_netherite_helmet": "Saphire Netherite Helmet",
       "block.random_stuff.gemstone_ore": "Gemstone Ore",
-      "item.minecraft.splash_potion.effect.battle": "_",
       "item.random_stuff.sand_paper": "Sand Paper",
-      "entity.random_stuff.noob": "Noob",
       "item.random_stuff.saphire_netherite_chestplate": "Saphire Netherite Body",
-      "item.random_stuff.eye": "Eye",
-      "item.minecraft.tipped_arrow.effect.battle": "_",
       "item.random_stuff.smiths_anvil_core": "Smiths Anvil Core",
       "item.random_stuff.shadow_armor_spawn_egg": "Shadow Armor Spawn Egg",
-      "advancements.land_of_noobs.title": "Land Of Noobs",
       "advancements.apprentice_smith.title": "Apprentice Smith",
       "item.random_stuff.rubie_netherite_chestplate": "Rubie Netherite Body",
       "item.random_stuff.jasper": "Jasper",
       "item.random_stuff.rubie_netherite_leggings": "Rubie Netherite Leggings",
-      "item.random_stuff.noob_spawn_egg": "Noob Spawn Egg",
-      "item.minecraft.lingering_potion.effect.battle": "_",
-      "advancements.gemed.descr": "get some Amber gems",
-      "item.random_stuff.earth_gem": "Earth Gem"
+      "advancements.gemed.descr": "get some Amber gems"
     }
   },
   "foldersRoot": {

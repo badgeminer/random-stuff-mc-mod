@@ -1,13 +1,11 @@
 
 package net.mcreator.randomstuff.item;
 
-import net.minecraft.world.item.UseAnim;
-import net.minecraft.world.item.Rarity;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import javax.annotation.Nullable;
 
 public class EyeItem extends Item {
+
 	public EyeItem() {
 		super(new Item.Properties().tab(CreativeModeTab.TAB_MISC).stacksTo(64).rarity(Rarity.COMMON));
 	}
@@ -21,4 +19,5 @@ public class EyeItem extends Item {
 	public int getUseDuration(ItemStack itemstack) {
 		return 0;
 	}
+
 }
