@@ -17,7 +17,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.projectile.ThrownPotion;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.RemoveBlockGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
@@ -29,21 +29,27 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.entity.MobType;
+import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.AreaEffectCloud;
+import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.chat.TextComponent;
 
+import net.mcreator.randomstuff.procedures.NoobEntityDiesProcedure;
 import net.mcreator.randomstuff.init.RandomStuffModEntities;
 
+import java.util.List;
+
 @Mod.EventBusSubscriber
-public class NoobEntity extends Monster {
+public class NoobEntity extends Animal {
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
 		event.getSpawns().getSpawner(MobCategory.CREATURE).add(new MobSpawnSettings.SpawnerData(RandomStuffModEntities.NOOB.get(), 20, 4, 4));
@@ -74,8 +80,8 @@ public class NoobEntity extends Monster {
 		this.goalSelector.addGoal(2, new RemoveBlockGoal(Blocks.DIRT, this, 10, (int) 3));
 		this.goalSelector.addGoal(3, new BreakDoorGoal(this, e -> true));
 		this.goalSelector.addGoal(4, new RandomStrollGoal(this, 1));
-		this.targetSelector.addGoal(5, new HurtByTargetGoal(this));
-		this.goalSelector.addGoal(6, new MeleeAttackGoal(this, 1.2, false) {
+		this.targetSelector.addGoal(5, new HurtByTargetGoal(this).setAlertOthers());
+		this.goalSelector.addGoal(6, new MeleeAttackGoal(this, 1.2, true) {
 			@Override
 			protected double getAttackReachSqr(LivingEntity entity) {
 				return (double) (4.0 + entity.getBbWidth() * entity.getBbWidth());
@@ -141,6 +147,24 @@ public class NoobEntity extends Monster {
 		return super.hurt(source, amount);
 	}
 
+	@Override
+	public void die(DamageSource source) {
+		super.die(source);
+		NoobEntityDiesProcedure.execute(this.level, this.getX(), this.getY(), this.getZ());
+	}
+
+	@Override
+	public AgeableMob getBreedOffspring(ServerLevel serverWorld, AgeableMob ageable) {
+		NoobEntity retval = RandomStuffModEntities.NOOB.get().create(serverWorld);
+		retval.finalizeSpawn(serverWorld, serverWorld.getCurrentDifficultyAt(retval.blockPosition()), MobSpawnType.BREEDING, null, null);
+		return retval;
+	}
+
+	@Override
+	public boolean isFood(ItemStack stack) {
+		return List.of(Blocks.DIRT.asItem()).contains(stack.getItem());
+	}
+
 	public static void init() {
 		SpawnPlacements.register(RandomStuffModEntities.NOOB.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
 				(entityType, world, reason, pos,
@@ -152,7 +176,7 @@ public class NoobEntity extends Monster {
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
 		builder = builder.add(Attributes.MAX_HEALTH, 1000);
 		builder = builder.add(Attributes.ARMOR, 100);
-		builder = builder.add(Attributes.ATTACK_DAMAGE, 10000);
+		builder = builder.add(Attributes.ATTACK_DAMAGE, 0);
 		return builder;
 	}
 }
