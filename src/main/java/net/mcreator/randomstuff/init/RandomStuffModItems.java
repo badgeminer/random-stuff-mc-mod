@@ -84,6 +84,8 @@ public class RandomStuffModItems {
 			() -> new ForgeSpawnEggItem(RandomStuffModEntities.GHOST, -1, -65536, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> NOOB = REGISTRY.register("noob_spawn_egg",
 			() -> new ForgeSpawnEggItem(RandomStuffModEntities.NOOB, -11776241, -16465639, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> ENDGHOST = REGISTRY.register("endghost_spawn_egg",
+			() -> new ForgeSpawnEggItem(RandomStuffModEntities.ENDGHOST, -1, -65536, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

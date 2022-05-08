@@ -19,6 +19,7 @@ import net.minecraft.world.entity.Entity;
 import net.mcreator.randomstuff.entity.ShadowArmorEntity;
 import net.mcreator.randomstuff.entity.NoobEntity;
 import net.mcreator.randomstuff.entity.GhostEntity;
+import net.mcreator.randomstuff.entity.EndghostEntity;
 import net.mcreator.randomstuff.RandomStuffMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -37,6 +38,11 @@ public class RandomStuffModEntities {
 	public static final RegistryObject<EntityType<NoobEntity>> NOOB = register("noob",
 			EntityType.Builder.<NoobEntity>of(NoobEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
 					.setUpdateInterval(3).setCustomClientFactory(NoobEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<EndghostEntity>> ENDGHOST = register("endghost",
+			EntityType.Builder.<EndghostEntity>of(EndghostEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
+					.setUpdateInterval(3).setCustomClientFactory(EndghostEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -48,6 +54,7 @@ public class RandomStuffModEntities {
 			ShadowArmorEntity.init();
 			GhostEntity.init();
 			NoobEntity.init();
+			EndghostEntity.init();
 		});
 	}
 
@@ -56,5 +63,6 @@ public class RandomStuffModEntities {
 		event.put(SHADOW_ARMOR.get(), ShadowArmorEntity.createAttributes().build());
 		event.put(GHOST.get(), GhostEntity.createAttributes().build());
 		event.put(NOOB.get(), NoobEntity.createAttributes().build());
+		event.put(ENDGHOST.get(), EndghostEntity.createAttributes().build());
 	}
 }
