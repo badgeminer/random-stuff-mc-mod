@@ -10,11 +10,13 @@ import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.mcreator.randomstuff.client.renderer.ShadowArmorRenderer;
+import net.mcreator.randomstuff.client.renderer.GhostRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class RandomStuffModEntityRenderers {
 	@SubscribeEvent
 	public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
 		event.registerEntityRenderer(RandomStuffModEntities.SHADOW_ARMOR.get(), ShadowArmorRenderer::new);
+		event.registerEntityRenderer(RandomStuffModEntities.GHOST.get(), GhostRenderer::new);
 	}
 }

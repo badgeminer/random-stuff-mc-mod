@@ -511,6 +511,26 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "shadow_armor"
+    },
+    {
+      "name": "GhostTransparentEntityModelCondition",
+      "type": "procedure",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ghost_transparent_entity_model_condition",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": []
+      }
+    },
+    {
+      "name": "Ghost",
+      "type": "livingentity",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ghost"
     }
   ],
   "variable_elements": [],
@@ -546,11 +566,13 @@
       "item.random_stuff.topaz": "Topaz",
       "advancements.apprentice_smith.title": "Apprentice Smith",
       "item.random_stuff.rubie_netherite_chestplate": "Rubie Netherite Body",
+      "entity.random_stuff.ghost": "Ghost",
       "item.random_stuff.jasper": "Jasper",
       "item.random_stuff.saphire_netherite_boots": "Saphire Netherite Boots",
       "item.random_stuff.rubie_netherite_leggings": "Rubie Netherite Leggings",
       "item.random_stuff.rubie_netherite_helmet": "Rubie Netherite Helmet",
       "advancements.random_stuff.descr": "lots of Random Stuff",
+      "item.random_stuff.ghost_spawn_egg": "Ghost Spawn Egg",
       "item.random_stuff.polished_amber": "Polished Amber",
       "advancements.gemed.descr": "get some Amber gems",
       "itemGroup.tabrandom_stuff_smith": "Random Stuff Smithing",
