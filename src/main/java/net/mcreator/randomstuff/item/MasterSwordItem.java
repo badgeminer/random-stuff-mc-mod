@@ -20,7 +20,7 @@ public class MasterSwordItem extends SwordItem {
 			}
 
 			public float getAttackDamageBonus() {
-				return 98f;
+				return 9998f;
 			}
 
 			public int getLevel() {
@@ -28,12 +28,12 @@ public class MasterSwordItem extends SwordItem {
 			}
 
 			public int getEnchantmentValue() {
-				return 2;
+				return 2000;
 			}
 
 			public Ingredient getRepairIngredient() {
 				return Ingredient.EMPTY;
 			}
-		}, 3, -3f, new Item.Properties().tab(RandomStuffModTabs.TAB_RANDOM_STUFF_MISC));
+		}, 3, -3f, new Item.Properties().tab(RandomStuffModTabs.TAB_RANDOM_STUFF_MISC).fireResistant());
 	}
 }

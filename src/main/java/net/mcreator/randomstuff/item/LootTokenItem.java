@@ -18,7 +18,7 @@ import net.mcreator.randomstuff.init.RandomStuffModTabs;
 
 public class LootTokenItem extends Item {
 	public LootTokenItem() {
-		super(new Item.Properties().tab(RandomStuffModTabs.TAB_RANDOM_STUFF_MISC).stacksTo(64).rarity(Rarity.EPIC));
+		super(new Item.Properties().tab(RandomStuffModTabs.TAB_RANDOM_STUFF_MISC).stacksTo(64).fireResistant().rarity(Rarity.EPIC));
 	}
 
 	@Override

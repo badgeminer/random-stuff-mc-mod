@@ -36,6 +36,6 @@ public class WarpStaffRightclickedProcedure {
 						_ent.getYRot(), _ent.getXRot());
 		}
 		if (entity instanceof Player _player)
-			_player.getCooldowns().addCooldown(itemstack.getItem(), 250);
+			_player.getCooldowns().addCooldown(itemstack.getItem(), 25);
 	}
 }

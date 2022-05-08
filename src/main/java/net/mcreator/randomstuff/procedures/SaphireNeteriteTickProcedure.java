@@ -23,7 +23,7 @@ public class SaphireNeteriteTickProcedure {
 					&& (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY)
 							.is(ItemTags.create(new ResourceLocation("forge:saphire_netherite_tag")))) {
 				if (entity instanceof LivingEntity _entity)
-					_entity.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 120, 4, (true), (false)));
+					_entity.addEffect(new MobEffectInstance(MobEffects.HEALTH_BOOST, 120, 4, (true), (false)));
 			}
 		}
 	}

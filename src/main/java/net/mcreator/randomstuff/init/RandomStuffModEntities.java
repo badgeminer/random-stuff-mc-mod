@@ -17,6 +17,7 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
 import net.mcreator.randomstuff.entity.ShadowArmorEntity;
+import net.mcreator.randomstuff.entity.NoobEntity;
 import net.mcreator.randomstuff.RandomStuffMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -27,6 +28,9 @@ public class RandomStuffModEntities {
 					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ShadowArmorEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<NoobEntity>> NOOB = register("noob",
+			EntityType.Builder.<NoobEntity>of(NoobEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
+					.setUpdateInterval(3).setCustomClientFactory(NoobEntity::new).fireImmune().sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -36,11 +40,13 @@ public class RandomStuffModEntities {
 	public static void init(FMLCommonSetupEvent event) {
 		event.enqueueWork(() -> {
 			ShadowArmorEntity.init();
+			NoobEntity.init();
 		});
 	}
 
 	@SubscribeEvent
 	public static void registerAttributes(EntityAttributeCreationEvent event) {
 		event.put(SHADOW_ARMOR.get(), ShadowArmorEntity.createAttributes().build());
+		event.put(NOOB.get(), NoobEntity.createAttributes().build());
 	}
 }

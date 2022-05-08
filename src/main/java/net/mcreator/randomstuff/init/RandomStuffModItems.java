@@ -21,6 +21,7 @@ import net.mcreator.randomstuff.item.SmithsAnvilCoreItem;
 import net.mcreator.randomstuff.item.SaphireNetheriteItem;
 import net.mcreator.randomstuff.item.SaphireItem;
 import net.mcreator.randomstuff.item.SandPaperItem;
+import net.mcreator.randomstuff.item.RubyItem;
 import net.mcreator.randomstuff.item.RubieNetheriteItem;
 import net.mcreator.randomstuff.item.RubieItem;
 import net.mcreator.randomstuff.item.PolishedTopazItem;
@@ -31,6 +32,9 @@ import net.mcreator.randomstuff.item.PolihsedRubieItem;
 import net.mcreator.randomstuff.item.MasterSwordItem;
 import net.mcreator.randomstuff.item.LootTokenItem;
 import net.mcreator.randomstuff.item.JasperItem;
+import net.mcreator.randomstuff.item.EyeItem;
+import net.mcreator.randomstuff.item.EarthGemItem;
+import net.mcreator.randomstuff.item.BoobitemItem;
 import net.mcreator.randomstuff.item.AmberItem;
 import net.mcreator.randomstuff.RandomStuffMod;
 
@@ -72,6 +76,12 @@ public class RandomStuffModItems {
 	public static final RegistryObject<Item> SHADOW_ARMOR = REGISTRY.register("shadow_armor_spawn_egg",
 			() -> new ForgeSpawnEggItem(RandomStuffModEntities.SHADOW_ARMOR, -16777216, -10092391,
 					new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> EYE = REGISTRY.register("eye", () -> new EyeItem());
+	public static final RegistryObject<Item> BOOBITEM = REGISTRY.register("boobitem", () -> new BoobitemItem());
+	public static final RegistryObject<Item> RUBY = REGISTRY.register("ruby", () -> new RubyItem());
+	public static final RegistryObject<Item> EARTH_GEM = REGISTRY.register("earth_gem", () -> new EarthGemItem());
+	public static final RegistryObject<Item> NOOB = REGISTRY.register("noob_spawn_egg",
+			() -> new ForgeSpawnEggItem(RandomStuffModEntities.NOOB, -11776241, -16465639, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
