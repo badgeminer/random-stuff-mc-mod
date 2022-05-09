@@ -43,7 +43,7 @@ public class EndghostEntity extends Monster {
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
 		if (SPAWN_BIOMES.contains(event.getName()))
-			event.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(RandomStuffModEntities.ENDGHOST.get(), 20, 4, 4));
+			event.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(RandomStuffModEntities.ENDGHOST.get(), 5, 4, 4));
 	}
 
 	public EndghostEntity(PlayMessages.SpawnEntity packet, Level world) {

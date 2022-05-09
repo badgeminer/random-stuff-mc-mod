@@ -25,5 +25,5 @@
   "rewards": {
     "experience": 100
   },
-  "parent": "random_stuff:apprentice_smith"
+  "parent": "random_stuff:random_stuff"
 }

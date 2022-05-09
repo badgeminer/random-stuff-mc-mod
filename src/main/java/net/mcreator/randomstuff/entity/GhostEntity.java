@@ -37,7 +37,7 @@ import net.mcreator.randomstuff.init.RandomStuffModEntities;
 public class GhostEntity extends Monster {
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
-		event.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(RandomStuffModEntities.GHOST.get(), 20, 4, 4));
+		event.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(RandomStuffModEntities.GHOST.get(), 6, 1, 1));
 	}
 
 	public GhostEntity(PlayMessages.SpawnEntity packet, Level world) {

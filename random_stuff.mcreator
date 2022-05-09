@@ -666,6 +666,70 @@
         ]
       },
       "path": "~/gear"
+    },
+    {
+      "name": "ShadowGem",
+      "type": "item",
+      "sortid": 50,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shadow_gem"
+    },
+    {
+      "name": "SoulShard",
+      "type": "item",
+      "sortid": 51,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "soul_shard"
+    },
+    {
+      "name": "GhostDrops",
+      "type": "loottable",
+      "sortid": 52,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ghost_drops"
+    },
+    {
+      "name": "EndGhostDrops",
+      "type": "loottable",
+      "sortid": 53,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "end_ghost_drops"
+    },
+    {
+      "name": "BossSpawn",
+      "type": "procedure",
+      "sortid": 54,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "boss_spawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BossAltarGui",
+      "type": "gui",
+      "sortid": 54,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "boss_altar_gui"
+    },
+    {
+      "name": "BossAltar",
+      "type": "block",
+      "sortid": 55,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "boss_altar"
     }
   ],
   "variable_elements": [],
@@ -684,6 +748,7 @@
       "advancements.loot_obtained.descr": "get a Loot Token",
       "block.random_stuff.drill": "Drill",
       "entity.random_stuff.shadow_armor": "Shadow Armor",
+      "block.random_stuff.boss_altar": "Boss Altar",
       "item.random_stuff.polished_jasper": "Polished Jasper",
       "item.random_stuff.rubie_netherite_boots": "Rubie Netherite Boots",
       "item.minecraft.potion.effect.battle": "Battle Potion",
@@ -715,6 +780,7 @@
       "item.random_stuff.sand_paper": "Sand Paper",
       "entity.random_stuff.noob": "Noob",
       "item.random_stuff.endghost_spawn_egg": "End Ghost Spawn Egg",
+      "item.random_stuff.shadow_gem": "Shadow Gem",
       "item.random_stuff.saphire_netherite_chestplate": "Saphire Netherite Body",
       "item.random_stuff.eye": "Eye",
       "item.minecraft.tipped_arrow.effect.battle": "_",
@@ -723,6 +789,7 @@
       "advancements.land_of_noobs.title": "Land Of Noobs",
       "advancements.apprentice_smith.title": "Apprentice Smith",
       "item.random_stuff.rubie_netherite_chestplate": "Rubie Netherite Chestplate",
+      "item.random_stuff.soul_shard": "Soul Shard",
       "item.random_stuff.jasper": "Jasper",
       "item.random_stuff.rubie_netherite_leggings": "Rubie Netherite Leggings",
       "item.random_stuff.noob_spawn_egg": "Noob Spawn Egg",

@@ -1,0 +1,130 @@
+{
+  "_fv": 28,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "marker_towersavepoint.png",
+          "use1Xscale": true,
+          "name": "marker_towersavepoint.png",
+          "x": 195,
+          "y": 44
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "summon bosses",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "summon bosses",
+          "x": 51,
+          "y": 44
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "use soul shards and a",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "use soul shards and a",
+          "x": 15,
+          "y": 53
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "summoning item to spawn",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "summoning item to spawn",
+          "x": 6,
+          "y": 62
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "bosses",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "bosses",
+          "x": 87,
+          "y": 71
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": "CUSTOM:SoulShard"
+          },
+          "color": {
+            "value": -10066177,
+            "falpha": 0.0
+          },
+          "id": 0,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #0",
+          "x": 177,
+          "y": 53
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 1,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #1",
+          "x": 231,
+          "y": 53
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "SPAWN",
+          "onClick": {
+            "name": "BossSpawn"
+          },
+          "width": 51,
+          "height": 20,
+          "name": "SPAWN",
+          "x": 186,
+          "y": 80
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}

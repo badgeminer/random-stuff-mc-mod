@@ -17,7 +17,9 @@ import net.minecraft.world.item.BlockItem;
 import net.mcreator.randomstuff.item.WarpStaffItem;
 import net.mcreator.randomstuff.item.UnobtanibleIconItemItem;
 import net.mcreator.randomstuff.item.TopazItem;
+import net.mcreator.randomstuff.item.SoulShardItem;
 import net.mcreator.randomstuff.item.SmithsAnvilCoreItem;
+import net.mcreator.randomstuff.item.ShadowGemItem;
 import net.mcreator.randomstuff.item.SaphireNetheriteItem;
 import net.mcreator.randomstuff.item.SaphireItem;
 import net.mcreator.randomstuff.item.SandPaperItem;
@@ -88,6 +90,9 @@ public class RandomStuffModItems {
 			() -> new ForgeSpawnEggItem(RandomStuffModEntities.ENDGHOST, -1, -65536, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> QUEEN_ELIZIBETH = REGISTRY.register("queen_elizibeth_spawn_egg",
 			() -> new ForgeSpawnEggItem(RandomStuffModEntities.QUEEN_ELIZIBETH, -1, -393467, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> SHADOW_GEM = REGISTRY.register("shadow_gem", () -> new ShadowGemItem());
+	public static final RegistryObject<Item> SOUL_SHARD = REGISTRY.register("soul_shard", () -> new SoulShardItem());
+	public static final RegistryObject<Item> BOSS_ALTAR = block(RandomStuffModBlocks.BOSS_ALTAR, RandomStuffModTabs.TAB_RANDOM_STUFF_SMITH);
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
