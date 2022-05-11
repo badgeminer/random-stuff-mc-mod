@@ -14,6 +14,7 @@ import net.mcreator.randomstuff.client.renderer.QueenElizibethRenderer;
 import net.mcreator.randomstuff.client.renderer.NoobRenderer;
 import net.mcreator.randomstuff.client.renderer.GhostRenderer;
 import net.mcreator.randomstuff.client.renderer.EndghostRenderer;
+import net.mcreator.randomstuff.client.renderer.EnderGhostRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class RandomStuffModEntityRenderers {
@@ -24,5 +25,6 @@ public class RandomStuffModEntityRenderers {
 		event.registerEntityRenderer(RandomStuffModEntities.NOOB.get(), NoobRenderer::new);
 		event.registerEntityRenderer(RandomStuffModEntities.ENDGHOST.get(), EndghostRenderer::new);
 		event.registerEntityRenderer(RandomStuffModEntities.QUEEN_ELIZIBETH.get(), QueenElizibethRenderer::new);
+		event.registerEntityRenderer(RandomStuffModEntities.ENDER_GHOST.get(), EnderGhostRenderer::new);
 	}
 }
