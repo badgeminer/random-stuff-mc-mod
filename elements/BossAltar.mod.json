@@ -111,10 +111,7 @@
     "inventoryStackSize": 64,
     "inventoryDropWhenDestroyed": true,
     "inventoryComparatorPower": true,
-    "inventoryOutSlotIDs": [
-      0,
-      1
-    ],
+    "inventoryOutSlotIDs": [],
     "inventoryInSlotIDs": [
       0,
       1

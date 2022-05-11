@@ -11,7 +11,7 @@
     {
       "name": "RandomStuffSmith",
       "type": "tab",
-      "sortid": 2,
+      "sortid": 32,
       "compiles": true,
       "locked_code": false,
       "registry_name": "random_stuff_smith"
@@ -19,7 +19,7 @@
     {
       "name": "SandPaper",
       "type": "item",
-      "sortid": 3,
+      "sortid": 2,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sand_paper"
@@ -27,7 +27,7 @@
     {
       "name": "Test",
       "type": "recipe",
-      "sortid": 3,
+      "sortid": 33,
       "compiles": true,
       "locked_code": false,
       "registry_name": "test"
@@ -35,7 +35,7 @@
     {
       "name": "RubieNetherite",
       "type": "armor",
-      "sortid": 4,
+      "sortid": 3,
       "compiles": true,
       "locked_code": false,
       "registry_name": "rubie_netherite",
@@ -50,7 +50,7 @@
     {
       "name": "RubienetheriteItems",
       "type": "tag",
-      "sortid": 6,
+      "sortid": 34,
       "compiles": true,
       "locked_code": false,
       "registry_name": "rubienetherite_items",
@@ -59,7 +59,7 @@
     {
       "name": "RubieNetheriteHelmetTickEvent",
       "type": "procedure",
-      "sortid": 6,
+      "sortid": 35,
       "compiles": true,
       "locked_code": false,
       "registry_name": "rubie_netherite_helmet_tick_event",
@@ -76,7 +76,7 @@
     {
       "name": "SaphireNetherite",
       "type": "armor",
-      "sortid": 7,
+      "sortid": 4,
       "compiles": true,
       "locked_code": false,
       "registry_name": "saphire_netherite",
@@ -91,7 +91,7 @@
     {
       "name": "SaphireNeteriteTick",
       "type": "procedure",
-      "sortid": 8,
+      "sortid": 36,
       "compiles": true,
       "locked_code": false,
       "registry_name": "saphire_neterite_tick",
@@ -108,7 +108,7 @@
     {
       "name": "SaphireNetheriteTag",
       "type": "tag",
-      "sortid": 9,
+      "sortid": 37,
       "compiles": true,
       "locked_code": false,
       "registry_name": "saphire_netherite_tag",
@@ -117,7 +117,7 @@
     {
       "name": "UnobtanibleIconItem",
       "type": "item",
-      "sortid": 10,
+      "sortid": 38,
       "compiles": true,
       "locked_code": false,
       "registry_name": "unobtanible_icon_item"
@@ -125,7 +125,7 @@
     {
       "name": "RandomStuffMisc",
       "type": "tab",
-      "sortid": 11,
+      "sortid": 39,
       "compiles": true,
       "locked_code": false,
       "registry_name": "random_stuff_misc"
@@ -133,7 +133,7 @@
     {
       "name": "Loot",
       "type": "gui",
-      "sortid": 12,
+      "sortid": 40,
       "compiles": true,
       "locked_code": false,
       "registry_name": "loot"
@@ -141,7 +141,7 @@
     {
       "name": "LootTokenRightClickedInAir",
       "type": "procedure",
-      "sortid": 13,
+      "sortid": 41,
       "compiles": true,
       "locked_code": false,
       "registry_name": "loot_token_right_clicked_in_air",
@@ -174,7 +174,7 @@
     {
       "name": "LootToken",
       "type": "item",
-      "sortid": 13,
+      "sortid": 7,
       "compiles": true,
       "locked_code": false,
       "registry_name": "loot_token"
@@ -182,7 +182,7 @@
     {
       "name": "Amber",
       "type": "item",
-      "sortid": 14,
+      "sortid": 8,
       "compiles": true,
       "locked_code": false,
       "registry_name": "amber"
@@ -190,7 +190,7 @@
     {
       "name": "PolishedAmber",
       "type": "item",
-      "sortid": 15,
+      "sortid": 9,
       "compiles": true,
       "locked_code": false,
       "registry_name": "polished_amber"
@@ -198,7 +198,7 @@
     {
       "name": "Rubie",
       "type": "item",
-      "sortid": 16,
+      "sortid": 10,
       "compiles": true,
       "locked_code": false,
       "registry_name": "rubie",
@@ -207,7 +207,7 @@
     {
       "name": "PolihsedRubie",
       "type": "item",
-      "sortid": 17,
+      "sortid": 11,
       "compiles": true,
       "locked_code": false,
       "registry_name": "polihsed_rubie",
@@ -216,7 +216,7 @@
     {
       "name": "Saphire",
       "type": "item",
-      "sortid": 18,
+      "sortid": 12,
       "compiles": true,
       "locked_code": false,
       "registry_name": "saphire",
@@ -225,7 +225,7 @@
     {
       "name": "PolisedSaphire",
       "type": "item",
-      "sortid": 19,
+      "sortid": 13,
       "compiles": true,
       "locked_code": false,
       "registry_name": "polised_saphire",
@@ -234,7 +234,7 @@
     {
       "name": "Saphch",
       "type": "recipe",
-      "sortid": 20,
+      "sortid": 42,
       "compiles": true,
       "locked_code": false,
       "registry_name": "saphch",
@@ -243,7 +243,7 @@
     {
       "name": "Saphhelm",
       "type": "recipe",
-      "sortid": 21,
+      "sortid": 43,
       "compiles": true,
       "locked_code": false,
       "registry_name": "saphhelm",
@@ -252,7 +252,7 @@
     {
       "name": "Saphleg",
       "type": "recipe",
-      "sortid": 22,
+      "sortid": 44,
       "compiles": true,
       "locked_code": false,
       "registry_name": "saphleg",
@@ -261,7 +261,7 @@
     {
       "name": "Saphboot",
       "type": "recipe",
-      "sortid": 23,
+      "sortid": 45,
       "compiles": true,
       "locked_code": false,
       "registry_name": "saphboot",
@@ -270,7 +270,7 @@
     {
       "name": "Rubieboot",
       "type": "recipe",
-      "sortid": 24,
+      "sortid": 46,
       "compiles": true,
       "locked_code": false,
       "registry_name": "rubieboot",
@@ -279,7 +279,7 @@
     {
       "name": "Rubieleg",
       "type": "recipe",
-      "sortid": 25,
+      "sortid": 47,
       "compiles": true,
       "locked_code": false,
       "registry_name": "rubieleg",
@@ -288,7 +288,7 @@
     {
       "name": "Rubiehelm",
       "type": "recipe",
-      "sortid": 26,
+      "sortid": 48,
       "compiles": true,
       "locked_code": false,
       "registry_name": "rubiehelm",
@@ -297,7 +297,7 @@
     {
       "name": "Rubiech",
       "type": "recipe",
-      "sortid": 27,
+      "sortid": 49,
       "compiles": true,
       "locked_code": false,
       "registry_name": "rubiech",
@@ -306,7 +306,7 @@
     {
       "name": "Jasper",
       "type": "item",
-      "sortid": 28,
+      "sortid": 14,
       "compiles": true,
       "locked_code": false,
       "registry_name": "jasper",
@@ -315,7 +315,7 @@
     {
       "name": "PolishedJasper",
       "type": "item",
-      "sortid": 29,
+      "sortid": 15,
       "compiles": true,
       "locked_code": false,
       "registry_name": "polished_jasper",
@@ -324,7 +324,7 @@
     {
       "name": "Topaz",
       "type": "item",
-      "sortid": 30,
+      "sortid": 16,
       "compiles": true,
       "locked_code": false,
       "registry_name": "topaz",
@@ -333,7 +333,7 @@
     {
       "name": "PolishedTopaz",
       "type": "item",
-      "sortid": 31,
+      "sortid": 17,
       "compiles": true,
       "locked_code": false,
       "registry_name": "polished_topaz",
@@ -342,7 +342,7 @@
     {
       "name": "ApprenticeSmith",
       "type": "achievement",
-      "sortid": 32,
+      "sortid": 50,
       "compiles": true,
       "locked_code": false,
       "registry_name": "apprentice_smith"
@@ -350,7 +350,7 @@
     {
       "name": "RandomStuff",
       "type": "achievement",
-      "sortid": 33,
+      "sortid": 51,
       "compiles": true,
       "locked_code": false,
       "registry_name": "random_stuff"
@@ -358,7 +358,7 @@
     {
       "name": "LootObtained",
       "type": "achievement",
-      "sortid": 34,
+      "sortid": 52,
       "compiles": true,
       "locked_code": false,
       "registry_name": "loot_obtained"
@@ -366,7 +366,7 @@
     {
       "name": "Gemed",
       "type": "achievement",
-      "sortid": 35,
+      "sortid": 53,
       "compiles": true,
       "locked_code": false,
       "registry_name": "gemed"
@@ -374,7 +374,7 @@
     {
       "name": "MasterSword",
       "type": "tool",
-      "sortid": 36,
+      "sortid": 21,
       "compiles": true,
       "locked_code": false,
       "registry_name": "master_sword"
@@ -382,7 +382,7 @@
     {
       "name": "GemOre",
       "type": "loottable",
-      "sortid": 37,
+      "sortid": 54,
       "compiles": true,
       "locked_code": false,
       "registry_name": "gem_ore"
@@ -390,7 +390,7 @@
     {
       "name": "GemstoneOre",
       "type": "block",
-      "sortid": 37,
+      "sortid": 5,
       "compiles": true,
       "locked_code": false,
       "registry_name": "gemstone_ore"
@@ -398,7 +398,7 @@
     {
       "name": "DrillGui",
       "type": "gui",
-      "sortid": 38,
+      "sortid": 55,
       "compiles": true,
       "locked_code": false,
       "registry_name": "drill_gui"
@@ -406,7 +406,7 @@
     {
       "name": "DrillBlockValidPlacementCondition",
       "type": "procedure",
-      "sortid": 39,
+      "sortid": 56,
       "compiles": true,
       "locked_code": false,
       "registry_name": "drill_block_valid_placement_condition",
@@ -435,7 +435,7 @@
     {
       "name": "Drill",
       "type": "block",
-      "sortid": 38,
+      "sortid": 18,
       "compiles": true,
       "locked_code": false,
       "registry_name": "drill"
@@ -443,7 +443,7 @@
     {
       "name": "DrillUpdateTick",
       "type": "procedure",
-      "sortid": 40,
+      "sortid": 57,
       "compiles": true,
       "locked_code": false,
       "registry_name": "drill_update_tick",
@@ -471,7 +471,7 @@
     {
       "name": "WarpStaff",
       "type": "item",
-      "sortid": 41,
+      "sortid": 22,
       "compiles": true,
       "locked_code": false,
       "registry_name": "warp_staff"
@@ -479,7 +479,7 @@
     {
       "name": "WarpStaffRightclicked",
       "type": "procedure",
-      "sortid": 42,
+      "sortid": 58,
       "compiles": true,
       "locked_code": false,
       "registry_name": "warp_staff_rightclicked",
@@ -499,7 +499,7 @@
     {
       "name": "TestTrades",
       "type": "villagertrade",
-      "sortid": 43,
+      "sortid": 59,
       "compiles": true,
       "locked_code": false,
       "registry_name": "test_trades"
@@ -507,7 +507,7 @@
     {
       "name": "ShadowArmor",
       "type": "livingentity",
-      "sortid": 44,
+      "sortid": 23,
       "compiles": true,
       "locked_code": false,
       "registry_name": "shadow_armor"
@@ -515,7 +515,7 @@
     {
       "name": "Eye",
       "type": "item",
-      "sortid": 45,
+      "sortid": 24,
       "compiles": true,
       "locked_code": false,
       "registry_name": "eye",
@@ -524,7 +524,7 @@
     {
       "name": "Noob",
       "type": "livingentity",
-      "sortid": 46,
+      "sortid": 29,
       "compiles": true,
       "locked_code": false,
       "registry_name": "noob",
@@ -533,7 +533,7 @@
     {
       "name": "Boobitem",
       "type": "item",
-      "sortid": 45,
+      "sortid": 25,
       "compiles": true,
       "locked_code": false,
       "registry_name": "boobitem",
@@ -542,7 +542,7 @@
     {
       "name": "Battle",
       "type": "potion",
-      "sortid": 46,
+      "sortid": 60,
       "compiles": true,
       "locked_code": false,
       "registry_name": "battle"
@@ -550,7 +550,7 @@
     {
       "name": "EarthGem",
       "type": "item",
-      "sortid": 45,
+      "sortid": 26,
       "compiles": true,
       "locked_code": false,
       "registry_name": "earth_gem",
@@ -559,7 +559,7 @@
     {
       "name": "LandOfNoobs",
       "type": "achievement",
-      "sortid": 47,
+      "sortid": 61,
       "compiles": true,
       "locked_code": false,
       "registry_name": "land_of_noobs"
@@ -567,7 +567,7 @@
     {
       "name": "Ruby",
       "type": "item",
-      "sortid": 45,
+      "sortid": 27,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ruby",
@@ -576,7 +576,7 @@
     {
       "name": "GhostTransparentEntityModelCondition",
       "type": "procedure",
-      "sortid": 45,
+      "sortid": 62,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ghost_transparent_entity_model_condition",
@@ -588,7 +588,7 @@
     {
       "name": "Ghost",
       "type": "livingentity",
-      "sortid": 45,
+      "sortid": 28,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ghost"
@@ -596,7 +596,7 @@
     {
       "name": "Endghost",
       "type": "livingentity",
-      "sortid": 49,
+      "sortid": 30,
       "compiles": true,
       "locked_code": false,
       "registry_name": "endghost"
@@ -604,7 +604,7 @@
     {
       "name": "NoobEntityDies",
       "type": "procedure",
-      "sortid": 48,
+      "sortid": 63,
       "compiles": true,
       "locked_code": false,
       "registry_name": "noob_entity_dies",
@@ -632,7 +632,7 @@
     {
       "name": "QueenElizibeth",
       "type": "livingentity",
-      "sortid": 49,
+      "sortid": 31,
       "compiles": true,
       "locked_code": false,
       "registry_name": "queen_elizibeth",
@@ -641,7 +641,7 @@
     {
       "name": "QueenElizibethEntityDies",
       "type": "procedure",
-      "sortid": 49,
+      "sortid": 64,
       "compiles": true,
       "locked_code": false,
       "registry_name": "queen_elizibeth_entity_dies",
@@ -670,7 +670,7 @@
     {
       "name": "ShadowGem",
       "type": "item",
-      "sortid": 50,
+      "sortid": 19,
       "compiles": true,
       "locked_code": false,
       "registry_name": "shadow_gem"
@@ -678,7 +678,7 @@
     {
       "name": "SoulShard",
       "type": "item",
-      "sortid": 51,
+      "sortid": 20,
       "compiles": true,
       "locked_code": false,
       "registry_name": "soul_shard"
@@ -686,7 +686,7 @@
     {
       "name": "GhostDrops",
       "type": "loottable",
-      "sortid": 52,
+      "sortid": 65,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ghost_drops"
@@ -694,7 +694,7 @@
     {
       "name": "EndGhostDrops",
       "type": "loottable",
-      "sortid": 53,
+      "sortid": 66,
       "compiles": true,
       "locked_code": false,
       "registry_name": "end_ghost_drops"
@@ -702,7 +702,7 @@
     {
       "name": "BossSpawn",
       "type": "procedure",
-      "sortid": 54,
+      "sortid": 67,
       "compiles": true,
       "locked_code": false,
       "registry_name": "boss_spawn",
@@ -718,7 +718,7 @@
     {
       "name": "BossAltarGui",
       "type": "gui",
-      "sortid": 54,
+      "sortid": 68,
       "compiles": true,
       "locked_code": false,
       "registry_name": "boss_altar_gui"
@@ -726,7 +726,7 @@
     {
       "name": "BossAltar",
       "type": "block",
-      "sortid": 55,
+      "sortid": 6,
       "compiles": true,
       "locked_code": false,
       "registry_name": "boss_altar"

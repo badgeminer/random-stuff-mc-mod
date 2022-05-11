@@ -76,7 +76,7 @@
         "type": "inputslot",
         "data": {
           "inputLimit": {
-            "value": "CUSTOM:SoulShard"
+            "value": ""
           },
           "color": {
             "value": -10066177,

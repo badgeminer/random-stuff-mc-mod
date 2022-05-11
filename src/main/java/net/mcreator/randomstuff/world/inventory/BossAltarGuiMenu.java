@@ -19,7 +19,6 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.randomstuff.init.RandomStuffModMenus;
-import net.mcreator.randomstuff.init.RandomStuffModItems;
 
 import java.util.function.Supplier;
 import java.util.Map;
@@ -77,10 +76,6 @@ public class BossAltarGuiMenu extends AbstractContainerMenu implements Supplier<
 			}
 		}
 		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 52, 17) {
-			@Override
-			public boolean mayPlace(ItemStack stack) {
-				return (RandomStuffModItems.SOUL_SHARD.get() == stack.getItem());
-			}
 		}));
 		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 106, 17) {
 		}));

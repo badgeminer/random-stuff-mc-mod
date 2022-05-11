@@ -110,10 +110,6 @@ public class BossAltarBlockEntity extends RandomizableContainerBlockEntity imple
 
 	@Override
 	public boolean canPlaceItem(int index, ItemStack stack) {
-		if (index == 0)
-			return false;
-		if (index == 1)
-			return false;
 		return true;
 	}
 
