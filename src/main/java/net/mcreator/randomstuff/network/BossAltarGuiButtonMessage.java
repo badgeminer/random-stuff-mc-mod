@@ -64,7 +64,7 @@ public class BossAltarGuiButtonMessage {
 			return;
 		if (buttonID == 0) {
 
-			BossSpawnProcedure.execute(entity);
+			BossSpawnProcedure.execute(world, x, y, z, entity);
 		}
 	}
 

@@ -7,6 +7,7 @@ import net.minecraftforge.network.NetworkHooks;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.projectile.ThrownPotion;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
@@ -19,6 +20,7 @@ import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.AreaEffectCloud;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.server.level.ServerPlayer;
@@ -39,7 +41,7 @@ public class EnderGhostEntity extends Monster {
 
 	public EnderGhostEntity(EntityType<EnderGhostEntity> type, Level world) {
 		super(type, world);
-		xpReward = 0;
+		xpReward = 3;
 		setNoAi(false);
 		setPersistenceRequired();
 	}
@@ -90,6 +92,23 @@ public class EnderGhostEntity extends Monster {
 	}
 
 	@Override
+	public boolean hurt(DamageSource source, float amount) {
+		if (source.getDirectEntity() instanceof ThrownPotion || source.getDirectEntity() instanceof AreaEffectCloud)
+			return false;
+		if (source == DamageSource.DROWN)
+			return false;
+		if (source == DamageSource.ANVIL)
+			return false;
+		if (source == DamageSource.DRAGON_BREATH)
+			return false;
+		if (source == DamageSource.WITHER)
+			return false;
+		if (source.getMsgId().equals("witherSkull"))
+			return false;
+		return super.hurt(source, amount);
+	}
+
+	@Override
 	public boolean canChangeDimensions() {
 		return false;
 	}
@@ -118,9 +137,11 @@ public class EnderGhostEntity extends Monster {
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
-		builder = builder.add(Attributes.MAX_HEALTH, 100);
-		builder = builder.add(Attributes.ARMOR, 0);
-		builder = builder.add(Attributes.ATTACK_DAMAGE, 3);
+		builder = builder.add(Attributes.MAX_HEALTH, 150);
+		builder = builder.add(Attributes.ARMOR, 5);
+		builder = builder.add(Attributes.ATTACK_DAMAGE, 9);
+		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 2);
+		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 0.2);
 		return builder;
 	}
 }
