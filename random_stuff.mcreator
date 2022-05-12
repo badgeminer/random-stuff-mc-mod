@@ -969,6 +969,77 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "end_ghost_drops"
+    },
+    {
+      "name": "BobCommandExecuted",
+      "type": "procedure",
+      "sortid": 70,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bob_command_executed",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Bob",
+      "type": "command",
+      "sortid": 70,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bob"
+    },
+    {
+      "name": "NoobWorld",
+      "type": "dimension",
+      "sortid": 71,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "noob_world",
+      "metadata": {
+        "ep": true
+      }
+    },
+    {
+      "name": "OiRightclickedOnBlock",
+      "type": "procedure",
+      "sortid": 72,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "oi_rightclicked_on_block",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Oi",
+      "type": "musicdisc",
+      "sortid": 72,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "oi"
     }
   ],
   "variable_elements": [],
@@ -984,6 +1055,7 @@
       "entity.random_stuff.queen_elizibeth": "Queen Elizibeth",
       "item.random_stuff.boobitem": "Explosion Element",
       "advancements.loot_obtained.title": "Loot Obtained",
+      "item.random_stuff.oi.desc": "ghghvnb",
       "advancements.loot_obtained.descr": "get a Loot Token",
       "block.random_stuff.drill": "Drill",
       "entity.random_stuff.shadow_armor": "Shadow Armor",
@@ -1013,6 +1085,7 @@
       "itemGroup.tabrandom_stuff_misc": "Random Stuff Misc",
       "item.random_stuff.unobtanible_icon_item": "q",
       "entity.random_stuff.endghost": "End Ghost",
+      "item.random_stuff.noob_world": "Noob World Portal Igniter",
       "advancements.gemed.title": "Amber Gemmed",
       "item.random_stuff.saphire_netherite_leggings": "Saphire Netherite Leggings",
       "advancements.random_stuff.title": "Random Stuff",
@@ -1037,6 +1110,7 @@
       "block.random_stuff.sap": "Sap",
       "advancements.land_of_noobs.title": "Land Of Noobs",
       "advancements.apprentice_smith.title": "Apprentice Smith",
+      "item.random_stuff.oi": "Oi",
       "item.random_stuff.rubie_netherite_chestplate": "Rubie Netherite Chestplate",
       "item.random_stuff.soul_shard": "Soul Shard",
       "item.random_stuff.jasper": "Jasper",

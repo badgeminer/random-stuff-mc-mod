@@ -15,6 +15,6 @@ public class NoobRenderer extends MobRenderer<NoobEntity, Modelsteve<NoobEntity>
 
 	@Override
 	public ResourceLocation getTextureLocation(NoobEntity entity) {
-		return new ResourceLocation("random_stuff:textures/blueprint.png");
+		return new ResourceLocation("random_stuff:textures/noob-1234-20274971.png");
 	}
 }

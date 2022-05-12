@@ -15,6 +15,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.world.level.block.Block;
 
 import net.mcreator.randomstuff.block.SapBlock;
+import net.mcreator.randomstuff.block.NoobWorldPortalBlock;
 import net.mcreator.randomstuff.block.GemstoneOreBlock;
 import net.mcreator.randomstuff.block.DrillBlock;
 import net.mcreator.randomstuff.block.BossAltarBlock;
@@ -26,6 +27,7 @@ public class RandomStuffModBlocks {
 	public static final RegistryObject<Block> GEMSTONE_ORE = REGISTRY.register("gemstone_ore", () -> new GemstoneOreBlock());
 	public static final RegistryObject<Block> DRILL = REGISTRY.register("drill", () -> new DrillBlock());
 	public static final RegistryObject<Block> SAP = REGISTRY.register("sap", () -> new SapBlock());
+	public static final RegistryObject<Block> NOOB_WORLD_PORTAL = REGISTRY.register("noob_world_portal", () -> new NoobWorldPortalBlock());
 
 	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 	public static class ClientSideHandler {
