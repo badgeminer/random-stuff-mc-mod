@@ -10,6 +10,7 @@ import net.minecraftforge.registries.DeferredRegister;
 
 import net.minecraft.world.level.block.Block;
 
+import net.mcreator.randomstuff.block.SapBlock;
 import net.mcreator.randomstuff.block.GemstoneOreBlock;
 import net.mcreator.randomstuff.block.DrillBlock;
 import net.mcreator.randomstuff.RandomStuffMod;
@@ -18,4 +19,5 @@ public class RandomStuffModBlocks {
 	public static final DeferredRegister<Block> REGISTRY = DeferredRegister.create(ForgeRegistries.BLOCKS, RandomStuffMod.MODID);
 	public static final RegistryObject<Block> GEMSTONE_ORE = REGISTRY.register("gemstone_ore", () -> new GemstoneOreBlock());
 	public static final RegistryObject<Block> DRILL = REGISTRY.register("drill", () -> new DrillBlock());
+	public static final RegistryObject<Block> SAP = REGISTRY.register("sap", () -> new SapBlock());
 }

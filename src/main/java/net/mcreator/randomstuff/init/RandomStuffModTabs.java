@@ -7,12 +7,14 @@ package net.mcreator.randomstuff.init;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.CreativeModeTab;
 
 public class RandomStuffModTabs {
 	public static CreativeModeTab TAB_RANDOM_STUFF_SMITH;
 	public static CreativeModeTab TAB_RANDOM_STUFF_MISC;
+	public static CreativeModeTab TAB_ELEMENTS;
 
 	public static void load() {
 		TAB_RANDOM_STUFF_SMITH = new CreativeModeTab("tabrandom_stuff_smith") {
@@ -30,6 +32,17 @@ public class RandomStuffModTabs {
 			@Override
 			public ItemStack makeIcon() {
 				return new ItemStack(RandomStuffModItems.UNOBTANIBLE_ICON_ITEM.get());
+			}
+
+			@OnlyIn(Dist.CLIENT)
+			public boolean hasSearchBar() {
+				return false;
+			}
+		};
+		TAB_ELEMENTS = new CreativeModeTab("tabelements") {
+			@Override
+			public ItemStack makeIcon() {
+				return new ItemStack(Items.NETHER_STAR);
 			}
 
 			@OnlyIn(Dist.CLIENT)

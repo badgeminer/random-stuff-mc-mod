@@ -1,0 +1,34 @@
+{
+  "_fv": 28,
+  "_type": "loottable",
+  "definition": {
+    "type": "Gift",
+    "pools": [
+      {
+        "minrolls": 100,
+        "maxrolls": 100,
+        "minbonusrolls": 100,
+        "maxbonusrolls": 100,
+        "hasbonusrolls": false,
+        "entries": [
+          {
+            "type": "item",
+            "item": {
+              "value": "CUSTOM:UnobtanibleIconItem"
+            },
+            "weight": 10,
+            "minCount": 10,
+            "maxCount": 10000,
+            "minEnchantmentLevel": 10,
+            "maxEnchantmentLevel": 10,
+            "affectedByFortune": false,
+            "explosionDecay": false,
+            "silkTouchMode": 0
+          }
+        ]
+      }
+    ],
+    "name": "entities/loo",
+    "namespace": "mod"
+  }
+}

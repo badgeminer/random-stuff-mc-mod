@@ -20,6 +20,7 @@ import net.mcreator.randomstuff.item.TopazItem;
 import net.mcreator.randomstuff.item.SmithsAnvilCoreItem;
 import net.mcreator.randomstuff.item.SaphireNetheriteItem;
 import net.mcreator.randomstuff.item.SaphireItem;
+import net.mcreator.randomstuff.item.SapItem;
 import net.mcreator.randomstuff.item.SandPaperItem;
 import net.mcreator.randomstuff.item.RubyItem;
 import net.mcreator.randomstuff.item.RubieNetheriteItem;
@@ -29,11 +30,15 @@ import net.mcreator.randomstuff.item.PolishedJasperItem;
 import net.mcreator.randomstuff.item.PolishedAmberItem;
 import net.mcreator.randomstuff.item.PolisedSaphireItem;
 import net.mcreator.randomstuff.item.PolihsedRubieItem;
+import net.mcreator.randomstuff.item.NetherbnItem;
+import net.mcreator.randomstuff.item.NetherElementItem;
 import net.mcreator.randomstuff.item.MasterSwordItem;
 import net.mcreator.randomstuff.item.LootTokenItem;
 import net.mcreator.randomstuff.item.JasperItem;
 import net.mcreator.randomstuff.item.EyeItem;
+import net.mcreator.randomstuff.item.EndPotecterElementItem;
 import net.mcreator.randomstuff.item.EarthGemItem;
+import net.mcreator.randomstuff.item.DrillRayItem;
 import net.mcreator.randomstuff.item.BoobitemItem;
 import net.mcreator.randomstuff.item.AmberItem;
 import net.mcreator.randomstuff.RandomStuffMod;
@@ -86,6 +91,11 @@ public class RandomStuffModItems {
 			() -> new ForgeSpawnEggItem(RandomStuffModEntities.NOOB, -11776241, -16465639, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> QUEEN_ELIZIBETH = REGISTRY.register("queen_elizibeth_spawn_egg",
 			() -> new ForgeSpawnEggItem(RandomStuffModEntities.QUEEN_ELIZIBETH, -1, -393467, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> SAP_BUCKET = REGISTRY.register("sap_bucket", () -> new SapItem());
+	public static final RegistryObject<Item> DRILL_RAY = REGISTRY.register("drill_ray", () -> new DrillRayItem());
+	public static final RegistryObject<Item> NETHERBN = REGISTRY.register("netherbn", () -> new NetherbnItem());
+	public static final RegistryObject<Item> END_POTECTER_ELEMENT = REGISTRY.register("end_potecter_element", () -> new EndPotecterElementItem());
+	public static final RegistryObject<Item> NETHER_ELEMENT = REGISTRY.register("nether_element", () -> new NetherElementItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

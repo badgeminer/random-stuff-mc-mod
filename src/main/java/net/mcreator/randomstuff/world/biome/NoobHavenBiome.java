@@ -33,13 +33,10 @@ import java.util.List;
 import com.google.common.collect.ImmutableList;
 
 public class NoobHavenBiome {
-	public static final Climate.ParameterPoint PARAMETER_POINT = new Climate.ParameterPoint(Climate.Parameter.span(-0.142857142857f, 0.142857142857f),
-			Climate.Parameter.span(-0.142857142857f, 0.142857142857f), Climate.Parameter.span(0.367142857143f, 0.652857142857f),
-			Climate.Parameter.span(0.657142857143f, 0.942857142857f), Climate.Parameter.point(0),
-			Climate.Parameter.span(0.119024372206f, 0.40473865792f), 0);
-	public static final Climate.ParameterPoint PARAMETER_POINT_UNDERGROUND = new Climate.ParameterPoint(Climate.Parameter.span(-1, 1),
-			Climate.Parameter.span(-1, 1), Climate.Parameter.span(-0.49f, 1.51f), Climate.Parameter.span(-0.2f, 1.8f),
-			Climate.Parameter.span(0.2f, 0.9f), Climate.Parameter.span(-0.738118484937f, 1.261881515063f), 0);
+	public static final Climate.ParameterPoint PARAMETER_POINT = new Climate.ParameterPoint(Climate.Parameter.span(-1.428571428571f, 1.428571428571f),
+			Climate.Parameter.span(-1.428571428571f, 1.428571428571f), Climate.Parameter.span(-0.918571428571f, 1.938571428571f),
+			Climate.Parameter.span(-0.628571428571f, 2.228571428571f), Climate.Parameter.point(0),
+			Climate.Parameter.span(-1.166689913508f, 1.690452943634f), 0);
 
 	public static Biome createBiome() {
 		BiomeSpecialEffects effects = new BiomeSpecialEffects.Builder().fogColor(-13092832).waterColor(-13092832).waterFogColor(-13092832)

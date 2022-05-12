@@ -3,14 +3,14 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "ruby",
+    "texture": "ability",
     "customModelName": "Normal",
-    "name": "Ender Dimension Element",
+    "name": "Nether Element",
     "rarity": "EPIC",
     "creativeTab": {
       "value": "CUSTOM:Elements"
     },
-    "stackSize": 64,
+    "stackSize": 1,
     "enchantability": 0,
     "useDuration": 0,
     "toolType": 1.0,
@@ -23,14 +23,14 @@
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
     "enableMeleeDamage": false,
-    "damageVsEntity": 0.0,
+    "damageVsEntity": 100000.0,
     "specialInfo": [],
-    "hasGlow": false,
+    "hasGlow": true,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "onItemInInventoryTick": {
-      "name": "EyeItemInInventoryTick"
+      "name": "NetherbnItemInInventoryTick"
     },
     "hasDispenseBehavior": false,
     "isFood": false,
@@ -41,6 +41,6 @@
     },
     "isMeat": false,
     "isAlwaysEdible": false,
-    "animation": "eat"
+    "animation": "none"
   }
 }

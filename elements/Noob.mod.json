@@ -4,8 +4,8 @@
   "definition": {
     "mobName": "Noob",
     "mobLabel": "Noob",
-    "mobModelName": "Biped",
-    "mobModelTexture": "daily_left_wing.png",
+    "mobModelName": "Modelsteve",
+    "mobModelTexture": "blueprint.png",
     "mobModelGlowTexture": "",
     "modelWidth": 0.6,
     "modelHeight": 1.8,

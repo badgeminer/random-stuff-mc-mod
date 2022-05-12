@@ -6,14 +6,14 @@ import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.entity.Entity;
 
-import net.mcreator.randomstuff.procedures.EyeItemInInventoryTickProcedure;
-import net.mcreator.randomstuff.init.RandomStuffModTabs;
+import net.mcreator.randomstuff.procedures.NetherElementItemInInventoryTickProcedure;
 
-public class EyeItem extends Item {
-	public EyeItem() {
-		super(new Item.Properties().tab(RandomStuffModTabs.TAB_ELEMENTS).stacksTo(64).rarity(Rarity.EPIC));
+public class NetherElementItem extends Item {
+	public NetherElementItem() {
+		super(new Item.Properties().tab(CreativeModeTab.TAB_MISC).stacksTo(64).rarity(Rarity.EPIC));
 	}
 
 	@Override
@@ -29,6 +29,6 @@ public class EyeItem extends Item {
 	@Override
 	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 		super.inventoryTick(itemstack, world, entity, slot, selected);
-		EyeItemInInventoryTickProcedure.execute(entity);
+		NetherElementItemInInventoryTickProcedure.execute(entity);
 	}
 }

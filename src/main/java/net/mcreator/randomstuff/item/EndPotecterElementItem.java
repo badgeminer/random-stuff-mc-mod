@@ -5,24 +5,30 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.level.Level;
+import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
 
-import net.mcreator.randomstuff.procedures.EarthGemItemInInventoryTickProcedure;
-import net.mcreator.randomstuff.init.RandomStuffModTabs;
+import net.mcreator.randomstuff.procedures.EndPotecterElementItemInInventoryTickProcedure;
 
 import com.google.common.collect.Multimap;
 import com.google.common.collect.ImmutableMultimap;
 
-public class EarthGemItem extends Item {
-	public EarthGemItem() {
-		super(new Item.Properties().tab(RandomStuffModTabs.TAB_ELEMENTS).stacksTo(1).fireResistant().rarity(Rarity.EPIC));
+public class EndPotecterElementItem extends Item {
+	public EndPotecterElementItem() {
+		super(new Item.Properties().tab(CreativeModeTab.TAB_MISC).stacksTo(1).fireResistant().rarity(Rarity.EPIC));
+	}
+
+	@Override
+	public UseAnim getUseAnimation(ItemStack itemstack) {
+		return UseAnim.EAT;
 	}
 
 	@Override
@@ -36,7 +42,7 @@ public class EarthGemItem extends Item {
 			ImmutableMultimap.Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
 			builder.putAll(super.getDefaultAttributeModifiers(equipmentSlot));
 			builder.put(Attributes.ATTACK_DAMAGE,
-					new AttributeModifier(BASE_ATTACK_DAMAGE_UUID, "Item modifier", 998d, AttributeModifier.Operation.ADDITION));
+					new AttributeModifier(BASE_ATTACK_DAMAGE_UUID, "Item modifier", -2d, AttributeModifier.Operation.ADDITION));
 			builder.put(Attributes.ATTACK_SPEED,
 					new AttributeModifier(BASE_ATTACK_SPEED_UUID, "Item modifier", -2.4, AttributeModifier.Operation.ADDITION));
 		}
@@ -52,6 +58,6 @@ public class EarthGemItem extends Item {
 	@Override
 	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 		super.inventoryTick(itemstack, world, entity, slot, selected);
-		EarthGemItemInInventoryTickProcedure.execute(entity);
+		EndPotecterElementItemInInventoryTickProcedure.execute(entity);
 	}
 }

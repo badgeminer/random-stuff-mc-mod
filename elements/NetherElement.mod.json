@@ -3,12 +3,12 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "ruby",
+    "texture": "seasonal_bullit",
     "customModelName": "Normal",
-    "name": "Ender Dimension Element",
+    "name": "Nether Element",
     "rarity": "EPIC",
     "creativeTab": {
-      "value": "CUSTOM:Elements"
+      "value": "MISC"
     },
     "stackSize": 64,
     "enchantability": 0,
@@ -30,7 +30,7 @@
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "onItemInInventoryTick": {
-      "name": "EyeItemInInventoryTick"
+      "name": "NetherElementItemInInventoryTick"
     },
     "hasDispenseBehavior": false,
     "isFood": false,
