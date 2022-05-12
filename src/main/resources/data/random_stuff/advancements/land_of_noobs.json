@@ -18,7 +18,7 @@
     "land_of_noobs": {
       "trigger": "minecraft:location",
       "conditions": {
-        "biome": "random_stuff:deleted_mod_element"
+        "biome": "random_stuff:noob_haven"
       }
     }
   },

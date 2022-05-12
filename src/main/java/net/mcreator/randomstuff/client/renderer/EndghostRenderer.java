@@ -1,11 +1,19 @@
 
 package net.mcreator.randomstuff.client.renderer;
 
-public class EndghostRenderer extends MobRenderer<EndghostEntity, Modelsteve<EndghostEntity>> {
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.client.renderer.entity.MobRenderer;
+import net.minecraft.client.renderer.entity.EntityRendererProvider;
 
+import net.mcreator.randomstuff.procedures.GhostTransparentEntityModelConditionProcedure;
+import net.mcreator.randomstuff.entity.EndghostEntity;
+import net.mcreator.randomstuff.client.model.Modelsteve;
+
+public class EndghostRenderer extends MobRenderer<EndghostEntity, Modelsteve<EndghostEntity>> {
 	public EndghostRenderer(EntityRendererProvider.Context context) {
 		super(context, new Modelsteve(context.bakeLayer(Modelsteve.LAYER_LOCATION)), 0.5f);
-
 	}
 
 	@Override
@@ -20,9 +28,6 @@ public class EndghostRenderer extends MobRenderer<EndghostEntity, Modelsteve<End
 		double x = entity.getX();
 		double y = entity.getY();
 		double z = entity.getZ();
-		return !
-
-		GhostTransparentEntityModelConditionProcedure.execute();
+		return !GhostTransparentEntityModelConditionProcedure.execute();
 	}
-
 }

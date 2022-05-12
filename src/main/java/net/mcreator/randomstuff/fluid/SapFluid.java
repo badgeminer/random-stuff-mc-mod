@@ -1,8 +1,21 @@
 
 package net.mcreator.randomstuff.fluid;
 
-public abstract class SapFluid extends ForgeFlowingFluid {
+import net.minecraftforge.fluids.ForgeFlowingFluid;
+import net.minecraftforge.fluids.FluidAttributes;
 
+import net.minecraft.world.level.material.FluidState;
+import net.minecraft.world.level.material.Fluid;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.LiquidBlock;
+import net.minecraft.world.item.Rarity;
+import net.minecraft.resources.ResourceLocation;
+
+import net.mcreator.randomstuff.init.RandomStuffModItems;
+import net.mcreator.randomstuff.init.RandomStuffModFluids;
+import net.mcreator.randomstuff.init.RandomStuffModBlocks;
+
+public abstract class SapFluid extends ForgeFlowingFluid {
 	public static final ForgeFlowingFluid.Properties PROPERTIES = new ForgeFlowingFluid.Properties(RandomStuffModFluids.SAP,
 			RandomStuffModFluids.FLOWING_SAP,
 			FluidAttributes.builder(new ResourceLocation("random_stuff:blocks/sap"), new ResourceLocation("random_stuff:blocks/sap"))
@@ -50,5 +63,4 @@ public abstract class SapFluid extends ForgeFlowingFluid {
 			return false;
 		}
 	}
-
 }

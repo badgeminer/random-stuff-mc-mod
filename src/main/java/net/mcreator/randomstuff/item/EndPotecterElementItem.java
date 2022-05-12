@@ -1,11 +1,27 @@
 
 package net.mcreator.randomstuff.item;
 
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.api.distmarker.Dist;
+
+import net.minecraft.world.level.Level;
+import net.minecraft.world.item.UseAnim;
+import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.entity.ai.attributes.Attributes;
-import javax.annotation.Nullable;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.entity.ai.attributes.Attribute;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.Entity;
+
+import net.mcreator.randomstuff.procedures.EndPotecterElementItemInInventoryTickProcedure;
+
+import com.google.common.collect.Multimap;
+import com.google.common.collect.ImmutableMultimap;
 
 public class EndPotecterElementItem extends Item {
-
 	public EndPotecterElementItem() {
 		super(new Item.Properties().tab(CreativeModeTab.TAB_MISC).stacksTo(1).fireResistant().rarity(Rarity.EPIC));
 	}
@@ -44,5 +60,4 @@ public class EndPotecterElementItem extends Item {
 		super.inventoryTick(itemstack, world, entity, slot, selected);
 		EndPotecterElementItemInInventoryTickProcedure.execute(entity);
 	}
-
 }

@@ -1,17 +1,55 @@
 
 package net.mcreator.randomstuff.entity;
 
-import net.minecraft.world.entity.ai.attributes.Attribute;
-import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.level.material.Material;
-import net.minecraft.nbt.Tag;
-import net.minecraft.sounds.SoundEvent;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.network.PlayMessages;
+import net.minecraftforge.network.NetworkHooks;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.event.world.BiomeLoadingEvent;
 
-import javax.annotation.Nullable;
+import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.levelgen.Heightmap;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.biome.MobSpawnSettings;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.projectile.ThrownPotion;
+import net.minecraft.world.entity.projectile.AbstractArrow;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.animal.Animal;
+import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
+import net.minecraft.world.entity.ai.goal.RemoveBlockGoal;
+import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
+import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
+import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
+import net.minecraft.world.entity.ai.goal.FloatGoal;
+import net.minecraft.world.entity.ai.goal.BreakDoorGoal;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
+import net.minecraft.world.entity.SpawnPlacements;
+import net.minecraft.world.entity.MobType;
+import net.minecraft.world.entity.MobSpawnType;
+import net.minecraft.world.entity.MobCategory;
+import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.AreaEffectCloud;
+import net.minecraft.world.entity.AgeableMob;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.protocol.Packet;
+import net.minecraft.network.chat.TextComponent;
+
+import net.mcreator.randomstuff.procedures.NoobEntityDiesProcedure;
+import net.mcreator.randomstuff.init.RandomStuffModEntities;
+
+import java.util.List;
 
 @Mod.EventBusSubscriber
 public class NoobEntity extends Animal {
-
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
 		event.getSpawns().getSpawner(MobCategory.CREATURE).add(new MobSpawnSettings.SpawnerData(RandomStuffModEntities.NOOB.get(), 20, 4, 4));
@@ -25,12 +63,9 @@ public class NoobEntity extends Animal {
 		super(type, world);
 		xpReward = 0;
 		setNoAi(false);
-
 		setCustomName(new TextComponent("Noob"));
 		setCustomNameVisible(true);
-
 		setPersistenceRequired();
-
 	}
 
 	@Override
@@ -41,23 +76,19 @@ public class NoobEntity extends Animal {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-
 		this.goalSelector.addGoal(1, new RemoveBlockGoal(Blocks.GRASS_BLOCK, this, 10, (int) 3));
 		this.goalSelector.addGoal(2, new RemoveBlockGoal(Blocks.DIRT, this, 10, (int) 3));
 		this.goalSelector.addGoal(3, new BreakDoorGoal(this, e -> true));
 		this.goalSelector.addGoal(4, new RandomStrollGoal(this, 1));
 		this.targetSelector.addGoal(5, new HurtByTargetGoal(this).setAlertOthers());
 		this.goalSelector.addGoal(6, new MeleeAttackGoal(this, 1.2, true) {
-
 			@Override
 			protected double getAttackReachSqr(LivingEntity entity) {
 				return (double) (4.0 + entity.getBbWidth() * entity.getBbWidth());
 			}
-
 		});
 		this.goalSelector.addGoal(7, new RandomLookAroundGoal(this));
 		this.goalSelector.addGoal(8, new FloatGoal(this));
-
 	}
 
 	@Override
@@ -138,7 +169,6 @@ public class NoobEntity extends Animal {
 		SpawnPlacements.register(RandomStuffModEntities.NOOB.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
 				(entityType, world, reason, pos,
 						random) -> (world.getBlockState(pos.below()).getMaterial() == Material.GRASS && world.getRawBrightness(pos, 0) > 8));
-
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {
@@ -147,8 +177,6 @@ public class NoobEntity extends Animal {
 		builder = builder.add(Attributes.MAX_HEALTH, 1000);
 		builder = builder.add(Attributes.ARMOR, 100);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 0);
-
 		return builder;
 	}
-
 }

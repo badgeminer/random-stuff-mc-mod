@@ -1,11 +1,19 @@
 
 package net.mcreator.randomstuff.item;
 
-import net.minecraft.world.entity.ai.attributes.Attributes;
-import javax.annotation.Nullable;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.api.distmarker.Dist;
+
+import net.minecraft.world.level.Level;
+import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.entity.Entity;
+
+import net.mcreator.randomstuff.procedures.NetherbnItemInInventoryTickProcedure;
+import net.mcreator.randomstuff.init.RandomStuffModTabs;
 
 public class NetherbnItem extends Item {
-
 	public NetherbnItem() {
 		super(new Item.Properties().tab(RandomStuffModTabs.TAB_ELEMENTS).stacksTo(1).rarity(Rarity.EPIC));
 	}
@@ -24,9 +32,6 @@ public class NetherbnItem extends Item {
 	@Override
 	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 		super.inventoryTick(itemstack, world, entity, slot, selected);
-		NetherbnItemInInventoryTickProcedure.execute(
-
-		);
+		NetherbnItemInInventoryTickProcedure.execute(entity);
 	}
-
 }
