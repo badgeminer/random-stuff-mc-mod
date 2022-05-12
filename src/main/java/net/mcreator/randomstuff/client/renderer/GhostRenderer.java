@@ -26,7 +26,7 @@ public class GhostRenderer extends MobRenderer<GhostEntity, Modelsteve<GhostEnti
 
 	@Override
 	public ResourceLocation getTextureLocation(GhostEntity entity) {
-		return new ResourceLocation("random_stuff:textures/811f8dae76dd7890612f9fee95dcd0b3b37f36a1984f28d7d5bc2656728cbf.png");
+		return new ResourceLocation("random_stuff:textures/e799350985fb163c1cb764c8b119dbd2f37bfc0d6fb0301bbae3746f1aecf81c.png");
 	}
 
 	@Override

@@ -14,6 +14,7 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 
 import net.mcreator.randomstuff.world.inventory.LootMenu;
 import net.mcreator.randomstuff.world.inventory.DrillGuiMenu;
+import net.mcreator.randomstuff.world.inventory.BossAltarGuiMenu;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -23,6 +24,8 @@ public class RandomStuffModMenus {
 	private static final List<MenuType<?>> REGISTRY = new ArrayList<>();
 	public static final MenuType<LootMenu> LOOT = register("loot", (id, inv, extraData) -> new LootMenu(id, inv, extraData));
 	public static final MenuType<DrillGuiMenu> DRILL_GUI = register("drill_gui", (id, inv, extraData) -> new DrillGuiMenu(id, inv, extraData));
+	public static final MenuType<BossAltarGuiMenu> BOSS_ALTAR_GUI = register("boss_altar_gui",
+			(id, inv, extraData) -> new BossAltarGuiMenu(id, inv, extraData));
 
 	private static <T extends AbstractContainerMenu> MenuType<T> register(String registryname, IContainerFactory<T> containerFactory) {
 		MenuType<T> menuType = new MenuType<T>(containerFactory);

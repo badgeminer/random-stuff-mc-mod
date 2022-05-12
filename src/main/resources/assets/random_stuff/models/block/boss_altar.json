@@ -1,0 +1,8 @@
+{
+  "parent": "random_stuff:custom/vault_altar",
+  "textures": {
+    "all": "random_stuff:blocks/vault_altar",
+    "particle": "random_stuff:blocks/vault_altar",
+    "0": "random_stuff:blocks/vault_altar"
+  }
+}

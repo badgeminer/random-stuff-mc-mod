@@ -18,12 +18,12 @@
     "land_of_noobs": {
       "trigger": "minecraft:location",
       "conditions": {
-        "biome": "random_stuff:noob_haven"
+        "biome": "random_stuff:deleted_mod_element"
       }
     }
   },
   "rewards": {
     "experience": 100
   },
-  "parent": "random_stuff:apprentice_smith"
+  "parent": "random_stuff:random_stuff"
 }

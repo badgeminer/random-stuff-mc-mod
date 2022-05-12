@@ -4,6 +4,7 @@ import net.minecraftforge.items.IItemHandlerModifiable;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.common.BiomeDictionary;
 
+import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
@@ -18,10 +19,13 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class DrillUpdateTickProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
 		if (Math.round(Math.random() * 100) <= 1) {
-			if (world.getBiome(new BlockPos(x, y, z)).value().getRegistryName() != null && BiomeDictionary.hasType(
-					ResourceKey.create(Registry.BIOME_REGISTRY,
-							world.registryAccess().registryOrThrow(Registry.BIOME_REGISTRY).getKey(world.getBiome(new BlockPos(x, y, z)).value())),
-					BiomeDictionary.Type.PLAINS)) {
+			if (world.getBiome(new BlockPos(x, world.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (int) x, (int) z), z)).value()
+					.getRegistryName() != null
+					&& BiomeDictionary.hasType(ResourceKey.create(Registry.BIOME_REGISTRY,
+							world.registryAccess().registryOrThrow(Registry.BIOME_REGISTRY).getKey(
+									world.getBiome(new BlockPos(x, world.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (int) x, (int) z), z))
+											.value())),
+							BiomeDictionary.Type.PLAINS)) {
 				{
 					BlockEntity _ent = world.getBlockEntity(new BlockPos(x, y, z));
 					if (_ent != null) {
@@ -43,10 +47,13 @@ public class DrillUpdateTickProcedure {
 						});
 					}
 				}
-			} else if (world.getBiome(new BlockPos(x, y, z)).value().getRegistryName() != null && BiomeDictionary.hasType(
-					ResourceKey.create(Registry.BIOME_REGISTRY,
-							world.registryAccess().registryOrThrow(Registry.BIOME_REGISTRY).getKey(world.getBiome(new BlockPos(x, y, z)).value())),
-					BiomeDictionary.Type.SNOWY)) {
+			} else if (world.getBiome(new BlockPos(x, world.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (int) x, (int) z), z)).value()
+					.getRegistryName() != null
+					&& BiomeDictionary.hasType(ResourceKey.create(Registry.BIOME_REGISTRY,
+							world.registryAccess().registryOrThrow(Registry.BIOME_REGISTRY).getKey(
+									world.getBiome(new BlockPos(x, world.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (int) x, (int) z), z))
+											.value())),
+							BiomeDictionary.Type.SNOWY)) {
 				{
 					BlockEntity _ent = world.getBlockEntity(new BlockPos(x, y, z));
 					if (_ent != null) {
@@ -68,10 +75,13 @@ public class DrillUpdateTickProcedure {
 						});
 					}
 				}
-			} else if (world.getBiome(new BlockPos(x, y, z)).value().getRegistryName() != null && BiomeDictionary.hasType(
-					ResourceKey.create(Registry.BIOME_REGISTRY,
-							world.registryAccess().registryOrThrow(Registry.BIOME_REGISTRY).getKey(world.getBiome(new BlockPos(x, y, z)).value())),
-					BiomeDictionary.Type.SANDY)) {
+			} else if (world.getBiome(new BlockPos(x, world.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (int) x, (int) z), z)).value()
+					.getRegistryName() != null
+					&& BiomeDictionary.hasType(ResourceKey.create(Registry.BIOME_REGISTRY,
+							world.registryAccess().registryOrThrow(Registry.BIOME_REGISTRY).getKey(
+									world.getBiome(new BlockPos(x, world.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (int) x, (int) z), z))
+											.value())),
+							BiomeDictionary.Type.SANDY)) {
 				{
 					BlockEntity _ent = world.getBlockEntity(new BlockPos(x, y, z));
 					if (_ent != null) {

@@ -668,12 +668,21 @@
       "path": "~/gear"
     },
     {
-      "name": "Loo",
-      "type": "loottable",
-      "sortid": 50,
+      "name": "EyeItemInInventoryTick",
+      "type": "procedure",
+      "sortid": 55,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "loo"
+      "registry_name": "eye_item_in_inventory_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/gear"
     },
     {
       "name": "Sap",
@@ -685,6 +694,98 @@
       "metadata": {
         "gb": true
       }
+    },
+    {
+      "name": "EndPotecterElementItemInInventoryTick",
+      "type": "procedure",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "end_potecter_element_item_in_inventory_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/gear"
+    },
+    {
+      "name": "EndPotecterElement",
+      "type": "item",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "end_potecter_element",
+      "path": "~/gear"
+    },
+    {
+      "name": "DrillRay",
+      "type": "item",
+      "sortid": 52,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "drill_ray"
+    },
+    {
+      "name": "RubyItemInInventoryTick",
+      "type": "procedure",
+      "sortid": 54,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ruby_item_in_inventory_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/gear"
+    },
+    {
+      "name": "Netherbn",
+      "type": "item",
+      "sortid": 57,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherbn"
+    },
+    {
+      "name": "Elements",
+      "type": "tab",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "elements"
+    },
+    {
+      "name": "Loo",
+      "type": "loottable",
+      "sortid": 50,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "loo"
+    },
+    {
+      "name": "NetherElementItemInInventoryTick",
+      "type": "procedure",
+      "sortid": 61,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nether_element_item_in_inventory_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/gear"
     },
     {
       "name": "DrillRayRightclickedOnBlock",
@@ -713,65 +814,6 @@
           }
         ]
       }
-    },
-    {
-      "name": "DrillRay",
-      "type": "item",
-      "sortid": 52,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "drill_ray"
-    },
-    {
-      "name": "EarthGemItemInInventoryTick",
-      "type": "procedure",
-      "sortid": 53,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "earth_gem_item_in_inventory_tick",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/gear"
-    },
-    {
-      "name": "RubyItemInInventoryTick",
-      "type": "procedure",
-      "sortid": 54,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "ruby_item_in_inventory_tick",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/gear"
-    },
-    {
-      "name": "EyeItemInInventoryTick",
-      "type": "procedure",
-      "sortid": 55,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "eye_item_in_inventory_tick",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/gear"
     },
     {
       "name": "BoobitemItemInInventoryTick",
@@ -807,28 +849,12 @@
       }
     },
     {
-      "name": "Netherbn",
-      "type": "item",
-      "sortid": 57,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "netherbn"
-    },
-    {
-      "name": "Elements",
-      "type": "tab",
-      "sortid": 58,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "elements"
-    },
-    {
-      "name": "EndPotecterElementItemInInventoryTick",
+      "name": "EarthGemItemInInventoryTick",
       "type": "procedure",
-      "sortid": 59,
+      "sortid": 53,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "end_potecter_element_item_in_inventory_tick",
+      "registry_name": "earth_gem_item_in_inventory_tick",
       "metadata": {
         "dependencies": [
           {
@@ -837,15 +863,6 @@
           }
         ]
       },
-      "path": "~/gear"
-    },
-    {
-      "name": "EndPotecterElement",
-      "type": "item",
-      "sortid": 59,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "end_potecter_element",
       "path": "~/gear"
     },
     {
@@ -858,21 +875,100 @@
       "path": "~/gear"
     },
     {
-      "name": "NetherElementItemInInventoryTick",
-      "type": "procedure",
-      "sortid": 61,
+      "name": "ShadowGem",
+      "type": "item",
+      "sortid": 19,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "nether_element_item_in_inventory_tick",
+      "registry_name": "shadow_gem"
+    },
+    {
+      "name": "SoulShard",
+      "type": "item",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "soul_shard"
+    },
+    {
+      "name": "BossAltarGui",
+      "type": "gui",
+      "sortid": 68,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "boss_altar_gui"
+    },
+    {
+      "name": "GhostDrops",
+      "type": "loottable",
+      "sortid": 65,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ghost_drops"
+    },
+    {
+      "name": "EnderGhost",
+      "type": "livingentity",
+      "sortid": 69,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ender_ghost"
+    },
+    {
+      "name": "BossSpawn",
+      "type": "procedure",
+      "sortid": 67,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "boss_spawn",
       "metadata": {
         "dependencies": [
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
-      },
-      "path": "~/gear"
+      }
+    },
+    {
+      "name": "BossAltar",
+      "type": "block",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "boss_altar"
+    },
+    {
+      "name": "Endghost",
+      "type": "livingentity",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "endghost"
+    },
+    {
+      "name": "EndGhostDrops",
+      "type": "loottable",
+      "sortid": 66,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "end_ghost_drops"
     }
   ],
   "variable_elements": [],
@@ -886,12 +982,11 @@
       "item.random_stuff.polihsed_rubie": "Polihsed Rubie",
       "item.random_stuff.saphire": "Saphire",
       "entity.random_stuff.queen_elizibeth": "Queen Elizibeth",
-      "item.random_stuff.boobitem": "Explosion Element",
+      "item.random_stuff.boobitem": "Boobitem",
       "advancements.loot_obtained.title": "Loot Obtained",
       "advancements.loot_obtained.descr": "get a Loot Token",
       "block.random_stuff.drill": "Drill",
       "entity.random_stuff.shadow_armor": "Shadow Armor",
-      "itemGroup.tabelements": "Elements",
       "item.random_stuff.drill_ray": "Drill Ray",
       "item.random_stuff.polished_jasper": "Polished Jasper",
       "item.random_stuff.rubie_netherite_boots": "Rubie Netherite Boots",
@@ -899,16 +994,14 @@
       "item.random_stuff.queen_elizibeth_spawn_egg": "Queen Elizibeth Spawn Egg",
       "item.random_stuff.warp_staff": "Warp Staff",
       "item.random_stuff.polised_saphire": "Polised Saphire",
-      "item.random_stuff.sap_bucket": "Sap in a Bucket",
       "item.random_stuff.topaz": "Topaz",
       "entity.random_stuff.ghost": "Ghost",
-      "item.random_stuff.ruby": "Fire Element",
+      "item.random_stuff.ruby": "Ruby Element",
       "item.random_stuff.saphire_netherite_boots": "Saphire Netherite Boots",
       "item.random_stuff.rubie_netherite_helmet": "Rubie Netherite Helmet",
       "advancements.random_stuff.descr": "lots of Random Stuff",
       "item.random_stuff.ghost_spawn_egg": "Ghost Spawn Egg",
       "item.random_stuff.polished_amber": "Polished Amber",
-      "fluid.random_stuff.sap": "Sap",
       "itemGroup.tabrandom_stuff_smith": "Random Stuff Smithing",
       "biome.random_stuff.noob_haven": "Noob Haven",
       "item.random_stuff.polished_topaz": "Polished Topaz",
@@ -924,15 +1017,11 @@
       "item.minecraft.splash_potion.effect.battle": "_",
       "item.random_stuff.sand_paper": "Sand Paper",
       "entity.random_stuff.noob": "Noob",
-      "item.random_stuff.netherbn": "Nether Element",
-      "item.random_stuff.end_potecter_element": "End Potecter Element",
       "item.random_stuff.saphire_netherite_chestplate": "Saphire Netherite Body",
-      "item.random_stuff.eye": "Ender Dimension Element",
+      "item.random_stuff.eye": "Eye",
       "item.minecraft.tipped_arrow.effect.battle": "_",
       "item.random_stuff.smiths_anvil_core": "Smiths Anvil Core",
-      "item.random_stuff.nether_element": "Nether Element",
       "item.random_stuff.shadow_armor_spawn_egg": "Shadow Armor Spawn Egg",
-      "block.random_stuff.sap": "Sap",
       "advancements.land_of_noobs.title": "Land Of Noobs",
       "advancements.apprentice_smith.title": "Apprentice Smith",
       "item.random_stuff.rubie_netherite_chestplate": "Rubie Netherite Chestplate",
@@ -941,7 +1030,7 @@
       "item.random_stuff.noob_spawn_egg": "Noob Spawn Egg",
       "item.minecraft.lingering_potion.effect.battle": "_",
       "advancements.gemed.descr": "get some Amber gems",
-      "item.random_stuff.earth_gem": "Earth Element"
+      "item.random_stuff.earth_gem": "Earth Gem"
     }
   },
   "foldersRoot": {

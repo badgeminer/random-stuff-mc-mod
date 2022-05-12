@@ -14,13 +14,13 @@
     "harvestLevel": 1,
     "efficiency": 4.0,
     "attackSpeed": 1.0,
-    "enchantability": 2000,
-    "damageVsEntity": 10000.0,
+    "enchantability": 2,
+    "damageVsEntity": 100.0,
     "usageCount": 1000,
     "blocksAffected": [],
     "hasGlow": false,
     "repairItems": [],
-    "immuneToFire": true,
+    "immuneToFire": false,
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false
   }

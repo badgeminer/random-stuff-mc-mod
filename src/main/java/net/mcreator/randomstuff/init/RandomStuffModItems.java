@@ -17,7 +17,9 @@ import net.minecraft.world.item.BlockItem;
 import net.mcreator.randomstuff.item.WarpStaffItem;
 import net.mcreator.randomstuff.item.UnobtanibleIconItemItem;
 import net.mcreator.randomstuff.item.TopazItem;
+import net.mcreator.randomstuff.item.SoulShardItem;
 import net.mcreator.randomstuff.item.SmithsAnvilCoreItem;
+import net.mcreator.randomstuff.item.ShadowGemItem;
 import net.mcreator.randomstuff.item.SaphireNetheriteItem;
 import net.mcreator.randomstuff.item.SaphireItem;
 import net.mcreator.randomstuff.item.SapItem;
@@ -54,6 +56,7 @@ public class RandomStuffModItems {
 	public static final RegistryObject<Item> RUBIE_NETHERITE_LEGGINGS = REGISTRY.register("rubie_netherite_leggings",
 			() -> new RubieNetheriteItem.Leggings());
 	public static final RegistryObject<Item> RUBIE_NETHERITE_BOOTS = REGISTRY.register("rubie_netherite_boots", () -> new RubieNetheriteItem.Boots());
+	public static final RegistryObject<Item> BOSS_ALTAR = block(RandomStuffModBlocks.BOSS_ALTAR, RandomStuffModTabs.TAB_RANDOM_STUFF_SMITH);
 	public static final RegistryObject<Item> SAPHIRE_NETHERITE_HELMET = REGISTRY.register("saphire_netherite_helmet",
 			() -> new SaphireNetheriteItem.Helmet());
 	public static final RegistryObject<Item> SAPHIRE_NETHERITE_CHESTPLATE = REGISTRY.register("saphire_netherite_chestplate",
@@ -70,9 +73,13 @@ public class RandomStuffModItems {
 	public static final RegistryObject<Item> POLIHSED_RUBIE = REGISTRY.register("polihsed_rubie", () -> new PolihsedRubieItem());
 	public static final RegistryObject<Item> SAPHIRE = REGISTRY.register("saphire", () -> new SaphireItem());
 	public static final RegistryObject<Item> POLISED_SAPHIRE = REGISTRY.register("polised_saphire", () -> new PolisedSaphireItem());
+	public static final RegistryObject<Item> SHADOW_GEM = REGISTRY.register("shadow_gem", () -> new ShadowGemItem());
+	public static final RegistryObject<Item> SOUL_SHARD = REGISTRY.register("soul_shard", () -> new SoulShardItem());
 	public static final RegistryObject<Item> JASPER = REGISTRY.register("jasper", () -> new JasperItem());
 	public static final RegistryObject<Item> POLISHED_JASPER = REGISTRY.register("polished_jasper", () -> new PolishedJasperItem());
 	public static final RegistryObject<Item> TOPAZ = REGISTRY.register("topaz", () -> new TopazItem());
+	public static final RegistryObject<Item> ENDGHOST = REGISTRY.register("endghost_spawn_egg",
+			() -> new ForgeSpawnEggItem(RandomStuffModEntities.ENDGHOST, -1, -65536, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> POLISHED_TOPAZ = REGISTRY.register("polished_topaz", () -> new PolishedTopazItem());
 	public static final RegistryObject<Item> MASTER_SWORD = REGISTRY.register("master_sword", () -> new MasterSwordItem());
 	public static final RegistryObject<Item> GEMSTONE_ORE = block(RandomStuffModBlocks.GEMSTONE_ORE, RandomStuffModTabs.TAB_RANDOM_STUFF_SMITH);
