@@ -5,10 +5,10 @@
     "renderType": 0,
     "texture": "earthgem",
     "customModelName": "Normal",
-    "name": "Earth Element",
+    "name": "Earth Gem",
     "rarity": "EPIC",
     "creativeTab": {
-      "value": "CUSTOM:Elements"
+      "value": "MISC"
     },
     "stackSize": 1,
     "enchantability": 0,
@@ -29,9 +29,6 @@
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "onItemInInventoryTick": {
-      "name": "EarthGemItemInInventoryTick"
-    },
     "hasDispenseBehavior": false,
     "isFood": false,
     "nutritionalValue": 4,

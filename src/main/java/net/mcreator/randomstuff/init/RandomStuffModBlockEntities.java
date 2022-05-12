@@ -17,9 +17,9 @@ import net.mcreator.randomstuff.RandomStuffMod;
 
 public class RandomStuffModBlockEntities {
 	public static final DeferredRegister<BlockEntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITIES, RandomStuffMod.MODID);
+	public static final RegistryObject<BlockEntityType<?>> DRILL = register("drill", RandomStuffModBlocks.DRILL, DrillBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> BOSS_ALTAR = register("boss_altar", RandomStuffModBlocks.BOSS_ALTAR,
 			BossAltarBlockEntity::new);
-	public static final RegistryObject<BlockEntityType<?>> DRILL = register("drill", RandomStuffModBlocks.DRILL, DrillBlockEntity::new);
 
 	private static RegistryObject<BlockEntityType<?>> register(String registryname, RegistryObject<Block> block,
 			BlockEntityType.BlockEntitySupplier<?> supplier) {

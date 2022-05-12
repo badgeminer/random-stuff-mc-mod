@@ -20,11 +20,11 @@ import net.mcreator.randomstuff.client.renderer.EnderGhostRenderer;
 public class RandomStuffModEntityRenderers {
 	@SubscribeEvent
 	public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
-		event.registerEntityRenderer(RandomStuffModEntities.ENDGHOST.get(), EndghostRenderer::new);
 		event.registerEntityRenderer(RandomStuffModEntities.SHADOW_ARMOR.get(), ShadowArmorRenderer::new);
 		event.registerEntityRenderer(RandomStuffModEntities.GHOST.get(), GhostRenderer::new);
 		event.registerEntityRenderer(RandomStuffModEntities.NOOB.get(), NoobRenderer::new);
 		event.registerEntityRenderer(RandomStuffModEntities.QUEEN_ELIZIBETH.get(), QueenElizibethRenderer::new);
+		event.registerEntityRenderer(RandomStuffModEntities.ENDGHOST.get(), EndghostRenderer::new);
 		event.registerEntityRenderer(RandomStuffModEntities.ENDER_GHOST.get(), EnderGhostRenderer::new);
 	}
 }

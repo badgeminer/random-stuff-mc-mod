@@ -23,10 +23,10 @@ import net.mcreator.randomstuff.RandomStuffMod;
 
 public class RandomStuffModBlocks {
 	public static final DeferredRegister<Block> REGISTRY = DeferredRegister.create(ForgeRegistries.BLOCKS, RandomStuffMod.MODID);
-	public static final RegistryObject<Block> BOSS_ALTAR = REGISTRY.register("boss_altar", () -> new BossAltarBlock());
 	public static final RegistryObject<Block> GEMSTONE_ORE = REGISTRY.register("gemstone_ore", () -> new GemstoneOreBlock());
 	public static final RegistryObject<Block> DRILL = REGISTRY.register("drill", () -> new DrillBlock());
 	public static final RegistryObject<Block> SAP = REGISTRY.register("sap", () -> new SapBlock());
+	public static final RegistryObject<Block> BOSS_ALTAR = REGISTRY.register("boss_altar", () -> new BossAltarBlock());
 	public static final RegistryObject<Block> NOOB_WORLD_PORTAL = REGISTRY.register("noob_world_portal", () -> new NoobWorldPortalBlock());
 
 	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)

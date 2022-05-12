@@ -5,10 +5,10 @@
     "renderType": 0,
     "texture": "ruby",
     "customModelName": "Normal",
-    "name": "Ender Dimension Element",
-    "rarity": "EPIC",
+    "name": "Eye",
+    "rarity": "COMMON",
     "creativeTab": {
-      "value": "CUSTOM:Elements"
+      "value": "MISC"
     },
     "stackSize": 64,
     "enchantability": 0,
@@ -29,9 +29,6 @@
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "onItemInInventoryTick": {
-      "name": "EyeItemInInventoryTick"
-    },
     "hasDispenseBehavior": false,
     "isFood": false,
     "nutritionalValue": 4,
