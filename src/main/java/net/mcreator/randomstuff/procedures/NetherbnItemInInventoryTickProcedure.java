@@ -11,7 +11,7 @@ public class NetherbnItemInInventoryTickProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof LivingEntity _entity)
-			_entity.addEffect(new MobEffectInstance(MobEffects.HEALTH_BOOST, 1, 50));
+			_entity.addEffect(new MobEffectInstance(MobEffects.HEALTH_BOOST, 100000000, 50));
 		if (entity instanceof Player _player) {
 			_player.getAbilities().mayfly = (true);
 			_player.onUpdateAbilities();

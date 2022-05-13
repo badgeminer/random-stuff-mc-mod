@@ -4,8 +4,8 @@
   "block.random_stuff.the_noob_kings_alter": "The Noob Kings Alter",
   "item.random_stuff.amber": "Amber",
   "item.random_stuff.master_sword": "Master Sword",
-  "subtitles.commands.bob.bob": "BOB",
   "entity.random_stuff.noob_king": "Noob King",
+  "subtitles.commands.bob.bob": "BOB",
   "item.random_stuff.polihsed_rubie": "Polihsed Rubie",
   "item.random_stuff.saphire": "Saphire",
   "entity.random_stuff.queen_elizibeth": "Queen Elizibeth",
@@ -80,5 +80,6 @@
   "item.random_stuff.noob_spawn_egg": "Noob Spawn Egg",
   "item.minecraft.lingering_potion.effect.battle": "_",
   "advancements.gemed.descr": "get some Amber gems",
-  "item.random_stuff.earth_gem": "Earth Element"
+  "item.random_stuff.earth_gem": "Earth Element",
+  "block.random_stuff.enchanted_dirt": "Enchanted Dirt"
 }

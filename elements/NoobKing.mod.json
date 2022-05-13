@@ -54,7 +54,7 @@
     "trackingRange": 6400,
     "health": 1001,
     "xpAmount": 0,
-    "waterMob": true,
+    "waterMob": false,
     "flyingMob": false,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
@@ -77,7 +77,7 @@
     "immuneToWither": true,
     "immuneToDragonBreath": true,
     "mobDrop": {
-      "value": "CUSTOM:EnchantedDirt"
+      "value": ""
     },
     "livingSound": {
       "value": ""
@@ -93,10 +93,10 @@
     },
     "spawnParticles": false,
     "particleToSpawn": {
-      "value": "SQUID_INK"
+      "value": "EXPLOSION_NORMAL"
     },
     "particleSpawningShape": "Spread",
-    "particleSpawningRadious": 1.0,
+    "particleSpawningRadious": 0.5,
     "particleAmount": 4,
     "hasAI": true,
     "aiBase": "(none)",
