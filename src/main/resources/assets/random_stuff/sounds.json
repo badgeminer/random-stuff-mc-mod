@@ -1,0 +1,12 @@
+{
+  "commands.bob.bob": {
+    "category": "master",
+    "subtitle": "subtitles.commands.bob.bob",
+    "sounds": [
+      {
+        "name": "random_stuff:untitled",
+        "stream": false
+      }
+    ]
+  }
+}
