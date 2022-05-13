@@ -1080,6 +1080,70 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "aqua_gem"
+    },
+    {
+      "name": "Noobaltar",
+      "type": "code",
+      "sortid": 77,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "noobaltar"
+    },
+    {
+      "name": "Noobsummon",
+      "type": "procedure",
+      "sortid": 78,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "noobsummon",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "NoobKingSpawn",
+      "type": "gui",
+      "sortid": 77,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "noob_king_spawn"
+    },
+    {
+      "name": "NoobKing",
+      "type": "livingentity",
+      "sortid": 78,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "noob_king"
+    },
+    {
+      "name": "TheNoobKingsAlter",
+      "type": "block",
+      "sortid": 77,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "the_noob_kings_alter"
     }
   ],
   "variable_elements": [],
@@ -1158,7 +1222,6 @@
       "item.random_stuff.rubie_netherite_chestplate": "Rubie Netherite Chestplate",
       "item.random_stuff.soul_shard": "Soul Shard",
       "item.random_stuff.jasper": "Jasper",
-      "item.random_stuff.aqua_gem": "Aqua Gem",
       "item.random_stuff.rubie_netherite_leggings": "Rubie Netherite Leggings",
       "item.random_stuff.noob_spawn_egg": "Noob Spawn Egg",
       "item.minecraft.lingering_potion.effect.battle": "_",

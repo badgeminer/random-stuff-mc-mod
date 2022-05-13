@@ -11,15 +11,18 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.Block;
 
+import net.mcreator.randomstuff.block.entity.TheNoobKingsAlterBlockEntity;
 import net.mcreator.randomstuff.block.entity.DrillBlockEntity;
 import net.mcreator.randomstuff.block.entity.BossAltarBlockEntity;
 import net.mcreator.randomstuff.RandomStuffMod;
 
 public class RandomStuffModBlockEntities {
 	public static final DeferredRegister<BlockEntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITIES, RandomStuffMod.MODID);
-	public static final RegistryObject<BlockEntityType<?>> DRILL = register("drill", RandomStuffModBlocks.DRILL, DrillBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> BOSS_ALTAR = register("boss_altar", RandomStuffModBlocks.BOSS_ALTAR,
 			BossAltarBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> DRILL = register("drill", RandomStuffModBlocks.DRILL, DrillBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> THE_NOOB_KINGS_ALTER = register("the_noob_kings_alter",
+			RandomStuffModBlocks.THE_NOOB_KINGS_ALTER, TheNoobKingsAlterBlockEntity::new);
 
 	private static RegistryObject<BlockEntityType<?>> register(String registryname, RegistryObject<Block> block,
 			BlockEntityType.BlockEntitySupplier<?> supplier) {

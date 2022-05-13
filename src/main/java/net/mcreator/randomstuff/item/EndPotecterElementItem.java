@@ -9,7 +9,6 @@ import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attribute;
@@ -17,13 +16,14 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
 
 import net.mcreator.randomstuff.procedures.EndPotecterElementItemInInventoryTickProcedure;
+import net.mcreator.randomstuff.init.RandomStuffModTabs;
 
 import com.google.common.collect.Multimap;
 import com.google.common.collect.ImmutableMultimap;
 
 public class EndPotecterElementItem extends Item {
 	public EndPotecterElementItem() {
-		super(new Item.Properties().tab(CreativeModeTab.TAB_MISC).stacksTo(1).fireResistant().rarity(Rarity.EPIC));
+		super(new Item.Properties().tab(RandomStuffModTabs.TAB_ELEMENTS).stacksTo(1).fireResistant().rarity(Rarity.EPIC));
 	}
 
 	@Override
