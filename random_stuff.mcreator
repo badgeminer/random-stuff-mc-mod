@@ -1136,6 +1136,14 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "the_noob_kings_alter"
+    },
+    {
+      "name": "EnchantedDirt",
+      "type": "block",
+      "sortid": 79,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enchanted_dirt"
     }
   ],
   "variable_elements": [],
@@ -1221,7 +1229,8 @@
       "item.random_stuff.noob_spawn_egg": "Noob Spawn Egg",
       "item.minecraft.lingering_potion.effect.battle": "_",
       "advancements.gemed.descr": "get some Amber gems",
-      "item.random_stuff.earth_gem": "Earth Element"
+      "item.random_stuff.earth_gem": "Earth Element",
+      "block.random_stuff.enchanted_dirt": "Enchanted Dirt"
     }
   },
   "foldersRoot": {

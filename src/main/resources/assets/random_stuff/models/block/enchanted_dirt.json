@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "random_stuff:blocks/w3",
+    "up": "random_stuff:blocks/w3",
+    "north": "random_stuff:blocks/w3",
+    "east": "random_stuff:blocks/w3",
+    "south": "random_stuff:blocks/w3",
+    "west": "random_stuff:blocks/w3",
+    "particle": "random_stuff:blocks/w3"
+  }
+}

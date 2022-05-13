@@ -85,5 +85,10 @@ public class BobCommandExecutedProcedure {
 			if (_mcserv != null)
 				_mcserv.getPlayerList().broadcastMessage(new TextComponent("bob"), ChatType.SYSTEM, Util.NIL_UUID);
 		}
+		if (!world.isClientSide()) {
+			MinecraftServer _mcserv = ServerLifecycleHooks.getCurrentServer();
+			if (_mcserv != null)
+				_mcserv.getPlayerList().broadcastMessage(new TextComponent("bob"), ChatType.SYSTEM, Util.NIL_UUID);
+		}
 	}
 }
