@@ -1072,6 +1072,14 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "cheese"
+    },
+    {
+      "name": "AquaGem",
+      "type": "item",
+      "sortid": 77,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "aqua_gem"
     }
   ],
   "variable_elements": [],
@@ -1150,6 +1158,7 @@
       "item.random_stuff.rubie_netherite_chestplate": "Rubie Netherite Chestplate",
       "item.random_stuff.soul_shard": "Soul Shard",
       "item.random_stuff.jasper": "Jasper",
+      "item.random_stuff.aqua_gem": "Aqua Gem",
       "item.random_stuff.rubie_netherite_leggings": "Rubie Netherite Leggings",
       "item.random_stuff.noob_spawn_egg": "Noob Spawn Egg",
       "item.minecraft.lingering_potion.effect.battle": "_",

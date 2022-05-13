@@ -48,6 +48,7 @@ import net.mcreator.randomstuff.item.DrillRayItem;
 import net.mcreator.randomstuff.item.DirtBagItem;
 import net.mcreator.randomstuff.item.CheeseItem;
 import net.mcreator.randomstuff.item.BoobitemItem;
+import net.mcreator.randomstuff.item.AquaGemItem;
 import net.mcreator.randomstuff.item.AmberItem;
 import net.mcreator.randomstuff.RandomStuffMod;
 
@@ -115,6 +116,7 @@ public class RandomStuffModItems {
 	public static final RegistryObject<Item> LIQUID_DARKNESS = REGISTRY.register("liquid_darkness", () -> new LiquidDarknessItem());
 	public static final RegistryObject<Item> ICE_CUBE = REGISTRY.register("ice_cube", () -> new IceCubeItem());
 	public static final RegistryObject<Item> CHEESE = REGISTRY.register("cheese", () -> new CheeseItem());
+	public static final RegistryObject<Item> AQUA_GEM = REGISTRY.register("aqua_gem", () -> new AquaGemItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
