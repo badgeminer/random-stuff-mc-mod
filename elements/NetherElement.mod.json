@@ -8,7 +8,7 @@
     "name": "Nether Element",
     "rarity": "EPIC",
     "creativeTab": {
-      "value": "MISC"
+      "value": "CUSTOM:Elements"
     },
     "stackSize": 64,
     "enchantability": 0,

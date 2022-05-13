@@ -18,6 +18,7 @@ import net.minecraft.world.entity.Entity;
 
 import net.mcreator.randomstuff.entity.ShadowArmorEntity;
 import net.mcreator.randomstuff.entity.QueenElizibethEntity;
+import net.mcreator.randomstuff.entity.NoobKingEntity;
 import net.mcreator.randomstuff.entity.NoobEntity;
 import net.mcreator.randomstuff.entity.GhostEntity;
 import net.mcreator.randomstuff.entity.EndghostEntity;
@@ -27,6 +28,11 @@ import net.mcreator.randomstuff.RandomStuffMod;
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class RandomStuffModEntities {
 	public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.ENTITIES, RandomStuffMod.MODID);
+	public static final RegistryObject<EntityType<EndghostEntity>> ENDGHOST = register("endghost",
+			EntityType.Builder.<EndghostEntity>of(EndghostEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
+					.setUpdateInterval(3).setCustomClientFactory(EndghostEntity::new)
+
+					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<ShadowArmorEntity>> SHADOW_ARMOR = register("shadow_armor",
 			EntityType.Builder.<ShadowArmorEntity>of(ShadowArmorEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
 					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ShadowArmorEntity::new)
@@ -43,16 +49,14 @@ public class RandomStuffModEntities {
 	public static final RegistryObject<EntityType<QueenElizibethEntity>> QUEEN_ELIZIBETH = register("queen_elizibeth",
 			EntityType.Builder.<QueenElizibethEntity>of(QueenElizibethEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
 					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(QueenElizibethEntity::new).fireImmune().sized(0.6f, 1.8f));
-	public static final RegistryObject<EntityType<EndghostEntity>> ENDGHOST = register("endghost",
-			EntityType.Builder.<EndghostEntity>of(EndghostEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
-					.setUpdateInterval(3).setCustomClientFactory(EndghostEntity::new)
-
-					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<EnderGhostEntity>> ENDER_GHOST = register("ender_ghost",
 			EntityType.Builder.<EnderGhostEntity>of(EnderGhostEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
 					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(EnderGhostEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<NoobKingEntity>> NOOB_KING = register("noob_king",
+			EntityType.Builder.<NoobKingEntity>of(NoobKingEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+					.setTrackingRange(6400).setUpdateInterval(3).setCustomClientFactory(NoobKingEntity::new).fireImmune().sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -61,22 +65,24 @@ public class RandomStuffModEntities {
 	@SubscribeEvent
 	public static void init(FMLCommonSetupEvent event) {
 		event.enqueueWork(() -> {
+			EndghostEntity.init();
 			ShadowArmorEntity.init();
 			GhostEntity.init();
 			NoobEntity.init();
 			QueenElizibethEntity.init();
-			EndghostEntity.init();
 			EnderGhostEntity.init();
+			NoobKingEntity.init();
 		});
 	}
 
 	@SubscribeEvent
 	public static void registerAttributes(EntityAttributeCreationEvent event) {
+		event.put(ENDGHOST.get(), EndghostEntity.createAttributes().build());
 		event.put(SHADOW_ARMOR.get(), ShadowArmorEntity.createAttributes().build());
 		event.put(GHOST.get(), GhostEntity.createAttributes().build());
 		event.put(NOOB.get(), NoobEntity.createAttributes().build());
 		event.put(QUEEN_ELIZIBETH.get(), QueenElizibethEntity.createAttributes().build());
-		event.put(ENDGHOST.get(), EndghostEntity.createAttributes().build());
 		event.put(ENDER_GHOST.get(), EnderGhostEntity.createAttributes().build());
+		event.put(NOOB_KING.get(), NoobKingEntity.createAttributes().build());
 	}
 }

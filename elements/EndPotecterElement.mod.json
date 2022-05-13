@@ -8,7 +8,7 @@
     "name": "End Potecter Element",
     "rarity": "EPIC",
     "creativeTab": {
-      "value": "MISC"
+      "value": "CUSTOM:Elements"
     },
     "stackSize": 1,
     "enchantability": 0,

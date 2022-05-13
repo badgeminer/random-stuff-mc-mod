@@ -1072,6 +1072,70 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "cheese"
+    },
+    {
+      "name": "Noobaltar",
+      "type": "code",
+      "sortid": 77,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "noobaltar"
+    },
+    {
+      "name": "NoobKing",
+      "type": "livingentity",
+      "sortid": 78,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "noob_king"
+    },
+    {
+      "name": "Noobsummon",
+      "type": "procedure",
+      "sortid": 78,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "noobsummon",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "NoobKingSpawn",
+      "type": "gui",
+      "sortid": 77,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "noob_king_spawn"
+    },
+    {
+      "name": "TheNoobKingsAlter",
+      "type": "block",
+      "sortid": 77,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "the_noob_kings_alter"
     }
   ],
   "variable_elements": [],
@@ -1080,12 +1144,14 @@
     "en_us": {
       "item.random_stuff.rubie": "Rubie",
       "item.random_stuff.loot_token": "Loot Token",
+      "block.random_stuff.the_noob_kings_alter": "The Noob Kings Alter",
       "item.random_stuff.amber": "Amber",
       "item.random_stuff.master_sword": "Master Sword",
+      "entity.random_stuff.noob_king": "Noob King",
       "item.random_stuff.polihsed_rubie": "Polihsed Rubie",
       "item.random_stuff.saphire": "Saphire",
       "entity.random_stuff.queen_elizibeth": "Queen Elizibeth",
-      "item.random_stuff.boobitem": "Boobitem",
+      "item.random_stuff.boobitem": "Explosion Element",
       "advancements.loot_obtained.title": "Loot Obtained",
       "item.random_stuff.oi.desc": "ghghvnb",
       "advancements.loot_obtained.descr": "get a Loot Token",
@@ -1106,8 +1172,9 @@
       "item.random_stuff.ice_cube": "Ice Cube",
       "item.random_stuff.cheese": "Cheese",
       "item.random_stuff.topaz": "Topaz",
+      "item.random_stuff.noob_king_spawn_egg": "Noob King Spawn Egg",
       "entity.random_stuff.ghost": "Ghost",
-      "item.random_stuff.ruby": "Ruby Element",
+      "item.random_stuff.ruby": "Fire Element",
       "item.random_stuff.saphire_netherite_boots": "Saphire Netherite Boots",
       "item.random_stuff.rubie_netherite_helmet": "Rubie Netherite Helmet",
       "advancements.random_stuff.descr": "lots of Random Stuff",
@@ -1137,7 +1204,7 @@
       "item.random_stuff.shadow_gem": "Shadow Gem",
       "item.random_stuff.endghost_spawn_egg": "End Ghost Spawn Egg",
       "item.random_stuff.saphire_netherite_chestplate": "Saphire Netherite Body",
-      "item.random_stuff.eye": "Eye",
+      "item.random_stuff.eye": "Ender Dimension Element",
       "item.minecraft.tipped_arrow.effect.battle": "_",
       "item.random_stuff.smiths_anvil_core": "Smiths Anvil Core",
       "item.random_stuff.nether_element": "Nether Element",
@@ -1154,7 +1221,7 @@
       "item.random_stuff.noob_spawn_egg": "Noob Spawn Egg",
       "item.minecraft.lingering_potion.effect.battle": "_",
       "advancements.gemed.descr": "get some Amber gems",
-      "item.random_stuff.earth_gem": "Earth Gem"
+      "item.random_stuff.earth_gem": "Earth Element"
     }
   },
   "foldersRoot": {

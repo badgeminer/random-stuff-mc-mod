@@ -6,14 +6,14 @@ import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.entity.Entity;
 
 import net.mcreator.randomstuff.procedures.NetherElementItemInInventoryTickProcedure;
+import net.mcreator.randomstuff.init.RandomStuffModTabs;
 
 public class NetherElementItem extends Item {
 	public NetherElementItem() {
-		super(new Item.Properties().tab(CreativeModeTab.TAB_MISC).stacksTo(64).rarity(Rarity.EPIC));
+		super(new Item.Properties().tab(RandomStuffModTabs.TAB_ELEMENTS).stacksTo(64).rarity(Rarity.EPIC));
 	}
 
 	@Override

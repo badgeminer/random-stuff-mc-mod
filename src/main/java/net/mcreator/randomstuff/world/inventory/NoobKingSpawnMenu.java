@@ -7,6 +7,7 @@ import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.CapabilityItemHandler;
 
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.inventory.Slot;
@@ -19,12 +20,13 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.randomstuff.init.RandomStuffModMenus;
+import net.mcreator.randomstuff.init.RandomStuffModItems;
 
 import java.util.function.Supplier;
 import java.util.Map;
 import java.util.HashMap;
 
-public class BossAltarGuiMenu extends AbstractContainerMenu implements Supplier<Map<Integer, Slot>> {
+public class NoobKingSpawnMenu extends AbstractContainerMenu implements Supplier<Map<Integer, Slot>> {
 	public final static HashMap<String, Object> guistate = new HashMap<>();
 	public final Level world;
 	public final Player entity;
@@ -33,8 +35,8 @@ public class BossAltarGuiMenu extends AbstractContainerMenu implements Supplier<
 	private final Map<Integer, Slot> customSlots = new HashMap<>();
 	private boolean bound = false;
 
-	public BossAltarGuiMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
-		super(RandomStuffModMenus.BOSS_ALTAR_GUI, id);
+	public NoobKingSpawnMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
+		super(RandomStuffModMenus.NOOB_KING_SPAWN, id);
 		this.entity = inv.player;
 		this.world = inv.player.level;
 		this.internal = new ItemStackHandler(2);
@@ -75,9 +77,17 @@ public class BossAltarGuiMenu extends AbstractContainerMenu implements Supplier<
 				}
 			}
 		}
-		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 52, 17) {
+		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 25, 44) {
+			@Override
+			public boolean mayPlace(ItemStack stack) {
+				return (RandomStuffModItems.SOUL_SHARD.get() == stack.getItem());
+			}
 		}));
-		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 115, 26) {
+		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 133, 44) {
+			@Override
+			public boolean mayPlace(ItemStack stack) {
+				return (Blocks.DIRT.asItem() == stack.getItem());
+			}
 		}));
 		for (int si = 0; si < 3; ++si)
 			for (int sj = 0; sj < 9; ++sj)

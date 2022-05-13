@@ -5,10 +5,10 @@
     "renderType": 0,
     "texture": "ruby",
     "customModelName": "Normal",
-    "name": "Ruby Element",
+    "name": "Fire Element",
     "rarity": "EPIC",
     "creativeTab": {
-      "value": "MISC"
+      "value": "CUSTOM:Elements"
     },
     "stackSize": 1,
     "enchantability": 0,
@@ -29,6 +29,9 @@
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
+    "onItemInInventoryTick": {
+      "name": "RubyItemInInventoryTick"
+    },
     "hasDispenseBehavior": false,
     "isFood": false,
     "nutritionalValue": 4,
