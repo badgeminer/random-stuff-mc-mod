@@ -1074,20 +1074,20 @@
       "registry_name": "cheese"
     },
     {
+      "name": "AquaGem",
+      "type": "item",
+      "sortid": 77,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "aqua_gem"
+    },
+    {
       "name": "Noobaltar",
       "type": "code",
       "sortid": 77,
       "compiles": true,
       "locked_code": true,
       "registry_name": "noobaltar"
-    },
-    {
-      "name": "NoobKing",
-      "type": "livingentity",
-      "sortid": 78,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "noob_king"
     },
     {
       "name": "Noobsummon",
@@ -1130,6 +1130,14 @@
       "registry_name": "noob_king_spawn"
     },
     {
+      "name": "NoobKing",
+      "type": "livingentity",
+      "sortid": 78,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "noob_king"
+    },
+    {
       "name": "TheNoobKingsAlter",
       "type": "block",
       "sortid": 77,
@@ -1147,7 +1155,16 @@
     }
   ],
   "variable_elements": [],
-  "sound_elements": [],
+  "sound_elements": [
+    {
+      "name": "commands.bob.bob",
+      "files": [
+        "untitled"
+      ],
+      "category": "master",
+      "subtitle": "BOB"
+    }
+  ],
   "language_map": {
     "en_us": {
       "item.random_stuff.rubie": "Rubie",
@@ -1156,6 +1173,7 @@
       "item.random_stuff.amber": "Amber",
       "item.random_stuff.master_sword": "Master Sword",
       "entity.random_stuff.noob_king": "Noob King",
+      "subtitles.commands.bob.bob": "BOB",
       "item.random_stuff.polihsed_rubie": "Polihsed Rubie",
       "item.random_stuff.saphire": "Saphire",
       "entity.random_stuff.queen_elizibeth": "Queen Elizibeth",
@@ -1225,6 +1243,7 @@
       "item.random_stuff.rubie_netherite_chestplate": "Rubie Netherite Chestplate",
       "item.random_stuff.soul_shard": "Soul Shard",
       "item.random_stuff.jasper": "Jasper",
+      "item.random_stuff.aqua_gem": "Aqua Gem",
       "item.random_stuff.rubie_netherite_leggings": "Rubie Netherite Leggings",
       "item.random_stuff.noob_spawn_egg": "Noob Spawn Egg",
       "item.minecraft.lingering_potion.effect.battle": "_",

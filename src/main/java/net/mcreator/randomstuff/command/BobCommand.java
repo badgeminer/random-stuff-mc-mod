@@ -44,7 +44,7 @@ public class BobCommand {
 			index[0]++;
 		});
 
-		BobCommandExecutedProcedure.execute(world);
+		BobCommandExecutedProcedure.execute(world, x, y, z);
 		return 0;
 	}
 }
