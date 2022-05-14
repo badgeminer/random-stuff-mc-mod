@@ -1152,6 +1152,38 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "enchanted_dirt"
+    },
+    {
+      "name": "TempestCrafter",
+      "type": "block",
+      "sortid": 80,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tempest_crafter"
+    },
+    {
+      "name": "TempestCraft",
+      "type": "procedure",
+      "sortid": 81,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tempest_craft",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TempestCrafterGui",
+      "type": "gui",
+      "sortid": 81,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tempest_crafter_gui"
     }
   ],
   "variable_elements": [],
@@ -1172,8 +1204,8 @@
       "block.random_stuff.the_noob_kings_alter": "The Noob Kings Alter",
       "item.random_stuff.amber": "Amber",
       "item.random_stuff.master_sword": "Master Sword",
-      "entity.random_stuff.noob_king": "Noob King",
       "subtitles.commands.bob.bob": "BOB",
+      "entity.random_stuff.noob_king": "Noob King",
       "item.random_stuff.polihsed_rubie": "Polihsed Rubie",
       "item.random_stuff.saphire": "Saphire",
       "entity.random_stuff.queen_elizibeth": "Queen Elizibeth",
@@ -1229,6 +1261,7 @@
       "item.random_stuff.end_potecter_element": "End Potecter Element",
       "item.random_stuff.shadow_gem": "Shadow Gem",
       "item.random_stuff.endghost_spawn_egg": "End Ghost Spawn Egg",
+      "block.random_stuff.tempest_crafter": "Tempest Crafter",
       "item.random_stuff.saphire_netherite_chestplate": "Saphire Netherite Body",
       "item.random_stuff.eye": "Ender Dimension Element",
       "item.minecraft.tipped_arrow.effect.battle": "_",

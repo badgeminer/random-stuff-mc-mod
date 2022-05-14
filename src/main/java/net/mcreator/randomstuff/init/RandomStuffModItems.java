@@ -122,6 +122,7 @@ public class RandomStuffModItems {
 	public static final RegistryObject<Item> NOOB_KING = REGISTRY.register("noob_king_spawn_egg",
 			() -> new ForgeSpawnEggItem(RandomStuffModEntities.NOOB_KING, -1, -1, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> ENCHANTED_DIRT = block(RandomStuffModBlocks.ENCHANTED_DIRT, CreativeModeTab.TAB_MATERIALS);
+	public static final RegistryObject<Item> TEMPEST_CRAFTER = block(RandomStuffModBlocks.TEMPEST_CRAFTER, RandomStuffModTabs.TAB_RANDOM_STUFF_MISC);
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
