@@ -1,0 +1,15 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "east": "tempest_crafter_side",
+        "south": "tempest_crafter_side",
+        "north": "tempest_crafter_side",
+        "west": "tempest_crafter_side",
+        "up": "tempest_crafter_top",
+        "down": "mini_tempest_down"
+      },
+      "name": "default"
+    }
+  }
+}

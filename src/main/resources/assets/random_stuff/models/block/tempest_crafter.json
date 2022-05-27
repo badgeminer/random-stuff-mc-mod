@@ -1,0 +1,13 @@
+{
+  "parent": "random_stuff:custom/cube",
+  "textures": {
+    "all": "random_stuff:blocks/tempest_crafter_top",
+    "particle": "random_stuff:blocks/tempest_crafter_top",
+    "east": "random_stuff:blocks/tempest_crafter_side",
+    "south": "random_stuff:blocks/tempest_crafter_side",
+    "north": "random_stuff:blocks/tempest_crafter_side",
+    "west": "random_stuff:blocks/tempest_crafter_side",
+    "up": "random_stuff:blocks/tempest_crafter_top",
+    "down": "random_stuff:blocks/mini_tempest_down"
+  }
+}

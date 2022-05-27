@@ -5,39 +5,25 @@ import net.minecraft.world.level.material.Material;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
 
-public class PowderKegBlock extends Block
+public class TempestCrafterBlock extends Block
 		implements
 
 			EntityBlock {
 
-	public PowderKegBlock() {
-		super(BlockBehaviour.Properties.of(Material.EXPLOSIVE).sound(SoundType.GRAVEL).strength(1f, 10f));
+	public TempestCrafterBlock() {
+		super(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).strength(1f, 10f).noOcclusion()
+				.isRedstoneConductor((bs, br, bp) -> false));
 
 	}
 
 	@Override
-	public float[] getBeaconColorMultiplier(BlockState state, LevelReader world, BlockPos pos, BlockPos beaconPos) {
-		return new float[]{1f, 0f, 0f};
+	public boolean propagatesSkylightDown(BlockState state, BlockGetter reader, BlockPos pos) {
+		return true;
 	}
 
 	@Override
 	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
-		return 15;
-	}
-
-	@Override
-	public Block.OffsetType getOffsetType() {
-		return Block.OffsetType.XYZ;
-	}
-
-	@Override
-	public PushReaction getPistonPushReaction(BlockState state) {
-		return PushReaction.PUSH_ONLY;
-	}
-
-	@Override
-	public boolean canConnectRedstone(BlockState state, BlockGetter world, BlockPos pos, Direction side) {
-		return true;
+		return 0;
 	}
 
 	@Override
@@ -50,32 +36,23 @@ public class PowderKegBlock extends Block
 	}
 
 	@Override
-	public void neighborChanged(BlockState blockstate, Level world, BlockPos pos, Block neighborBlock, BlockPos fromPos, boolean moving) {
-		super.neighborChanged(blockstate, world, pos, neighborBlock, fromPos, moving);
-		if (world.getBestNeighborSignal(pos) > 0) {
-			PowderKegRedstoneOnProcedure.execute(
+	public InteractionResult use(BlockState blockstate, Level world, BlockPos pos, Player entity, InteractionHand hand, BlockHitResult hit) {
+		super.use(blockstate, world, pos, entity, hand, hit);
+		if (entity instanceof ServerPlayer player) {
+			NetworkHooks.openGui(player, new MenuProvider() {
+				@Override
+				public Component getDisplayName() {
+					return new TextComponent("Tempest Crafter");
+				}
 
-			);
+				@Override
+				public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
+					return new TempestCrafterGuiMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(pos));
+				}
+			}, pos);
 		}
-	}
 
-	@OnlyIn(Dist.CLIENT)
-	@Override
-	public void animateTick(BlockState blockstate, Level world, BlockPos pos, Random random) {
-		super.animateTick(blockstate, world, pos, random);
-		Player entity = Minecraft.getInstance().player;
-		int x = pos.getX();
-		int y = pos.getY();
-		int z = pos.getZ();
-		for (int l = 0; l < 4; ++l) {
-			double x0 = x + random.nextFloat();
-			double y0 = y + random.nextFloat();
-			double z0 = z + random.nextFloat();
-			double dx = (random.nextFloat() - 0.5D) * 0.5D;
-			double dy = (random.nextFloat() - 0.5D) * 0.5D;
-			double dz = (random.nextFloat() - 0.5D) * 0.5D;
-			world.addParticle(ParticleTypes.ENCHANTED_HIT, x0, y0, z0, dx, dy, dz);
-		}
+		return InteractionResult.SUCCESS;
 	}
 
 	@Override
@@ -86,7 +63,7 @@ public class PowderKegBlock extends Block
 
 	@Override
 	public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-		return new PowderKegBlockEntity(pos, state);
+		return new TempestCrafterBlockEntity(pos, state);
 	}
 
 	@Override
@@ -100,7 +77,7 @@ public class PowderKegBlock extends Block
 	public void onRemove(BlockState state, Level world, BlockPos pos, BlockState newState, boolean isMoving) {
 		if (state.getBlock() != newState.getBlock()) {
 			BlockEntity blockEntity = world.getBlockEntity(pos);
-			if (blockEntity instanceof PowderKegBlockEntity be) {
+			if (blockEntity instanceof TempestCrafterBlockEntity be) {
 				Containers.dropContents(world, pos, be);
 				world.updateNeighbourForOutputSignal(pos, this);
 			}
@@ -117,10 +94,15 @@ public class PowderKegBlock extends Block
 	@Override
 	public int getAnalogOutputSignal(BlockState blockState, Level world, BlockPos pos) {
 		BlockEntity tileentity = world.getBlockEntity(pos);
-		if (tileentity instanceof PowderKegBlockEntity be)
+		if (tileentity instanceof TempestCrafterBlockEntity be)
 			return AbstractContainerMenu.getRedstoneSignalFromContainer(be);
 		else
 			return 0;
+	}
+
+	@OnlyIn(Dist.CLIENT)
+	public static void registerRenderLayer() {
+		ItemBlockRenderTypes.setRenderLayer(RandomStuffModBlocks.TEMPEST_CRAFTER.get(), renderType -> renderType == RenderType.cutout());
 	}
 
 }

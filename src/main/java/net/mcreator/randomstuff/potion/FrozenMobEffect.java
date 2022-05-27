@@ -1,10 +1,8 @@
 
 package net.mcreator.randomstuff.potion;
 
-import net.minecraft.world.effect.MobEffectCategory;
-import net.minecraft.world.effect.MobEffect;
-
 public class FrozenMobEffect extends MobEffect {
+
 	public FrozenMobEffect() {
 		super(MobEffectCategory.HARMFUL, -13369345);
 	}
@@ -18,4 +16,5 @@ public class FrozenMobEffect extends MobEffect {
 	public boolean isDurationEffectTick(int duration, int amplifier) {
 		return true;
 	}
+
 }

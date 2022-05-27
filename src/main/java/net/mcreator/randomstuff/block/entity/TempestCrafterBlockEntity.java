@@ -2,14 +2,14 @@ package net.mcreator.randomstuff.block.entity;
 
 import javax.annotation.Nullable;
 
-public class PowderKegBlockEntity extends RandomizableContainerBlockEntity implements WorldlyContainer {
+public class TempestCrafterBlockEntity extends RandomizableContainerBlockEntity implements WorldlyContainer {
 
-	private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(9, ItemStack.EMPTY);
+	private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(11, ItemStack.EMPTY);
 
 	private final LazyOptional<? extends IItemHandler>[] handlers = SidedInvWrapper.create(this, Direction.values());
 
-	public PowderKegBlockEntity(BlockPos position, BlockState state) {
-		super(RandomStuffModBlockEntities.POWDER_KEG.get(), position, state);
+	public TempestCrafterBlockEntity(BlockPos position, BlockState state) {
+		super(RandomStuffModBlockEntities.TEMPEST_CRAFTER.get(), position, state);
 	}
 
 	@Override
@@ -58,7 +58,7 @@ public class PowderKegBlockEntity extends RandomizableContainerBlockEntity imple
 
 	@Override
 	public Component getDefaultName() {
-		return new TextComponent("powder_keg");
+		return new TextComponent("tempest_crafter");
 	}
 
 	@Override
@@ -68,12 +68,12 @@ public class PowderKegBlockEntity extends RandomizableContainerBlockEntity imple
 
 	@Override
 	public AbstractContainerMenu createMenu(int id, Inventory inventory) {
-		return ChestMenu.threeRows(id, inventory);
+		return new TempestCrafterGuiMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(this.worldPosition));
 	}
 
 	@Override
 	public Component getDisplayName() {
-		return new TextComponent("Powder Keg");
+		return new TextComponent("Tempest Crafter");
 	}
 
 	@Override
@@ -88,6 +88,8 @@ public class PowderKegBlockEntity extends RandomizableContainerBlockEntity imple
 
 	@Override
 	public boolean canPlaceItem(int index, ItemStack stack) {
+		if (index == 10)
+			return false;
 		return true;
 	}
 
@@ -103,6 +105,26 @@ public class PowderKegBlockEntity extends RandomizableContainerBlockEntity imple
 
 	@Override
 	public boolean canTakeItemThroughFace(int index, ItemStack stack, Direction direction) {
+		if (index == 0)
+			return false;
+		if (index == 1)
+			return false;
+		if (index == 2)
+			return false;
+		if (index == 3)
+			return false;
+		if (index == 4)
+			return false;
+		if (index == 5)
+			return false;
+		if (index == 6)
+			return false;
+		if (index == 7)
+			return false;
+		if (index == 8)
+			return false;
+		if (index == 9)
+			return false;
 		return true;
 	}
 
