@@ -32,7 +32,6 @@ import net.mcreator.randomstuff.item.PolishedJasperItem;
 import net.mcreator.randomstuff.item.PolishedAmberItem;
 import net.mcreator.randomstuff.item.PolisedSaphireItem;
 import net.mcreator.randomstuff.item.PolihsedRubieItem;
-import net.mcreator.randomstuff.item.OiItem;
 import net.mcreator.randomstuff.item.NoobWorldItem;
 import net.mcreator.randomstuff.item.NetherbnItem;
 import net.mcreator.randomstuff.item.NetherElementItem;
@@ -41,6 +40,7 @@ import net.mcreator.randomstuff.item.LootTokenItem;
 import net.mcreator.randomstuff.item.LiquidDarknessItem;
 import net.mcreator.randomstuff.item.JasperItem;
 import net.mcreator.randomstuff.item.IceCubeItem;
+import net.mcreator.randomstuff.item.FireTasimlanItem;
 import net.mcreator.randomstuff.item.EyeItem;
 import net.mcreator.randomstuff.item.EndPotecterElementItem;
 import net.mcreator.randomstuff.item.EarthGemItem;
@@ -111,7 +111,6 @@ public class RandomStuffModItems {
 	public static final RegistryObject<Item> END_POTECTER_ELEMENT = REGISTRY.register("end_potecter_element", () -> new EndPotecterElementItem());
 	public static final RegistryObject<Item> NETHER_ELEMENT = REGISTRY.register("nether_element", () -> new NetherElementItem());
 	public static final RegistryObject<Item> NOOB_WORLD = REGISTRY.register("noob_world", () -> new NoobWorldItem());
-	public static final RegistryObject<Item> OI = REGISTRY.register("oi", () -> new OiItem());
 	public static final RegistryObject<Item> DIRT_BAG = REGISTRY.register("dirt_bag", () -> new DirtBagItem());
 	public static final RegistryObject<Item> LIQUID_DARKNESS = REGISTRY.register("liquid_darkness", () -> new LiquidDarknessItem());
 	public static final RegistryObject<Item> ICE_CUBE = REGISTRY.register("ice_cube", () -> new IceCubeItem());
@@ -122,6 +121,8 @@ public class RandomStuffModItems {
 	public static final RegistryObject<Item> NOOB_KING = REGISTRY.register("noob_king_spawn_egg",
 			() -> new ForgeSpawnEggItem(RandomStuffModEntities.NOOB_KING, -1, -1, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> ENCHANTED_DIRT = block(RandomStuffModBlocks.ENCHANTED_DIRT, CreativeModeTab.TAB_MATERIALS);
+	public static final RegistryObject<Item> POWDER_KEG = block(RandomStuffModBlocks.POWDER_KEG, RandomStuffModTabs.TAB_RANDOM_STUFF_SMITH);
+	public static final RegistryObject<Item> FIRE_TASIMLAN = REGISTRY.register("fire_tasimlan", () -> new FireTasimlanItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

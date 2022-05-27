@@ -38,9 +38,5 @@ public class RandomStuffModTrades {
 
 					new ItemStack(RandomStuffModItems.SMITHS_ANVIL_CORE.get()), 10, 5, 0.05f));
 		}
-		if (event.getType() == VillagerProfession.CLERIC) {
-			trades.get(5).add(new BasicItemListing(new ItemStack(Items.POISONOUS_POTATO), new ItemStack(Items.POTATO),
-					new ItemStack(Items.POISONOUS_POTATO, 2), 2, 0, 0.26f));
-		}
 	}
 }

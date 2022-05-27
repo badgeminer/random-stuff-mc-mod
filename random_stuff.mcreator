@@ -1034,14 +1034,6 @@
       }
     },
     {
-      "name": "Oi",
-      "type": "musicdisc",
-      "sortid": 72,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "oi"
-    },
-    {
       "name": "DirtBag",
       "type": "item",
       "sortid": 73,
@@ -1080,14 +1072,6 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "aqua_gem"
-    },
-    {
-      "name": "Noobaltar",
-      "type": "code",
-      "sortid": 77,
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "noobaltar"
     },
     {
       "name": "Noobsummon",
@@ -1152,6 +1136,130 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "enchanted_dirt"
+    },
+    {
+      "name": "FrozenActiveTickCondition",
+      "type": "procedure",
+      "sortid": 80,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "frozen_active_tick_condition",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Frozen",
+      "type": "potioneffect",
+      "sortid": 80,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "frozen"
+    },
+    {
+      "name": "PowderKegRedstoneOn",
+      "type": "procedure",
+      "sortid": 81,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "powder_keg_redstone_on",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PowderKeg",
+      "type": "block",
+      "sortid": 81,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "powder_keg"
+    },
+    {
+      "name": "FireTasimlanRightclicked",
+      "type": "procedure",
+      "sortid": 90,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_tasimlan_rightclicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "FireTasimlanItemInInventoryTick",
+      "type": "procedure",
+      "sortid": 91,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_tasimlan_item_in_inventory_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "FireTasimlan",
+      "type": "item",
+      "sortid": 90,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_tasimlan"
     }
   ],
   "variable_elements": [],
@@ -1170,6 +1278,7 @@
       "item.random_stuff.rubie": "Rubie",
       "item.random_stuff.loot_token": "Loot Token",
       "block.random_stuff.the_noob_kings_alter": "The Noob Kings Alter",
+      "effect.random_stuff.frozen": "Freezing",
       "item.random_stuff.amber": "Amber",
       "item.random_stuff.master_sword": "Master Sword",
       "subtitles.commands.bob.bob": "BOB",
@@ -1179,7 +1288,6 @@
       "entity.random_stuff.queen_elizibeth": "Queen Elizibeth",
       "item.random_stuff.boobitem": "Explosion Element",
       "advancements.loot_obtained.title": "Loot Obtained",
-      "item.random_stuff.oi.desc": "ghghvnb",
       "advancements.loot_obtained.descr": "get a Loot Token",
       "block.random_stuff.drill": "Drill",
       "entity.random_stuff.shadow_armor": "Shadow Armor",
@@ -1202,6 +1310,7 @@
       "entity.random_stuff.ghost": "Ghost",
       "item.random_stuff.ruby": "Fire Element",
       "item.random_stuff.saphire_netherite_boots": "Saphire Netherite Boots",
+      "item.random_stuff.fire_tasimlan": "Fire Tasimlan",
       "item.random_stuff.rubie_netherite_helmet": "Rubie Netherite Helmet",
       "advancements.random_stuff.descr": "lots of Random Stuff",
       "item.random_stuff.ghost_spawn_egg": "Ghost Spawn Egg",
@@ -1231,6 +1340,7 @@
       "item.random_stuff.endghost_spawn_egg": "End Ghost Spawn Egg",
       "item.random_stuff.saphire_netherite_chestplate": "Saphire Netherite Body",
       "item.random_stuff.eye": "Ender Dimension Element",
+      "block.random_stuff.powder_keg": "Powder Keg",
       "item.minecraft.tipped_arrow.effect.battle": "_",
       "item.random_stuff.smiths_anvil_core": "Smiths Anvil Core",
       "item.random_stuff.nether_element": "Nether Element",
@@ -1239,7 +1349,6 @@
       "block.random_stuff.sap": "Sap",
       "advancements.land_of_noobs.title": "Land Of Noobs",
       "advancements.apprentice_smith.title": "Apprentice Smith",
-      "item.random_stuff.oi": "Oi",
       "item.random_stuff.rubie_netherite_chestplate": "Rubie Netherite Chestplate",
       "item.random_stuff.soul_shard": "Soul Shard",
       "item.random_stuff.jasper": "Jasper",

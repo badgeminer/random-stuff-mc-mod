@@ -28,6 +28,7 @@ import net.minecraft.network.FriendlyByteBuf;
 
 import net.mcreator.randomstuff.init.RandomStuffModTabs;
 import net.mcreator.randomstuff.init.RandomStuffModPotions;
+import net.mcreator.randomstuff.init.RandomStuffModMobEffects;
 import net.mcreator.randomstuff.init.RandomStuffModItems;
 import net.mcreator.randomstuff.init.RandomStuffModFluids;
 import net.mcreator.randomstuff.init.RandomStuffModEntities;
@@ -58,6 +59,7 @@ public class RandomStuffMod {
 
 		RandomStuffModFluids.REGISTRY.register(bus);
 
+		RandomStuffModMobEffects.REGISTRY.register(bus);
 		RandomStuffModPotions.REGISTRY.register(bus);
 		RandomStuffModBiomes.REGISTRY.register(bus);
 

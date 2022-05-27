@@ -77,31 +77,6 @@
             "priceMultiplier": 0.05
           }
         ]
-      },
-      {
-        "villagerProfession": {
-          "value": "CLERIC"
-        },
-        "entries": [
-          {
-            "price1": {
-              "value": "Items.POISONOUS_POTATO"
-            },
-            "countPrice1": 1,
-            "price2": {
-              "value": "Items.POTATO"
-            },
-            "countPrice2": 1,
-            "offer": {
-              "value": "Items.POISONOUS_POTATO"
-            },
-            "countOffer": 2,
-            "level": 5,
-            "maxTrades": 2,
-            "xp": 0,
-            "priceMultiplier": 0.26
-          }
-        ]
       }
     ]
   }
