@@ -40,6 +40,7 @@ import net.mcreator.randomstuff.item.LootTokenItem;
 import net.mcreator.randomstuff.item.LiquidDarknessItem;
 import net.mcreator.randomstuff.item.JasperItem;
 import net.mcreator.randomstuff.item.IceCubeItem;
+import net.mcreator.randomstuff.item.GateGaurdsArmourItem;
 import net.mcreator.randomstuff.item.FireTasimlanItem;
 import net.mcreator.randomstuff.item.EyeItem;
 import net.mcreator.randomstuff.item.EndPotecterElementItem;
@@ -124,6 +125,14 @@ public class RandomStuffModItems {
 	public static final RegistryObject<Item> TEMPEST_CRAFTER = block(RandomStuffModBlocks.TEMPEST_CRAFTER, RandomStuffModTabs.TAB_RANDOM_STUFF_MISC);
 	public static final RegistryObject<Item> POWDER_KEG = block(RandomStuffModBlocks.POWDER_KEG, RandomStuffModTabs.TAB_RANDOM_STUFF_SMITH);
 	public static final RegistryObject<Item> FIRE_TASIMLAN = REGISTRY.register("fire_tasimlan", () -> new FireTasimlanItem());
+	public static final RegistryObject<Item> GATE_GAURDS_ARMOUR_HELMET = REGISTRY.register("gate_gaurds_armour_helmet",
+			() -> new GateGaurdsArmourItem.Helmet());
+	public static final RegistryObject<Item> GATE_GAURDS_ARMOUR_CHESTPLATE = REGISTRY.register("gate_gaurds_armour_chestplate",
+			() -> new GateGaurdsArmourItem.Chestplate());
+	public static final RegistryObject<Item> GATE_GAURDS_ARMOUR_LEGGINGS = REGISTRY.register("gate_gaurds_armour_leggings",
+			() -> new GateGaurdsArmourItem.Leggings());
+	public static final RegistryObject<Item> GATE_GAURDS_ARMOUR_BOOTS = REGISTRY.register("gate_gaurds_armour_boots",
+			() -> new GateGaurdsArmourItem.Boots());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

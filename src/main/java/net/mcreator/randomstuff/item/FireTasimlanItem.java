@@ -1,11 +1,24 @@
 
 package net.mcreator.randomstuff.item;
 
-import net.minecraft.world.entity.ai.attributes.Attributes;
-import javax.annotation.Nullable;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.api.distmarker.Dist;
+
+import net.minecraft.world.level.Level;
+import net.minecraft.world.item.UseAnim;
+import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.InteractionHand;
+
+import net.mcreator.randomstuff.procedures.FireTasimlanRightclickedProcedure;
+import net.mcreator.randomstuff.procedures.FireTasimlanItemInInventoryTickProcedure;
 
 public class FireTasimlanItem extends Item {
-
 	public FireTasimlanItem() {
 		super(new Item.Properties().tab(CreativeModeTab.TAB_MISC).stacksTo(64).rarity(Rarity.COMMON));
 	}
@@ -34,16 +47,13 @@ public class FireTasimlanItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		FireTasimlanRightclickedProcedure.execute();
+		FireTasimlanRightclickedProcedure.execute(world, x, y, z);
 		return ar;
 	}
 
 	@Override
 	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 		super.inventoryTick(itemstack, world, entity, slot, selected);
-		FireTasimlanItemInInventoryTickProcedure.execute(
-
-		);
+		FireTasimlanItemInInventoryTickProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ());
 	}
-
 }
