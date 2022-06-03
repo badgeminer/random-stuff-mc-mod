@@ -32,7 +32,6 @@ import net.mcreator.randomstuff.item.PolishedJasperItem;
 import net.mcreator.randomstuff.item.PolishedAmberItem;
 import net.mcreator.randomstuff.item.PolisedSaphireItem;
 import net.mcreator.randomstuff.item.PolihsedRubieItem;
-import net.mcreator.randomstuff.item.NoobWorldItem;
 import net.mcreator.randomstuff.item.NetherbnItem;
 import net.mcreator.randomstuff.item.NetherElementItem;
 import net.mcreator.randomstuff.item.MasterSwordItem;
@@ -111,7 +110,6 @@ public class RandomStuffModItems {
 	public static final RegistryObject<Item> NETHERBN = REGISTRY.register("netherbn", () -> new NetherbnItem());
 	public static final RegistryObject<Item> END_POTECTER_ELEMENT = REGISTRY.register("end_potecter_element", () -> new EndPotecterElementItem());
 	public static final RegistryObject<Item> NETHER_ELEMENT = REGISTRY.register("nether_element", () -> new NetherElementItem());
-	public static final RegistryObject<Item> NOOB_WORLD = REGISTRY.register("noob_world", () -> new NoobWorldItem());
 	public static final RegistryObject<Item> DIRT_BAG = REGISTRY.register("dirt_bag", () -> new DirtBagItem());
 	public static final RegistryObject<Item> LIQUID_DARKNESS = REGISTRY.register("liquid_darkness", () -> new LiquidDarknessItem());
 	public static final RegistryObject<Item> ICE_CUBE = REGISTRY.register("ice_cube", () -> new IceCubeItem());
