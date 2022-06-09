@@ -9,10 +9,13 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.minecraft.client.renderer.entity.ThrownItemRenderer;
+
 import net.mcreator.randomstuff.client.renderer.ShadowArmorRenderer;
 import net.mcreator.randomstuff.client.renderer.QueenElizibethRenderer;
 import net.mcreator.randomstuff.client.renderer.NoobRenderer;
 import net.mcreator.randomstuff.client.renderer.NoobKingRenderer;
+import net.mcreator.randomstuff.client.renderer.Nightmare1Renderer;
 import net.mcreator.randomstuff.client.renderer.GhostRenderer;
 import net.mcreator.randomstuff.client.renderer.EndghostRenderer;
 import net.mcreator.randomstuff.client.renderer.EnderGhostRenderer;
@@ -28,5 +31,7 @@ public class RandomStuffModEntityRenderers {
 		event.registerEntityRenderer(RandomStuffModEntities.QUEEN_ELIZIBETH.get(), QueenElizibethRenderer::new);
 		event.registerEntityRenderer(RandomStuffModEntities.ENDER_GHOST.get(), EnderGhostRenderer::new);
 		event.registerEntityRenderer(RandomStuffModEntities.NOOB_KING.get(), NoobKingRenderer::new);
+		event.registerEntityRenderer(RandomStuffModEntities.NIGHTMARE_1.get(), Nightmare1Renderer::new);
+		event.registerEntityRenderer(RandomStuffModEntities.NIGHTMARE_1_PROJECTILE.get(), ThrownItemRenderer::new);
 	}
 }

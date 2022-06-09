@@ -20,6 +20,8 @@ import net.mcreator.randomstuff.entity.ShadowArmorEntity;
 import net.mcreator.randomstuff.entity.QueenElizibethEntity;
 import net.mcreator.randomstuff.entity.NoobKingEntity;
 import net.mcreator.randomstuff.entity.NoobEntity;
+import net.mcreator.randomstuff.entity.Nightmare1EntityProjectile;
+import net.mcreator.randomstuff.entity.Nightmare1Entity;
 import net.mcreator.randomstuff.entity.GhostEntity;
 import net.mcreator.randomstuff.entity.EndghostEntity;
 import net.mcreator.randomstuff.entity.EnderGhostEntity;
@@ -57,6 +59,12 @@ public class RandomStuffModEntities {
 	public static final RegistryObject<EntityType<NoobKingEntity>> NOOB_KING = register("noob_king",
 			EntityType.Builder.<NoobKingEntity>of(NoobKingEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
 					.setTrackingRange(6400).setUpdateInterval(3).setCustomClientFactory(NoobKingEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<Nightmare1Entity>> NIGHTMARE_1 = register("nightmare_1",
+			EntityType.Builder.<Nightmare1Entity>of(Nightmare1Entity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+					.setTrackingRange(640).setUpdateInterval(3).setCustomClientFactory(Nightmare1Entity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<Nightmare1EntityProjectile>> NIGHTMARE_1_PROJECTILE = register("projectile_nightmare_1",
+			EntityType.Builder.<Nightmare1EntityProjectile>of(Nightmare1EntityProjectile::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true)
+					.setTrackingRange(64).setUpdateInterval(1).setCustomClientFactory(Nightmare1EntityProjectile::new).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -72,6 +80,7 @@ public class RandomStuffModEntities {
 			QueenElizibethEntity.init();
 			EnderGhostEntity.init();
 			NoobKingEntity.init();
+			Nightmare1Entity.init();
 		});
 	}
 
@@ -84,5 +93,6 @@ public class RandomStuffModEntities {
 		event.put(QUEEN_ELIZIBETH.get(), QueenElizibethEntity.createAttributes().build());
 		event.put(ENDER_GHOST.get(), EnderGhostEntity.createAttributes().build());
 		event.put(NOOB_KING.get(), NoobKingEntity.createAttributes().build());
+		event.put(NIGHTMARE_1.get(), Nightmare1Entity.createAttributes().build());
 	}
 }

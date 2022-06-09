@@ -47,9 +47,9 @@ public class NoobHavenBiome {
 						new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(Blocks.DIRT.defaultBlockState()),
 								new GiantTrunkPlacer(7, 2, 14), BlockStateProvider.simple(Blocks.DIRT.defaultBlockState()),
 								new MegaPineFoliagePlacer(ConstantInt.of(0), ConstantInt.of(0), UniformInt.of(13, 17)),
-								new TwoLayersFeatureSize(1, 1, 2))
-								.decorators(ImmutableList.of(new AlterGroundDecorator(BlockStateProvider.simple(Blocks.PODZOL.defaultBlockState()))))
-								.build()),
+								new TwoLayersFeatureSize(1, 1, 2)).decorators(
+										ImmutableList.of(new AlterGroundDecorator(BlockStateProvider.simple(Blocks.PODZOL.defaultBlockState()))))
+										.build()),
 						List.of(CountPlacement.of(1), InSquarePlacement.spread(), SurfaceWaterDepthFilter.forMaxDepth(0),
 								PlacementUtils.HEIGHTMAP_OCEAN_FLOOR, PlacementUtils.filteredByBlockSurvival(Blocks.OAK_SAPLING),
 								BiomeFilter.biome())));

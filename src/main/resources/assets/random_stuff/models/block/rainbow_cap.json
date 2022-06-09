@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "random_stuff:blocks/cmh",
+    "particle": "random_stuff:blocks/cmh"
+  }
+}

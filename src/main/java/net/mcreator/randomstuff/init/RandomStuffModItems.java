@@ -32,8 +32,11 @@ import net.mcreator.randomstuff.item.PolishedJasperItem;
 import net.mcreator.randomstuff.item.PolishedAmberItem;
 import net.mcreator.randomstuff.item.PolisedSaphireItem;
 import net.mcreator.randomstuff.item.PolihsedRubieItem;
+import net.mcreator.randomstuff.item.ObsidianSwordItem;
+import net.mcreator.randomstuff.item.ObsidianShardItem;
 import net.mcreator.randomstuff.item.NetherbnItem;
 import net.mcreator.randomstuff.item.NetherElementItem;
+import net.mcreator.randomstuff.item.MorelMedelyItem;
 import net.mcreator.randomstuff.item.MasterSwordItem;
 import net.mcreator.randomstuff.item.LootTokenItem;
 import net.mcreator.randomstuff.item.LiquidDarknessItem;
@@ -42,9 +45,9 @@ import net.mcreator.randomstuff.item.IceCubeItem;
 import net.mcreator.randomstuff.item.GateGaurdsArmourItem;
 import net.mcreator.randomstuff.item.FireTasimlanItem;
 import net.mcreator.randomstuff.item.EyeItem;
+import net.mcreator.randomstuff.item.EndersteelIngotItem;
 import net.mcreator.randomstuff.item.EndPotecterElementItem;
 import net.mcreator.randomstuff.item.EarthGemItem;
-import net.mcreator.randomstuff.item.DrillRayItem;
 import net.mcreator.randomstuff.item.DirtBagItem;
 import net.mcreator.randomstuff.item.CheeseItem;
 import net.mcreator.randomstuff.item.BoobitemItem;
@@ -106,7 +109,6 @@ public class RandomStuffModItems {
 	public static final RegistryObject<Item> QUEEN_ELIZIBETH = REGISTRY.register("queen_elizibeth_spawn_egg",
 			() -> new ForgeSpawnEggItem(RandomStuffModEntities.QUEEN_ELIZIBETH, -1, -393467, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> SAP_BUCKET = REGISTRY.register("sap_bucket", () -> new SapItem());
-	public static final RegistryObject<Item> DRILL_RAY = REGISTRY.register("drill_ray", () -> new DrillRayItem());
 	public static final RegistryObject<Item> NETHERBN = REGISTRY.register("netherbn", () -> new NetherbnItem());
 	public static final RegistryObject<Item> END_POTECTER_ELEMENT = REGISTRY.register("end_potecter_element", () -> new EndPotecterElementItem());
 	public static final RegistryObject<Item> NETHER_ELEMENT = REGISTRY.register("nether_element", () -> new NetherElementItem());
@@ -131,6 +133,18 @@ public class RandomStuffModItems {
 			() -> new GateGaurdsArmourItem.Leggings());
 	public static final RegistryObject<Item> GATE_GAURDS_ARMOUR_BOOTS = REGISTRY.register("gate_gaurds_armour_boots",
 			() -> new GateGaurdsArmourItem.Boots());
+	public static final RegistryObject<Item> OBSIDIAN_SHARD = REGISTRY.register("obsidian_shard", () -> new ObsidianShardItem());
+	public static final RegistryObject<Item> OBSIDIAN_SWORD = REGISTRY.register("obsidian_sword", () -> new ObsidianSwordItem());
+	public static final RegistryObject<Item> UMBER_STALK = block(RandomStuffModBlocks.UMBER_STALK, CreativeModeTab.TAB_DECORATIONS);
+	public static final RegistryObject<Item> GHOST_MOREL = block(RandomStuffModBlocks.GHOST_MOREL, CreativeModeTab.TAB_DECORATIONS);
+	public static final RegistryObject<Item> FIRE_FUNGUS = block(RandomStuffModBlocks.FIRE_FUNGUS, CreativeModeTab.TAB_DECORATIONS);
+	public static final RegistryObject<Item> ASTRAL_TOADSTOOL = block(RandomStuffModBlocks.ASTRAL_TOADSTOOL, CreativeModeTab.TAB_DECORATIONS);
+	public static final RegistryObject<Item> RAINBOW_CAP = block(RandomStuffModBlocks.RAINBOW_CAP, CreativeModeTab.TAB_DECORATIONS);
+	public static final RegistryObject<Item> MOREL_MEDELY = REGISTRY.register("morel_medely", () -> new MorelMedelyItem());
+	public static final RegistryObject<Item> ENDERSTEEL_INGOT = REGISTRY.register("endersteel_ingot", () -> new EndersteelIngotItem());
+	public static final RegistryObject<Item> NIGHTMARE_1 = REGISTRY.register("nightmare_1_spawn_egg",
+			() -> new ForgeSpawnEggItem(RandomStuffModEntities.NIGHTMARE_1, -3407872, -16777216,
+					new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

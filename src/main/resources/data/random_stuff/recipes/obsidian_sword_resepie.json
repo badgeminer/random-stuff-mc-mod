@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0",
+    "1",
+    "2"
+  ],
+  "key": {
+    "0": {
+      "item": "random_stuff:obsidian_shard"
+    },
+    "1": {
+      "item": "random_stuff:obsidian_shard"
+    },
+    "2": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "random_stuff:obsidian_sword",
+    "count": 1
+  }
+}
