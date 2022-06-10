@@ -22,9 +22,10 @@ public abstract class SapFluid extends ForgeFlowingFluid {
 
 					.viscosity(100000)
 
-					.rarity(Rarity.UNCOMMON)).explosionResistance(100f)
+					.rarity(Rarity.UNCOMMON))
+			.explosionResistance(100f)
 
-							.bucket(RandomStuffModItems.SAP_BUCKET).block(() -> (LiquidBlock) RandomStuffModBlocks.SAP.get());
+			.bucket(RandomStuffModItems.SAP_BUCKET).block(() -> (LiquidBlock) RandomStuffModBlocks.SAP.get());
 
 	private SapFluid() {
 		super(PROPERTIES);

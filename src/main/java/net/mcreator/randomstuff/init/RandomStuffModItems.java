@@ -123,7 +123,6 @@ public class RandomStuffModItems {
 			() -> new ForgeSpawnEggItem(RandomStuffModEntities.NOOB_KING, -1, -1, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> ENCHANTED_DIRT = block(RandomStuffModBlocks.ENCHANTED_DIRT, CreativeModeTab.TAB_MATERIALS);
 	public static final RegistryObject<Item> TEMPEST_CRAFTER = block(RandomStuffModBlocks.TEMPEST_CRAFTER, RandomStuffModTabs.TAB_RANDOM_STUFF_MISC);
-	public static final RegistryObject<Item> POWDER_KEG = block(RandomStuffModBlocks.POWDER_KEG, RandomStuffModTabs.TAB_RANDOM_STUFF_SMITH);
 	public static final RegistryObject<Item> FIRE_TASIMLAN = REGISTRY.register("fire_tasimlan", () -> new FireTasimlanItem());
 	public static final RegistryObject<Item> GATE_GAURDS_ARMOUR_HELMET = REGISTRY.register("gate_gaurds_armour_helmet",
 			() -> new GateGaurdsArmourItem.Helmet());

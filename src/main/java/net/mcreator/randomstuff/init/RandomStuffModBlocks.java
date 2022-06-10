@@ -19,7 +19,6 @@ import net.mcreator.randomstuff.block.TheNoobKingsAlterBlock;
 import net.mcreator.randomstuff.block.TempestCrafterBlock;
 import net.mcreator.randomstuff.block.SapBlock;
 import net.mcreator.randomstuff.block.RainbowCapBlock;
-import net.mcreator.randomstuff.block.PowderKegBlock;
 import net.mcreator.randomstuff.block.GhostMorelBlock;
 import net.mcreator.randomstuff.block.GemstoneOreBlock;
 import net.mcreator.randomstuff.block.FireFungusBlock;
@@ -38,7 +37,6 @@ public class RandomStuffModBlocks {
 	public static final RegistryObject<Block> THE_NOOB_KINGS_ALTER = REGISTRY.register("the_noob_kings_alter", () -> new TheNoobKingsAlterBlock());
 	public static final RegistryObject<Block> ENCHANTED_DIRT = REGISTRY.register("enchanted_dirt", () -> new EnchantedDirtBlock());
 	public static final RegistryObject<Block> TEMPEST_CRAFTER = REGISTRY.register("tempest_crafter", () -> new TempestCrafterBlock());
-	public static final RegistryObject<Block> POWDER_KEG = REGISTRY.register("powder_keg", () -> new PowderKegBlock());
 	public static final RegistryObject<Block> UMBER_STALK = REGISTRY.register("umber_stalk", () -> new UmberStalkBlock());
 	public static final RegistryObject<Block> GHOST_MOREL = REGISTRY.register("ghost_morel", () -> new GhostMorelBlock());
 	public static final RegistryObject<Block> FIRE_FUNGUS = REGISTRY.register("fire_fungus", () -> new FireFungusBlock());
